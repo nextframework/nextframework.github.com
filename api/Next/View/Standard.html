@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Next\View\Standard | Next Framework</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Next_View_Standard" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Next Framework</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Next.html">Next</a></li><li class="backslash">\</li><li><a href="../../Next/View.html">View</a></li><li class="backslash">\</li><li>Standard</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Standard
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Standard</strong>        extends <a href="../../Next/Components/Object.html"><abbr title="Next\Components\Object">Object</abbr></a>        implements
+        <a href="../../Next/Validation/Verifiable.html"><abbr title="Next\Validation\Verifiable">Verifiable</abbr></a>, <a href="../../Next/View/View.html"><abbr title="Next\View\View">View</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>The Standard View Engine</p>                                </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_parameters">
+                                        protected                                        array
+                </td>
+                <td>$parameters</td>
+                <td class="last">Parameter Options Definition</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property__helpers">
+                                                            private                    array
+                </td>
+                <td>$_helpers</td>
+                <td class="last">View Helpers</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property__tplVars">
+                                                            private                    array
+                </td>
+                <td>$_tplVars</td>
+                <td class="last">Template Variables</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property__forbiddenTplVars">
+                                                            private                    array
+                </td>
+                <td>$_forbiddenTplVars</td>
+                <td class="last">Forbidden Template Variables Names</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property__paths">
+                                                            private                    array
+                </td>
+                <td>$_paths</td>
+                <td class="last">Template Views Paths</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property__shouldRender">
+                                                            private                    boolean
+                </td>
+                <td>$_shouldRender</td>
+                <td class="last">Flag to define whether or not Template File should be rendered</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_init">init</a>()
+        
+                                            <p>Additional Initialization.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resetDefaults">resetDefaults</a>()
+        
+                                            <p>Reset View to its defaults</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerHelper">registerHelper</a>($name, <abbr title="Next\View\Next\View\Helpers\Helper">Helper</abbr>|string|callable $resource)
+        
+                                            <p>Register a new Template View Helper</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHelpers">getHelpers</a>()
+        
+                                            <p>Get all registered View Helpers</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getExtension">getExtension</a>()
+        
+                                            <p>Get default File Extension</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBasepath">getBasepath</a>()
+        
+                                            <p>Get current Basepath</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSubpath">getSubpath</a>()
+        
+                                            <p>Get current Subpath</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addPath">addPath</a>(string $path)
+        
+                                            <p>Add more paths to Template Files Location</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPaths">getPaths</a>()
+        
+                                            <p>Get current paths</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFileSpec">getFileSpec</a>()
+        
+                                            <p>Get FileSpec definition</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_shouldReturnVariables">shouldReturnVariables</a>()
+        
+                                            <p>Should Variables be returned or echoed</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_assign">assign</a>(string|array $tplVar, mixed|<abbr title="Next\View\optional">optional</abbr> $value = NULL)
+        
+                                            <p>Assign one or more Template Variables</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getVars">getVars</a>()
+        
+                                            <p>Get all assigned Template Variables</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getVar">getVar</a>(string $tplVar)
+        
+                                            <p>Get an specific Template Variable assigned</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultTemplate">getDefaultTemplate</a>()
+        
+                                            <p>Get Default Template</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_render">render</a>(string|<abbr title="Next\View\optional">optional</abbr> $name = NULL, boolean|<abbr title="Next\View\optional">optional</abbr> $search = TRUE)
+        
+                                            <p>Render the page, outputs the buffer</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_disableRender">disableRender</a>()
+        
+                                            <p>Disable Rendering process</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_enableRender">enableRender</a>()
+        
+                                            <p>(Re-)Enables Rendering process</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_verify">verify</a>()
+        
+                                            <p>Verifies Object Integrity</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___isset">__isset</a>(string $tplVar)
+        
+                                            <p>Checks if a Template Variable Exists.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___unset">__unset</a>(string $tplVar)
+        
+                                            <p>Unsets a Template Variable
+Note that the PRESENCE of key is tested before unset it, not its value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___set">__set</a>(string $tplVar, mixed|<abbr title="Next\View\optional">optional</abbr> $value = NULL)
+        
+                                            <p>Create a new Template Value and assigns its value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed|void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___get">__get</a>(string $tplVar)
+        
+                                            <p>Return/Echo the current value of a Template Variable
+Note that the PRESENCE of key is tested before return/echo it,
+not its value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed|void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $helper, array $args = [])
+        
+                                            <p>Allows View Helpers to be called in this Object context</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_findFile">findFile</a>(string|<abbr title="Next\View\optional">optional</abbr> $file = NULL)
+        
+                                            <p>Find given Template View file in defined Views Directories</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_findFileBySpec">findFileBySpec</a>()
+        
+                                            <p>Find the Template View File from FileSpec</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">at         line 196</div>
+        <code>            protected        
+    <strong>init</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Additional Initialization.</p>                    <p>Configures resources based on Next\Application\Application
+provided and apply quik fixes over optional Parameter Options</p>                            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resetDefaults">
+        <div class="location">at         line 229</div>
+        <code>                    
+    <strong>resetDefaults</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Reset View to its defaults</p>                    <p>User defined Template Variables are removed leaving only the
+pre-assigned variables.</p>
+
+<p>If, for some reason, it's already empty, simply create them.</p>                            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerHelper">
+        <div class="location">at         line 282</div>
+        <code>                    
+    <strong>registerHelper</strong>($name, <abbr title="Next\View\Next\View\Helpers\Helper">Helper</abbr>|string|callable $resource)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a new Template View Helper</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Next\View\Next\View\Helpers\Helper">Helper</abbr>|string|callable</td>
+                <td>$resource</td>
+                <td>Resource being registered as a View Helper.
+ It can be a Fully Qualified Classname of an Object implementing
+ <em>Next\View\Helper\Helper</em>
+ Or it can be any other callable resource as well, like arrays, anonymous
+ function, an internal function...</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Next\View\Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></td>
+                <td>Thrown if <code>$resource</code> is an FQCN but something went wrong while
+ reflecting over it</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Next\View\Next\Exception\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></td>
+                <td>Thrown if <code>$resource</code> is a FQCN but its not an instance of
+ Next\Components\Object and/or it doesn't implement
+ Next\View\Helpers\Helper Interface</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHelpers">
+        <div class="location">at         line 339</div>
+        <code>                    
+    <strong>getHelpers</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all registered View Helpers</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExtension">
+        <div class="location">at         line 351</div>
+        <code>                    
+    <strong>getExtension</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get default File Extension</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBasepath">
+        <div class="location">at         line 363</div>
+        <code>                    
+    <strong>getBasepath</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get current Basepath</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSubpath">
+        <div class="location">at         line 373</div>
+        <code>                    
+    <strong>getSubpath</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get current Subpath</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addPath">
+        <div class="location">at         line 386</div>
+        <code>                    
+    <strong>addPath</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add more paths to Template Files Location</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>Another Path to locate Template Views</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPaths">
+        <div class="location">at         line 406</div>
+        <code>                    
+    <strong>getPaths</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get current paths</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFileSpec">
+        <div class="location">at         line 416</div>
+        <code>                    
+    <strong>getFileSpec</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get FileSpec definition</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_shouldReturnVariables">
+        <div class="location">at         line 428</div>
+        <code>                    
+    <strong>shouldReturnVariables</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Should Variables be returned or echoed</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assign">
+        <div class="location">at         line 448</div>
+        <code>                    
+    <strong>assign</strong>(string|array $tplVar, mixed|<abbr title="Next\View\optional">optional</abbr> $value = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Assign one or more Template Variables</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$tplVar</td>
+                <td>Template Variable Name or an array of Variables</td>
+            </tr>
+                    <tr>
+                <td>mixed|<abbr title="Next\View\optional">optional</abbr></td>
+                <td>$value</td>
+                <td>Value for Template Variable when <strong>$tplVar</strong>
+      is not an array</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Next/Exception/Exceptions/InvalidArgumentException.html"><abbr title="Next\Exception\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>Chosen Template Variable is defined as reserved</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getVars">
+        <div class="location">at         line 481</div>
+        <code>                    
+    <strong>getVars</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all assigned Template Variables</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getVar">
+        <div class="location">at         line 494</div>
+        <code>                    
+    <strong>getVar</strong>(string $tplVar)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an specific Template Variable assigned</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tplVar</td>
+                <td>The Template Variable</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultTemplate">
+        <div class="location">at         line 508</div>
+        <code>                    
+    <strong>getDefaultTemplate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Default Template</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_render">
+        <div class="location">at         line 528</div>
+        <code>                    
+    <strong>render</strong>(string|<abbr title="Next\View\optional">optional</abbr> $name = NULL, boolean|<abbr title="Next\View\optional">optional</abbr> $search = TRUE)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Render the page, outputs the buffer</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<abbr title="Next\View\optional">optional</abbr></td>
+                <td>$name</td>
+                <td>Template View File to render. If NULL, we'll try to find it</td>
+            </tr>
+                    <tr>
+                <td>boolean|<abbr title="Next\View\optional">optional</abbr></td>
+                <td>$search</td>
+                <td>Flag to condition whether or not we should try to find the
+ proper Template View File automatically</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a></td>
+                <td>Thrown if unable to find Template View File</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_disableRender">
+        <div class="location">at         line 592</div>
+        <code>                    
+    <strong>disableRender</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Disable Rendering process</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_enableRender">
+        <div class="location">at         line 605</div>
+        <code>                    
+    <strong>enableRender</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>(Re-)Enables Rendering process</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_verify">
+        <div class="location">at         line 621</div>
+        <code>                    
+    <strong>verify</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Verifies Object Integrity</p>                                                </div>
+                <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Next/Exception/Exceptions/InvalidArgumentException.html"><abbr title="Next\Exception\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>Thrown if provided Template View FileSpec is not minimally
+ valid (i.e at least one string led by a colon)</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___isset">
+        <div class="location">at         line 650</div>
+        <code>                    boolean
+    <strong>__isset</strong>(string $tplVar)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checks if a Template Variable Exists.</p>                    <p>Note that the PRESENCE of key is tested, not its value</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tplVar</td>
+                <td>Template Variable to be tested</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if desired Template Variable exists and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___unset">
+        <div class="location">at         line 668</div>
+        <code>                    
+    <strong>__unset</strong>(string $tplVar)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unsets a Template Variable
+Note that the PRESENCE of key is tested before unset it, not its value</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tplVar</td>
+                <td>Template Variable to be deleted</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Next/Exception/Exceptions/InvalidArgumentException.html"><abbr title="Next\Exception\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>Trying to unset a undefined Template Variable</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Next/Exception/Exceptions/AccessViolationException.html"><abbr title="Next\Exception\Exceptions\AccessViolationException">AccessViolationException</abbr></a></td>
+                <td>Trying to unset a Template Variable whose name has been marked
+ as forbidden or forbidden due an association with a View Engine Helper</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___set">
+        <div class="location">at         line 694</div>
+        <code>                    
+    <strong>__set</strong>(string $tplVar, mixed|<abbr title="Next\View\optional">optional</abbr> $value = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new Template Value and assigns its value</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tplVar</td>
+                <td>Template Variable Name</td>
+            </tr>
+                    <tr>
+                <td>mixed|<abbr title="Next\View\optional">optional</abbr></td>
+                <td>$value</td>
+                <td>Template Variable Value</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Next/Exception/Exceptions/AccessViolationException.html"><abbr title="Next\Exception\Exceptions\AccessViolationException">AccessViolationException</abbr></a></td>
+                <td>Trying to set a Template Variable with a name that has been marked
+ as forbidden or forbidden due an association with a View Engine Helper</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___get">
+        <div class="location">at         line 722</div>
+        <code>                    mixed|void
+    <strong>__get</strong>(string $tplVar)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return/Echo the current value of a Template Variable
+Note that the PRESENCE of key is tested before return/echo it,
+not its value</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tplVar</td>
+                <td>Template Variable to be displayed or retrieved, accordingly to
+  the Parameter Option <strong>$returnVariables</strong></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed|void</td>
+            <td>If Parameter Option <strong>returnVariables</strong> was set to TRUE -OR-
+ <strong>$tplVar</strong> represents an array or an Object, the desired
+ Template Variable will be returned.
+ Otherwise, variable will be echoed and thus, nothing will be returned</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Next/Exception/Exceptions/InvalidArgumentException.html"><abbr title="Next\Exception\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>Trying to retrieve/output data from an undefined Template Variable</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">at         line 758</div>
+        <code>                    mixed|void
+    <strong>__call</strong>(string $helper, array $args = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Allows View Helpers to be called in this Object context</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$helper</td>
+                <td>The View Helper</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>Variable list of arguments to the method</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed|void</td>
+            <td>Returns what the method under Extended Context returns or
+ what the prototyped resource returns
+ Any failure on either of these calls and nothing is returned</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Next/Exception/Exceptions/InvalidArgumentException.html"><abbr title="Next\Exception\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>Thrown if View Helper cannot be recognized among registered ones</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_findFile">
+        <div class="location">at         line 794</div>
+        <code>                private    string
+    <strong>findFile</strong>(string|<abbr title="Next\View\optional">optional</abbr> $file = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Find given Template View file in defined Views Directories</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<abbr title="Next\View\optional">optional</abbr></td>
+                <td>$file</td>
+                <td>Template View File</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Template View Filepath</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a></td>
+                <td>Thrown if template Filepath wasn't provide and the auto-searching
+ feature through Template View FileSpec is turned off</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a></td>
+                <td>Thrown if there are no paths assigned to iterate and search for the file</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a></td>
+                <td>Thrown if a Template File could be found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_findFileBySpec">
+        <div class="location">at         line 893</div>
+        <code>                private    string
+    <strong>findFileBySpec</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Find the Template View File from FileSpec</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Template View FilePath from defined FileSpec</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>\Next\HTTP\Router\Router::getController()
+</td>
+                <td>\Next\HTTP\Router\Router::getMethod()</td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

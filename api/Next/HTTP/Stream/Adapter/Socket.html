@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Next\HTTP\Stream\Adapter\Socket | Next Framework</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Next_HTTP_Stream_Adapter_Socket" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Next Framework</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../../Next.html">Next</a></li><li class="backslash">\</li><li><a href="../../../../Next/HTTP.html">HTTP</a></li><li class="backslash">\</li><li><a href="../../../../Next/HTTP/Stream.html">Stream</a></li><li class="backslash">\</li><li><a href="../../../../Next/HTTP/Stream/Adapter.html">Adapter</a></li><li class="backslash">\</li><li>Socket</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Socket
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Socket</strong>        extends <a href="../../../../Next/HTTP/Stream/Adapter/AbstractAdapter.html"><abbr title="Next\HTTP\Stream\Adapter\AbstractAdapter">AbstractAdapter</abbr></a>        implements
+        <a href="../../../../Next/Validation/Verifiable.html"><abbr title="Next\Validation\Verifiable">Verifiable</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>An HTTP Stream Adapter with Stream Sockets (FileSystem)</p>                                </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>READ</td>
+                <td class="last">
+                    <p><em>Read-only</em></p>
+                    <p>Open the stream for reading, placing the pointer at the beginning
+    of the file</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>READ_WRITE</td>
+                <td class="last">
+                    <p><em>Read and Write.</em></p>
+                    <p>Open the stream for reading and writing, placing the pointer at the
+beginning of the file</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TRUNCATE_WRITE</td>
+                <td class="last">
+                    <p><em>Write-only.</em></p>
+                    <p>Open the stream for writing, placing the pointer at the beginning of the
+file and truncating the file to zero length.</p>
+
+<p>If the file does not exist, attempt to create it</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TRUNCATE_READ_WRITE</td>
+                <td class="last">
+                    <p><em>Read and Write.</em></p>
+                    <p>Open the stream for reading and writing, placing the pointer at the
+beginning of the file and truncating the file to zero length.</p>
+
+<p>If the file does not exist, attempt to create it</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>APPEND_WRITE</td>
+                <td class="last">
+                    <p><em>Append Write-only.</em></p>
+                    <p>Open the stream for writing, placing the pointer at the end of the file
+and truncating the file to zero length.</p>
+
+<p>If the file does not exist, attempt to create it</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>APPEND_READ_WRITE</td>
+                <td class="last">
+                    <p><em>Append Read and Write.</em></p>
+                    <p>Open the stream for writing, placing the pointer at the end of the file
+and truncating the file to zero length.</p>
+
+<p>If the file does not exist, attempt to create it</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EXCLUSIVE_WRITE</td>
+                <td class="last">
+                    <p><em>Exclusive Write.</em></p>
+                    <p>Create and open the stream for writing only, placing the pointer in the
+beginning of file.</p>
+
+<p>If the file does not exist doesn't try to create it but the opening
+routine returns FALSE em emits an E_WARNING error</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EXCLUSIVE_READ_WRITE</td>
+                <td class="last">
+                    <p><em>Exclusive Read and Write.</em></p>
+                    <p>Create and open the stream for writing only, placing the pointer in the
+beginning of file.</p>
+
+<p>If the file does not exist doesn't try to create it but the opening
+routine returns FALSE em emits an E_WARNING error</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONDITIONAL_WRITE</td>
+                <td class="last">
+                    <p><em>Conditional Read.</em></p>
+                    <p>The same as WRITE ONLY, but the file is not truncated nor any error is
+is raised if the file already exists (opposed to EXCLUSIVE).</p>
+
+<p>Useful for advisory locks before attempt to modify the file.</p>
+
+<p>E.g: A simplified but equivalent implementation of
+<code>\Next\HTTP\Stream\Writer::write()</code> that prevents a zero-length data to
+be written, warning the user about possible data loss.</p>
+
+<pre><code>function write( $string, $length = NULL ) {
+
+    $handler = fopen( './file.txt', 'w' );
+
+    if( $length !== NULL ) {
+
+        if( (int) $length === 0 ) {
+
+            throw new Exception(
+                'Using zero-length when writing data, will result in a blank file/empty stream'
+            );
+        }
+
+        $bytes = fwrite( $handler, $string, $length );
+
+    } else {
+
+       $bytes = fwrite( $handler, $string );
+    }
+
+    return $bytes;
+}
+
+try {
+
+    var_dump( write( 'some text', 0 ) );
+
+} catch( Exception $e ) {
+
+    echo $e -&gt; getMessage();
+}
+</code></pre>
+
+<p>Because of the WRITE mode (<code>w</code>) the code above will output the Exception
+message, but the file named <strong>file.txt</strong> will already be
+emptied not because of fwrite(), but because of fopen() already
+truncated the file</p>
+
+<p>By using the "c" or "c+" mode (see below), this does not happen.</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONDITIONAL_READ_WRITE</td>
+                <td class="last">
+                    <p><em>Conditional Read and Write.</em></p>
+                    <p>The same as READ and WRITE (w+), but the file is not truncated nor any
+error is raised if the file already exists (opposed to EXCLUSIVE)</p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_mode">
+                                                            private                    string
+                </td>
+                <td>$mode</td>
+                <td class="last">Opening Mode</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $filename, string|<abbr title="Next\HTTP\Stream\Adapter\optional">optional</abbr> $mode = self::READ, <a href="../../../../Next/HTTP/Stream/Context/Context.html"><abbr title="Next\HTTP\Stream\Context\Context">Context</abbr></a> $context = NULL)
+        
+                                            <p>HTTP Stream Socket Adapter Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_verify">verify</a>()
+        
+                                            <p>Verifies Object Integrity</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_open">open</a>()
+        
+                                            <p>Open a File (or URL)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_close">close</a>()
+        
+                                            <p>Close opened Stream</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_eof">eof</a>()
+        
+                                            <p>Test if Stream has achieved the End of File</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_tell">tell</a>()
+        
+                                            <p>Tell the current position of Stream Pointer</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_size">size</a>()
+        
+                                            <p>Get the size of Stream</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isOpened">isOpened</a>()
+        
+                                            <p>Check if Stream was opened, by testing its Resource</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMetaData">getMetaData</a>()
+        
+                                            <p>Get Stream Meta Data</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_seek">seek</a>(integer $position)
+        
+                                            <p>Seek Stream to given position</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_current">current</a>()
+        
+                                            <p>Return the current element</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer|boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_key">key</a>()
+        
+                                            <p>Return the key of the current element</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_next">next</a>()
+        
+                                            <p>Move forward to next element, if possible</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rewind">rewind</a>()
+        
+                                            <p>Rewind the Iterator to the first element</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_valid">valid</a>()
+        
+                                            <p>Check if current position is valid.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkPermissions">checkPermissions</a>()
+        
+                                            <p>Check if we have permissions to open the Stream
+in according to given Opening's Mode</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         line 209</div>
+        <code>                    
+    <strong>__construct</strong>(string $filename, string|<abbr title="Next\HTTP\Stream\Adapter\optional">optional</abbr> $mode = self::READ, <a href="../../../../Next/HTTP/Stream/Context/Context.html"><abbr title="Next\HTTP\Stream\Context\Context">Context</abbr></a> $context = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>HTTP Stream Socket Adapter Constructor</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td>File/URL to be opened</td>
+            </tr>
+                    <tr>
+                <td>string|<abbr title="Next\HTTP\Stream\Adapter\optional">optional</abbr></td>
+                <td>$mode</td>
+                <td>Opening Mode</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Next/HTTP/Stream/Context/Context.html"><abbr title="Next\HTTP\Stream\Context\Context">Context</abbr></a></td>
+                <td>$context</td>
+                <td>Optional Stream Context to be used</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_verify">
+        <div class="location">at         line 228</div>
+        <code>                    
+    <strong>verify</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Verifies Object Integrity</p>                                                </div>
+                <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Next/Exception/Exceptions/InvalidArgumentException.html"><abbr title="Next\Exception\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>Thrown if chosen opening mode is invalid</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_open">
+        <div class="location">at         line 243</div>
+        <code>                    
+    <strong>open</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Open a File (or URL)</p>                                                </div>
+                <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a></td>
+                <td>Thrown when unable to open the Stream</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_close">
+        <div class="location">at         line 289</div>
+        <code>                    
+    <strong>close</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Close opened Stream</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_eof">
+        <div class="location">at         line 312</div>
+        <code>                    
+    <strong>eof</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test if Stream has achieved the End of File</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tell">
+        <div class="location">at         line 332</div>
+        <code>                    
+    <strong>tell</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Tell the current position of Stream Pointer</p>                                                </div>
+                <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a></td>
+                <td>Thrown if unable to retrieve the current position of Stream Pointer
+ because the Stream is not valid or because an error occurred while
+ using fseek()</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_size">
+        <div class="location">at         line 352</div>
+        <code>                    
+    <strong>size</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the size of Stream</p>                                                </div>
+                <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a></td>
+                <td>Thrown if unable to retrieve Stream size because the Stream is not valid</td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>\Next\HTTP\Stream\Adapter\Adapter::valid()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isOpened">
+        <div class="location">at         line 371</div>
+        <code>                    
+    <strong>isOpened</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if Stream was opened, by testing its Resource</p>                                                </div>
+                <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Next/Exception/Exceptions/InvalidArgumentException.html"><abbr title="Next\Exception\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>Thrown if opened Stream is not a valid Resource.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMetaData">
+        <div class="location">at         line 395</div>
+        <code>                    
+    <strong>getMetaData</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Stream Meta Data</p>                                                </div>
+                <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a></td>
+                <td>Thrown if unable to retrieve Stream Metadata because the Stream is
+ not valid</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_seek">
+        <div class="location">at         line 422</div>
+        <code>                    integer
+    <strong>seek</strong>(integer $position)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Seek Stream to given position</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$position</td>
+                <td>Offset to seek Stream Pointer</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td>If Stream is valid and fseek() is a success, zero will be returned</p>
+
+<p>If Stream is not valid, -1 will be returned, just as
+ fomality</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a></td>
+                <td>Thrown if unable to seek to a Stream position because the Stream is not
+ valid or because an error occurred while using fseek()</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_current">
+        <div class="location">at         line 440</div>
+        <code>                    string|boolean
+    <strong>current</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the current element</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|boolean</td>
+            <td>If current element can be read, a string will be returned</p>
+
+<p>Otherwise, FALSE will.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_key">
+        <div class="location">at         line 451</div>
+        <code>                    integer|boolean
+    <strong>key</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the key of the current element</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer|boolean</td>
+            <td>If Pointer position can be retrieved, it will be returned
+ Otherwise — or if Stream is not valid — FALSE will</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_next">
+        <div class="location">at         line 471</div>
+        <code>                    
+    <strong>next</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Move forward to next element, if possible</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>Socket::seek()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>Socket::tell()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rewind">
+        <div class="location">at         line 490</div>
+        <code>                    boolean
+    <strong>rewind</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Rewind the Iterator to the first element</p>                    <p>In Stream context, moves pointer to beginning of file</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if Stream is valid and Pointer can be rewinded and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_valid">
+        <div class="location">at         line 510</div>
+        <code>                    boolean
+    <strong>valid</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if current position is valid.</p>                    <p>This method is called after Iterator::rewind() and Iterator::next()
+to check if the current position still valid</p>
+
+<p>This a "Interface Alias" for Next\HTTP\Stream\Adapter\Adapter::eof()</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if EOF (End-of-File) was NOT achieved</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>Next\HTTP\Stream\Adapter\Socket::eof()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkPermissions">
+        <div class="location">at         line 530</div>
+        <code>                private    boolean
+    <strong>checkPermissions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if we have permissions to open the Stream
+in according to given Opening's Mode</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>Always TRUE, because on failure an Exception is thrown</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a></td>
+                <td>Thrown if Stream is not readable and opening more requires readability</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a></td>
+                <td>Thrown if Stream is not writable — nor its parent directory — and
+ opening mode required writability</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

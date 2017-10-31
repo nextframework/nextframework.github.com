@@ -1,0 +1,1976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Next\HTTP\Request | Next Framework</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Next_HTTP_Request" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Next Framework</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Next.html">Next</a></li><li class="backslash">\</li><li><a href="../../Next/HTTP.html">HTTP</a></li><li class="backslash">\</li><li>Request</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Request
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Request</strong>        extends <a href="../../Next/Components/Object.html"><abbr title="Next\Components\Object">Object</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>The Request Class</p>                                </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>GET</td>
+                <td class="last">
+                    <p><em>GET Method</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PATCH</td>
+                <td class="last">
+                    <p><em>PATCH Method</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>POST</td>
+                <td class="last">
+                    <p><em>POST Method</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PUT</td>
+                <td class="last">
+                    <p><em>PUT Method</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DELETE</td>
+                <td class="last">
+                    <p><em>DELETE Method</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>HEAD</td>
+                <td class="last">
+                    <p><em>HEAD Method</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>OPTIONS</td>
+                <td class="last">
+                    <p><em>OPTIONS Method</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONNECT</td>
+                <td class="last">
+                    <p><em>CONNECT Method</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TRACE</td>
+                <td class="last">
+                    <p><em>TRACE Method</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SCHEME_HTTP</td>
+                <td class="last">
+                    <p><em>HTTP Scheme</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SCHEME_HTTPS</td>
+                <td class="last">
+                    <p><em>HTTPS Scheme</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>HTTP10</td>
+                <td class="last">
+                    <p><em>HTTP 1.0 Protocol</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>HTTP11</td>
+                <td class="last">
+                    <p><em>HTTP 1.1 Protocol</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PROTOCOL_REGEXP</td>
+                <td class="last">
+                    <p><em>HTTP Protocol RegExp</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_cookies">
+                                                            private                    <a href="../../Next/HTTP/Cookies.html"><abbr title="Next\HTTP\Cookies">Cookies</abbr></a>
+                </td>
+                <td>$cookies</td>
+                <td class="last">Cookies Management Object</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_headers">
+                                                            private                    <a href="../../Next/HTTP/Headers/Manager.html"><abbr title="Next\HTTP\Headers\Manager">Manager</abbr></a>
+                </td>
+                <td>$headers</td>
+                <td class="last">Headers Management Object</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_adapter">
+                                                            private                    <a href="../../Next/HTTP/Stream/Adapter/Adapter.html"><abbr title="Next\HTTP\Stream\Adapter\Adapter">Adapter</abbr></a>
+                </td>
+                <td>$adapter</td>
+                <td class="last">HTTP Stream Adapter</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_host">
+                                        protected                                        string
+                </td>
+                <td>$host</td>
+                <td class="last">Request Host</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_uri">
+                                        protected                                        string
+                </td>
+                <td>$uri</td>
+                <td class="last">Request URI</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_method">
+                                                            private                    string
+                </td>
+                <td>$method</td>
+                <td class="last">Request Method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_protocol">
+                                                            private                    <abbr title="Next\HTTP\stdClass">stdClass</abbr>
+                </td>
+                <td>$protocol</td>
+                <td class="last">Request Protocol</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_basepath">
+                                                            private                    string
+                </td>
+                <td>$basepath</td>
+                <td class="last">Request Basepath</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_queryData">
+                                                            private                    array
+                </td>
+                <td>$queryData</td>
+                <td class="last">Query Data (a.k.a. GET Params)</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_postData">
+                                                            private                    array
+                </td>
+                <td>$postData</td>
+                <td class="last">POST Data (a.k.a. POST Params)</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_rawPostData">
+                                                            private                    array
+                </td>
+                <td>$rawPostData</td>
+                <td class="last">RAW POST Data (a.k.a. non URLEncoded POST Params)</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_init">init</a>()
+        
+                                            <p>Additional Initialization</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHost">getHost</a>()
+        
+                                            <p>Get Host</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Next/HTTP/Request.html"><abbr title="Next\HTTP\Request">Request</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setBasepath">setBasepath</a>(string $basepath)
+        
+                                            <p>Set BasePath</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBasepath">getBasepath</a>()
+        
+                                            <p>Get Basepath</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRequestURI">getRequestURI</a>(boolean $stripBasePath = TRUE)
+        
+                                            <p>Get Request Uri</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getURL">getURL</a>(boolean|<abbr title="Next\HTTP\optional">optional</abbr> $includeSchema = TRUE)
+        
+                                            <p>Get Full URL</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBaseURL">getBaseURL</a>()
+        
+                                            <p>Get Base URL</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getReferrer">getReferrer</a>()
+        
+                                            <p>Get Request Referrer</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Next\HTTP\stdClass">stdClass</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProtocol">getProtocol</a>(boolean|<abbr title="Next\HTTP\optional">optional</abbr> $includeVersion = FALSE)
+        
+                                            <p>Get Request Protocol</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRequestMethod">getRequestMethod</a>()
+        
+                                            <p>Get Request Method</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isGet">isGet</a>()
+        
+                                            <p>Is this a GET method request?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isPatch">isPatch</a>()
+        
+                                            <p>Is this a PATCH method request?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isPost">isPost</a>()
+        
+                                            <p>Is this a POST method request?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isPut">isPut</a>()
+        
+                                            <p>Is this a PUT method request?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isDelete">isDelete</a>()
+        
+                                            <p>Is this a DELETE method request?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isHead">isHead</a>()
+        
+                                            <p>Is this a HEAD method request?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isOptions">isOptions</a>()
+        
+                                            <p>Is this an OPTIONS method request?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isConnect">isConnect</a>()
+        
+                                            <p>Is this a CONNECT method request?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isTrace">isTrace</a>()
+        
+                                            <p>Is this a TRACE method request?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isAjax">isAjax</a>()
+        
+                                            <p>Check if we're dealing with an AJAX Request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isFlash">isFlash</a>()
+        
+                                            <p>Check if we're dealing with a Flash Request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isSsl">isSsl</a>()
+        
+                                            <p>Check if we're under a Secure (HTTPS) connection</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isCli">isCli</a>()
+        
+                                            <p>Check if we're runing under Command Line (CLI)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Next/HTTP/Request.html"><abbr title="Next\HTTP\Request">Request</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setQuery">setQuery</a>(array $data)
+        
+                                            <p>Set Query Data a.k.a. GET Data</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQuery">getQuery</a>(string|<abbr title="Next\HTTP\optional">optional</abbr> $key = NULL)
+        
+                                            <p>Get Query Data (a.k.a. GET Data)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Next/HTTP/Request.html"><abbr title="Next\HTTP\Request">Request</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPostData">setPostData</a>(array|string $field, mixed|<abbr title="Next\HTTP\optional">optional</abbr> $value = NULL)
+        
+                                            <p>Set POST Data</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Next/HTTP/Request.html"><abbr title="Next\HTTP\Request">Request</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRawPostData">setRawPostData</a>(array|string $field, mixed|<abbr title="Next\HTTP\optional">optional</abbr> $value = NULL)
+        
+                                            <p>Set RAW POST Data</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPost">getPost</a>(string|<abbr title="Next\HTTP\optional">optional</abbr> $key = NULL)
+        
+                                            <p>Get POST Data</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|NULL
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRawData">getRawData</a>()
+        
+                                            <p>Get Raw Data</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getServer">getServer</a>(string|<abbr title="Next\HTTP\optional">optional</abbr> $key = NULL)
+        
+                                            <p>Get SERVER Data</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEnv">getEnv</a>(string|<abbr title="Next\HTTP\optional">optional</abbr> $key = NULL, boolean|<abbr title="Next\HTTP\option">option</abbr> $strict = FALSE)
+        
+                                            <p>Get Environment Data</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getData">getData</a>(array $source, string|<abbr title="Next\HTTP\optional">optional</abbr> $key = NULL)
+        
+                                            <p>Wrapper Method for Data Retrieving</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_send">send</a>()
+        
+                                            <p>Send the Request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Next/HTTP/Stream/Adapter/Adapter.html"><abbr title="Next\HTTP\Stream\Adapter\Adapter">Adapter</abbr></a>|NULL
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAdapter">getAdapter</a>()
+        
+                                            <p>Get Connection Adapter, available only in External Requests</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOptions">setOptions</a>()
+        
+                                            <p>Set class options</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer|NULL
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProtocolVersion">getProtocolVersion</a>()
+        
+                                            <p>Get Request Protocol Version</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sendPost">sendPost</a>()
+        
+                                            <p>Wrapper method for POST Request routines</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">at         line 253</div>
+        <code>            protected        
+    <strong>init</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Additional Initialization</p>                    <p>If only one argument is provided, it'll be checked against
+\Next\HTTP\Stream\Adapter\Adapter.</p>
+
+<p>If it passes, it will be used and Request URI will be retrieved
+from it</p>
+
+<p>Otherwise, this argument will be THE Request URI</p>
+
+<p>The second argument is the Request Method, also optional.</p>
+
+<p>If no arguments are entered (case of Routed Requests), default
+values will take place: REQUEST_URI from $_SERVER and GET as
+Request Method</p>                            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHost">
+        <div class="location">at         line 400</div>
+        <code>                    string
+    <strong>getHost</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Host</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Request Host</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBasepath">
+        <div class="location">at         line 413</div>
+        <code>                    <a href="../../Next/HTTP/Request.html"><abbr title="Next\HTTP\Request">Request</abbr></a>
+    <strong>setBasepath</strong>(string $basepath)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set BasePath</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$basepath</td>
+                <td>Request Base Path</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/HTTP/Request.html"><abbr title="Next\HTTP\Request">Request</abbr></a></td>
+            <td>Request Object (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBasepath">
+        <div class="location">at         line 428</div>
+        <code>                    string
+    <strong>getBasepath</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Basepath</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>The BasePath</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRequestURI">
+        <div class="location">at         line 441</div>
+        <code>                    string
+    <strong>getRequestURI</strong>(boolean $stripBasePath = TRUE)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Request Uri</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$stripBasePath</td>
+                <td>If TRUE removes what is defined in Request:basepath property</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>The Request URI</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getURL">
+        <div class="location">at         line 470</div>
+        <code>                    string
+    <strong>getURL</strong>(boolean|<abbr title="Next\HTTP\optional">optional</abbr> $includeSchema = TRUE)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Full URL</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean|<abbr title="Next\HTTP\optional">optional</abbr></td>
+                <td>$includeSchema</td>
+                <td>Defines whether or not the HTTP Schema, if available, will be included
+ or not in the final string. Defaults to TRUE</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>The full URL</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBaseURL">
+        <div class="location">at         line 496</div>
+        <code>                    string
+    <strong>getBaseURL</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Base URL</p>                    <p>Base URL is the union of: Scheme (HTTP, HTTPS, FTP...), HTTP Host and Base Path</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>The Base URL</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getReferrer">
+        <div class="location">at         line 523</div>
+        <code>                    string
+    <strong>getReferrer</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Request Referrer</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>The Request Referrer coming from $_SERVER</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProtocol">
+        <div class="location">at         line 542</div>
+        <code>                    <abbr title="Next\HTTP\stdClass">stdClass</abbr>
+    <strong>getProtocol</strong>(boolean|<abbr title="Next\HTTP\optional">optional</abbr> $includeVersion = FALSE)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Request Protocol</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean|<abbr title="Next\HTTP\optional">optional</abbr></td>
+                <td>$includeVersion</td>
+                <td>If set as TRUE and Protocol Version hasn't been detected
+ during Additional Initialization stage then
+ <code>\Next\HTTP\Request::getProtocolVersion()</code>
+ will be invoked in order to <em>try to</em> provide Server Protocol
+ version too</p>
+
+<p>This may be a little slow! u.u'</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Next\HTTP\stdClass">stdClass</abbr></td>
+            <td>Server Protocol Informations</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRequestMethod">
+        <div class="location">at         line 559</div>
+        <code>                    string
+    <strong>getRequestMethod</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Request Method</p>                    <p>Just a formality, since its use is not very necessary</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>The Request Method</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isGet">
+        <div class="location">at         line 569</div>
+        <code>                    boolean
+    <strong>isGet</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is this a GET method request?</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if current Request is a GET Request and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isPatch">
+        <div class="location">at         line 579</div>
+        <code>                    boolean
+    <strong>isPatch</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is this a PATCH method request?</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if current Request is a PATCH Request and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isPost">
+        <div class="location">at         line 589</div>
+        <code>                    boolean
+    <strong>isPost</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is this a POST method request?</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if current Request is a POST Request and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isPut">
+        <div class="location">at         line 599</div>
+        <code>                    boolean
+    <strong>isPut</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is this a PUT method request?</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if current Request is a PUT Request and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDelete">
+        <div class="location">at         line 609</div>
+        <code>                    boolean
+    <strong>isDelete</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is this a DELETE method request?</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if current Request is a DELETE Request and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isHead">
+        <div class="location">at         line 619</div>
+        <code>                    boolean
+    <strong>isHead</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is this a HEAD method request?</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if current Request is a HEAD Request and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isOptions">
+        <div class="location">at         line 629</div>
+        <code>                    boolean
+    <strong>isOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is this an OPTIONS method request?</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if current Request is an OPTIONS Request and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isConnect">
+        <div class="location">at         line 639</div>
+        <code>                    boolean
+    <strong>isConnect</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is this a CONNECT method request?</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if current Request is a CONNECT Request and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isTrace">
+        <div class="location">at         line 649</div>
+        <code>                    boolean
+    <strong>isTrace</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is this a TRACE method request?</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if current Request is a TRACE Request and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isAjax">
+        <div class="location">at         line 659</div>
+        <code>                    boolean
+    <strong>isAjax</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if we're dealing with an AJAX Request</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is an AJAX Request and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isFlash">
+        <div class="location">at         line 675</div>
+        <code>                    boolean
+    <strong>isFlash</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if we're dealing with a Flash Request</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is a Flash Request and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isSsl">
+        <div class="location">at         line 691</div>
+        <code>                    boolean
+    <strong>isSsl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if we're under a Secure (HTTPS) connection</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is under an SSL Request and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isCli">
+        <div class="location">at         line 701</div>
+        <code>                    boolean
+    <strong>isCli</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if we're runing under Command Line (CLI)</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is under Command Line (CLI) and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setQuery">
+        <div class="location">at         line 714</div>
+        <code>                    <a href="../../Next/HTTP/Request.html"><abbr title="Next\HTTP\Request">Request</abbr></a>
+    <strong>setQuery</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set Query Data a.k.a. GET Data</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td>Params to be used as Dynamic (a.k.a. GET) Params</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/HTTP/Request.html"><abbr title="Next\HTTP\Request">Request</abbr></a></td>
+            <td>Request Instance (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQuery">
+        <div class="location">at         line 734</div>
+        <code>                    mixed
+    <strong>getQuery</strong>(string|<abbr title="Next\HTTP\optional">optional</abbr> $key = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Query Data (a.k.a. GET Data)</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<abbr title="Next\HTTP\optional">optional</abbr></td>
+                <td>$key</td>
+                <td>Desired Dynamic Param</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>If <strong>$key</strong> isn't set or (i.e. <code>NULL</code>), all POST Data (i.e. $_POST)
+ will be returned as array</p>
+
+<p>If defined key exists as Post Data it'll be returned, if not <code>NULL</code>
+ is returned instead</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPostData">
+        <div class="location">at         line 754</div>
+        <code>                    <a href="../../Next/HTTP/Request.html"><abbr title="Next\HTTP\Request">Request</abbr></a>
+    <strong>setPostData</strong>(array|string $field, mixed|<abbr title="Next\HTTP\optional">optional</abbr> $value = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set POST Data</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$field</td>
+                <td>POST Field</td>
+            </tr>
+                    <tr>
+                <td>mixed|<abbr title="Next\HTTP\optional">optional</abbr></td>
+                <td>$value</td>
+                <td>Field Value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/HTTP/Request.html"><abbr title="Next\HTTP\Request">Request</abbr></a></td>
+            <td>Request Instance (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Next/Exception/Exceptions/BadMethodCallException.html"><abbr title="Next\Exception\Exceptions\BadMethodCallException">BadMethodCallException</abbr></a></td>
+                <td><strong>$value</strong> argument is NULL, case in which a
+ possible RAW Data should be considered instead</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRawPostData">
+        <div class="location">at         line 796</div>
+        <code>                    <a href="../../Next/HTTP/Request.html"><abbr title="Next\HTTP\Request">Request</abbr></a>
+    <strong>setRawPostData</strong>(array|string $field, mixed|<abbr title="Next\HTTP\optional">optional</abbr> $value = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set RAW POST Data</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$field</td>
+                <td>Raw POST Field</td>
+            </tr>
+                    <tr>
+                <td>mixed|<abbr title="Next\HTTP\optional">optional</abbr></td>
+                <td>$value</td>
+                <td>Field Value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/HTTP/Request.html"><abbr title="Next\HTTP\Request">Request</abbr></a></td>
+            <td>Request Instance (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPost">
+        <div class="location">at         line 838</div>
+        <code>                    mixed
+    <strong>getPost</strong>(string|<abbr title="Next\HTTP\optional">optional</abbr> $key = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get POST Data</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<abbr title="Next\HTTP\optional">optional</abbr></td>
+                <td>$key</td>
+                <td>Desired POST Param</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>If <strong>$key</strong> isn't set or (i.e. <code>NULL</code>), all POST Data (i.e. $_POST)
+ will be returned as array</p>
+
+<p>If defined key exists as Post Data it'll be returned, if not <code>NULL</code>
+ is returned instead</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Next/Exception/Exceptions/BadMethodCallException.html"><abbr title="Next\Exception\Exceptions\BadMethodCallException">BadMethodCallException</abbr></a></td>
+                <td>Throw if trying to retried Post Data while not being in a POST Request</td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>\Next\HTTP\Request::getData()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRawData">
+        <div class="location">at         line 857</div>
+        <code>                    string|NULL
+    <strong>getRawData</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Raw Data</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|NULL</td>
+            <td>If there is RAW Data to return, it will be
+ If not or if RAW Data is made of blanks, NULL is returned</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getServer">
+        <div class="location">at         line 877</div>
+        <code>                    mixed
+    <strong>getServer</strong>(string|<abbr title="Next\HTTP\optional">optional</abbr> $key = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get SERVER Data</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<abbr title="Next\HTTP\optional">optional</abbr></td>
+                <td>$key</td>
+                <td>Desired SERVER Param</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>If <strong>$key</strong> isn't set or (i.e. <code>NULL</code>), all POST Data (i.e. $_POST)
+ will be returned as array</p>
+
+<p>If defined key exists as Post Data it'll be returned, if not <code>NULL</code>
+ is returned instead</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEnv">
+        <div class="location">at         line 899</div>
+        <code>                    mixed
+    <strong>getEnv</strong>(string|<abbr title="Next\HTTP\optional">optional</abbr> $key = NULL, boolean|<abbr title="Next\HTTP\option">option</abbr> $strict = FALSE)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Environment Data</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<abbr title="Next\HTTP\optional">optional</abbr></td>
+                <td>$key</td>
+                <td>Desired environment variable</td>
+            </tr>
+                    <tr>
+                <td>boolean|<abbr title="Next\HTTP\option">option</abbr></td>
+                <td>$strict</td>
+                <td>Conditions whether or not the search will be case-sensitive.
+ Defaults to FALSE because $_ENV may be empty if, for some reason, it
+ has been explicitly disabled in PHP.INI 'variables_order directive'</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>If <strong>$key</strong> isn't set or (i.e. <code>NULL</code>), all POST Data (i.e. $_POST)
+ will be returned as array</p>
+
+<p>If defined key exists as Post Data it'll be returned, if not <code>NULL</code>
+ is returned instead</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getData">
+        <div class="location">at         line 927</div>
+        <code>                    mixed
+    <strong>getData</strong>(array $source, string|<abbr title="Next\HTTP\optional">optional</abbr> $key = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Wrapper Method for Data Retrieving</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$source</td>
+                <td>Data-source</td>
+            </tr>
+                    <tr>
+                <td>string|<abbr title="Next\HTTP\optional">optional</abbr></td>
+                <td>$key</td>
+                <td>Desired Param</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>If <strong>$key</strong> isn't set or (i.e. <code>NULL</code>), all POST Data (i.e. $_POST)
+ will be returned as array</p>
+
+<p>If defined key exists as Post Data it'll be returned, if not <code>NULL</code>
+ is returned instead</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_send">
+        <div class="location">at         line 942</div>
+        <code>                    <a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a>
+    <strong>send</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Send the Request</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a></td>
+            <td>HTTP Response Object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAdapter">
+        <div class="location">at         line 1039</div>
+        <code>                    <a href="../../Next/HTTP/Stream/Adapter/Adapter.html"><abbr title="Next\HTTP\Stream\Adapter\Adapter">Adapter</abbr></a>|NULL
+    <strong>getAdapter</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Connection Adapter, available only in External Requests</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/HTTP/Stream/Adapter/Adapter.html"><abbr title="Next\HTTP\Stream\Adapter\Adapter">Adapter</abbr></a>|NULL</td>
+            <td>On external Requests, an Object instance of
+ <code>\Next\HTTP\Stream\Adapter\Adapter</code> will be returned.
+ On internal (i.e routed) Requests, nothing is returned</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOptions">
+        <div class="location">at         line 1051</div>
+        <code>                    
+    <strong>setOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set class options</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProtocolVersion">
+        <div class="location">at         line 1082</div>
+        <code>                private    integer|NULL
+    <strong>getProtocolVersion</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Request Protocol Version</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer|NULL</td>
+            <td>Protocol version if able to match and NULL otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendPost">
+        <div class="location">at         line 1103</div>
+        <code>                private    
+    <strong>sendPost</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Wrapper method for POST Request routines</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

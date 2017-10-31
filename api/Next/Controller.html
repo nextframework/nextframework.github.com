@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Next\Controller | Next Framework</title>
+
+            <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/sami.css">
+        <script src="../js/jquery-1.11.1.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/typeahead.min.js"></script>
+        <script src="../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="namespace" data-name="namespace:Next_Controller" data-root-path="../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">Next Framework</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../classes.html">Classes</a></li>
+                                            <li><a href="../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../interfaces.html">Interfaces</a></li>
+                    <li><a href="../traits.html">Traits</a></li>
+                    <li><a href="../doc-index.html">Index</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                <div class="namespace-breadcrumbs">
+        <ol class="breadcrumb">
+            <li><span class="label label-default">Namespace</span></li>
+                    <li><a href="../Next.html">Next</a></li><li class="backslash">\</li><li><a href="../Next/Controller.html">Controller</a></li><li class="backslash">\</li>
+        </ol>
+    </div>
+            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>Next\Controller</h1>
+    </div>
+
+    
+            <h2>Classes</h2>
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../Next/Controller/Chain.html"><abbr title="Next\Controller\Chain">Chain</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    A Collection for Controller Objects
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../Next/Controller/Controller.html"><abbr title="Next\Controller\Controller">Controller</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Base structure for all Controllers to be used in association with an
+Application created with Next Framework
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../Next/Controller/ControllerException.html"><abbr title="Next\Controller\ControllerException">ControllerException</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    The ControllerException Class outlines the Error Standardization Concept
+through which all errors that must be sent to the UI by a Controller
+is automatically done by the Dispatcher requiring the developer only to
+pretty much only echo a Template Variable
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../Next/Controller/Dispatcher.html"><abbr title="Next\Controller\Dispatcher">Dispatcher</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    The Controller Dispatcher reflects over Application Controllers,
+adding Route Arguments as GET Parameters to their associated Request Object
+and returning its Response Object with the the contents of the Action Method
+from the matching Page Controller
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../Next/Controller/Front.html"><abbr title="Next\Controller\Front">Front</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    The Front Controller iterates through all Applications in a Chain trying
+to match, through their associated Router, if any, a Page Controller to
+dispatch
+                </div>
+            </div>
+            </div>
+    
+    
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

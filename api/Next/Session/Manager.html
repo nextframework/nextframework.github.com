@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Next\Session\Manager | Next Framework</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Next_Session_Manager" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Next Framework</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Next.html">Next</a></li><li class="backslash">\</li><li><a href="../../Next/Session.html">Session</a></li><li class="backslash">\</li><li>Manager</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Manager
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Manager</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>The Session Manager handles everything Session-related, from its
+initialization to its destruction, including custom Session Handlers</p>                                </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_instance">
+                    static                    protected                                        <abbr title="Next\Session\Session">Session</abbr>
+                </td>
+                <td>$instance</td>
+                <td class="last">Session Instance</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_savePath">
+                                        protected                                        string
+                </td>
+                <td>$savePath</td>
+                <td class="last">Session Save Path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_lifetime">
+                    static                    protected                                        
+                </td>
+                <td>$lifetime</td>
+                <td class="last">Session Max Lifetime</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_handlers">
+                                        protected                                        <a href="../../Next/Session/Handlers.html"><abbr title="Next\Session\Handlers">Handlers</abbr></a>
+                </td>
+                <td>$handlers</td>
+                <td class="last">Session Handlers Manager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_environment">
+                                        protected                                        <a href="../../Next/Session/Environment.html"><abbr title="Next\Session\Environment">Environment</abbr></a>
+                </td>
+                <td>$environment</td>
+                <td class="last">Default Session Environment</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___clone">__clone</a>()
+        
+                                            <p>Enforcing Singleton. Disallow cloning</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>()
+        
+                                            <p>Session Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Next/Session/Manager.html"><abbr title="Next\Session\Manager">Manager</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_start">start</a>(string|<abbr title="Next\Session\optional">optional</abbr> $name = NULL, string|<abbr title="Next\Session\optional">optional</abbr> $id = NULL)
+        
+                                            <p>Session Object Starter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_init">init</a>(string|<abbr title="Next\Session\optional">optional</abbr> $name = NULL, string|<abbr title="Next\Session\optional">optional</abbr> $id = NULL)
+        
+                                            <p>Session Starter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_destroy">destroy</a>()
+        
+                                            <p>Destroy the Session and the Session Object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Next\Session\Session">Session</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_regenerateID">regenerateID</a>()
+        
+                                            <p>Regenerate Session ID</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_commit">commit</a>()
+        
+                                            <p>Commit current Session Data</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSessionData">getSessionData</a>()
+        
+                                            <p>Get current Session Data</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Next/Session/Handlers.html"><abbr title="Next\Session\Handlers">Handlers</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHandlersManager">getHandlersManager</a>()
+        
+                                            <p>Get Handlers Management Object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Next/Session/Environment.html"><abbr title="Next\Session\Environment">Environment</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEnvironment">getEnvironment</a>()
+        
+                                            <p>Get default Session Environment</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSessionName">getSessionName</a>()
+        
+                                            <p>Get Session Name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setSessionName">setSessionName</a>(string $sessionName)
+        
+                                            <p>Set Session Name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSessionID">getSessionID</a>()
+        
+                                            <p>Get Session ID</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setSessionID">setSessionID</a>(string $id)
+        
+                                            <p>Set Session ID</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSessionLifetime">getSessionLifetime</a>()
+        
+                                            <p>Get Session Cache Lifetime</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setSessionLifetime">setSessionLifetime</a>(integer $lifetime)
+        
+                                            <p>Set Session Cache Lifetime</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSessionSavePath">getSessionSavePath</a>()
+        
+                                            <p>Get Session Save Path</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Next\Session\Session">Session</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setSessionSavePath">setSessionSavePath</a>(string $savePath)
+        
+                                            <p>Set Session Save Path</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___clone">
+        <div class="location">at         line 67</div>
+        <code>                private    
+    <strong>__clone</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enforcing Singleton. Disallow cloning</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         line 72</div>
+        <code>                private    
+    <strong>__construct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Session Constructor</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_start">
+        <div class="location">at         line 93</div>
+        <code>        static            <a href="../../Next/Session/Manager.html"><abbr title="Next\Session\Manager">Manager</abbr></a>
+    <strong>start</strong>(string|<abbr title="Next\Session\optional">optional</abbr> $name = NULL, string|<abbr title="Next\Session\optional">optional</abbr> $id = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Session Object Starter</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<abbr title="Next\Session\optional">optional</abbr></td>
+                <td>$name</td>
+                <td>Optional Session Name</td>
+            </tr>
+                    <tr>
+                <td>string|<abbr title="Next\Session\optional">optional</abbr></td>
+                <td>$id</td>
+                <td>Optional Session ID.
+ Mostly used by custom Session Handlers</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/Session/Manager.html"><abbr title="Next\Session\Manager">Manager</abbr></a></td>
+            <td>Session Manager Instance</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Next\Session\SessionException">SessionException</abbr></td>
+                <td>Session has been already initialized, through a manually
+ called session_start()</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">at         line 151</div>
+        <code>                    
+    <strong>init</strong>(string|<abbr title="Next\Session\optional">optional</abbr> $name = NULL, string|<abbr title="Next\Session\optional">optional</abbr> $id = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Session Starter</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<abbr title="Next\Session\optional">optional</abbr></td>
+                <td>$name</td>
+                <td>Optional Session Name</td>
+            </tr>
+                    <tr>
+                <td>string|<abbr title="Next\Session\optional">optional</abbr></td>
+                <td>$id</td>
+                <td>Optional Session ID.
+ Mostly used by custom Session Handlers</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Next\Session\SessionException">SessionException</abbr></td>
+                <td>session_start() failed, returning FALSE</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_destroy">
+        <div class="location">at         line 183</div>
+        <code>                    
+    <strong>destroy</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Destroy the Session and the Session Object</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_regenerateID">
+        <div class="location">at         line 224</div>
+        <code>                    <abbr title="Next\Session\Session">Session</abbr>
+    <strong>regenerateID</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Regenerate Session ID</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Next\Session\Session">Session</abbr></td>
+            <td>Session Object (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_commit">
+        <div class="location">at         line 234</div>
+        <code>                    
+    <strong>commit</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Commit current Session Data</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSessionData">
+        <div class="location">at         line 246</div>
+        <code>                    string
+    <strong>getSessionData</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get current Session Data</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Encoded Session Data</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHandlersManager">
+        <div class="location">at         line 256</div>
+        <code>                    <a href="../../Next/Session/Handlers.html"><abbr title="Next\Session\Handlers">Handlers</abbr></a>
+    <strong>getHandlersManager</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Handlers Management Object</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/Session/Handlers.html"><abbr title="Next\Session\Handlers">Handlers</abbr></a></td>
+            <td>Session Handler Management Object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEnvironment">
+        <div class="location">at         line 266</div>
+        <code>                    <a href="../../Next/Session/Environment.html"><abbr title="Next\Session\Environment">Environment</abbr></a>
+    <strong>getEnvironment</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get default Session Environment</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/Session/Environment.html"><abbr title="Next\Session\Environment">Environment</abbr></a></td>
+            <td>Default Session Environment</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSessionName">
+        <div class="location">at         line 278</div>
+        <code>                    string
+    <strong>getSessionName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Session Name</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Session Name</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSessionName">
+        <div class="location">at         line 288</div>
+        <code>        static            
+    <strong>setSessionName</strong>(string $sessionName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set Session Name</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$sessionName</td>
+                <td>Session Name</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSessionID">
+        <div class="location">at         line 298</div>
+        <code>                    string
+    <strong>getSessionID</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Session ID</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Session ID</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSessionID">
+        <div class="location">at         line 308</div>
+        <code>        static            
+    <strong>setSessionID</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set Session ID</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>Session ID</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSessionLifetime">
+        <div class="location">at         line 318</div>
+        <code>                    integer
+    <strong>getSessionLifetime</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Session Cache Lifetime</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td>Session Max Lifetime</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSessionLifetime">
+        <div class="location">at         line 328</div>
+        <code>                    
+    <strong>setSessionLifetime</strong>(integer $lifetime)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set Session Cache Lifetime</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$lifetime</td>
+                <td>Session Lifetime</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSessionSavePath">
+        <div class="location">at         line 341</div>
+        <code>                    string
+    <strong>getSessionSavePath</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Session Save Path</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Session SavePath</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSessionSavePath">
+        <div class="location">at         line 354</div>
+        <code>                    <abbr title="Next\Session\Session">Session</abbr>
+    <strong>setSessionSavePath</strong>(string $savePath)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set Session Save Path</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$savePath</td>
+                <td>Session Save Path</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Next\Session\Session">Session</abbr></td>
+            <td>Session Object (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

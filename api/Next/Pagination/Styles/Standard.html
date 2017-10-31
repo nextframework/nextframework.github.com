@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Next\Pagination\Styles\Standard | Next Framework</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Next_Pagination_Styles_Standard" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Next Framework</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Next.html">Next</a></li><li class="backslash">\</li><li><a href="../../../Next/Pagination.html">Pagination</a></li><li class="backslash">\</li><li><a href="../../../Next/Pagination/Styles.html">Styles</a></li><li class="backslash">\</li><li>Standard</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Standard
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Standard</strong>        extends <a href="../../../Next/Components/Object.html"><abbr title="Next\Components\Object">Object</abbr></a>        implements
+        <a href="../../../Next/Validation/Verifiable.html"><abbr title="Next\Validation\Verifiable">Verifiable</abbr></a>, <a href="../../../Next/Pagination/Styles/Style.html"><abbr title="Next\Pagination\Styles\Style">Style</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>The 'Standard' Pagination Style builds an Interval with a configurable amount
+of items before and after the Current Page, resembling a curvy mountain</p>                                </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_parameters">
+                                        protected                                        array
+                </td>
+                <td>$parameters</td>
+                <td class="last">Parameter Options Definition</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_paginator">
+                                        protected                                        <abbr title="Next\Pagination\Styles\Next\Pagination\Paginator">Paginator</abbr>
+                </td>
+                <td>$paginator</td>
+                <td class="last">Paginator Object</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_lowerBound">
+                                        protected                                        integer
+                </td>
+                <td>$lowerBound</td>
+                <td class="last">Lowest Pagination Interval value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_upperBound">
+                                        protected                                        integer
+                </td>
+                <td>$upperBound</td>
+                <td class="last">Highest Pagination Interval value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_count">
+                                        protected                                        integer
+                </td>
+                <td>$count</td>
+                <td class="last">Total of Records in Pagination Style Interval</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPaginator">setPaginator</a>(<a href="../../../Next/Pagination/Paginator.html"><abbr title="Next\Pagination\Paginator">Paginator</abbr></a> $paginator)
+        
+                                            <p>Set Paginator Object to read Pagination Informations from</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLowerBound">getLowerBound</a>()
+        
+                                            <p>Get the Lower Bound of a Subset.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUpperBound">getUpperBound</a>()
+        
+                                            <p>Get the Upper Bound of a Subset.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getInterval">getInterval</a>()
+        
+                                            <p>Get an Interval.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_verify">verify</a>()
+        
+                                            <p>Verifies Object Integrity</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_count">count</a>()
+        
+                                            <p>Count the number of elements within the Interval</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setPaginator">
+        <div class="location">at         line 84</div>
+        <code>                    
+    <strong>setPaginator</strong>(<a href="../../../Next/Pagination/Paginator.html"><abbr title="Next\Pagination\Paginator">Paginator</abbr></a> $paginator)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set Paginator Object to read Pagination Informations from</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Next/Pagination/Paginator.html"><abbr title="Next\Pagination\Paginator">Paginator</abbr></a></td>
+                <td>$paginator</td>
+                <td>Paginator Object</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLowerBound">
+        <div class="location">at         line 105</div>
+        <code>                    
+    <strong>getLowerBound</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the Lower Bound of a Subset.</p>                    <p>A Lower Bound is the lowest 'k' element within all 's' elements
+in a partially ordered set 'P' of a subset 'S' such as
+'k' ≤ 's' for each and all 's within 'S'</p>
+
+<p>In Pagination Interval this means the Lowest Pagination Interval value</p>                            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUpperBound">
+        <div class="location">at         line 124</div>
+        <code>                    
+    <strong>getUpperBound</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the Upper Bound of a Subset.</p>                    <p>An Upper Bound is the highest 'k' element within all 's' elements
+in a partially ordered set 'P' of a subset 'S' such as
+'k' ≥ 's' for each and all 's within 'S'</p>
+
+<p>In Pagination Interval this means the Highest Pagination Interval value</p>                            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInterval">
+        <div class="location">at         line 149</div>
+        <code>                    
+    <strong>getInterval</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an Interval.</p>                    <p>In mathematics, a (real) interval is a set of real numbers with
+the property that any number that lies between two numbers in
+the set is also included in the set. For example, the set of all
+numbers x satisfying 0 ≤ x ≤ 1 is an interval which contains 0 and 1,
+as well as all numbers between them.</p>
+
+<p>To put it simple, this means a range between the Lower Bound and the Upper Bound</p>                            </div>
+                <div class="tags">
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>https://en.wikipedia.org/wiki/Interval_(mathematics)</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_verify">
+        <div class="location">at         line 174</div>
+        <code>                    
+    <strong>verify</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Verifies Object Integrity</p>                                                </div>
+                <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Next\Pagination\Styles\Next\Exception\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></td>
+                <td>Thrown if initial value of Parameter Option 'before' is not an
+ integer or it's less than 1</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_count">
+        <div class="location">at         line 192</div>
+        <code>                    integer
+    <strong>count</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Count the number of elements within the Interval</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td>Number of elements within the Interval</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

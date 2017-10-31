@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Next\HTTP\Cookies | Next Framework</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Next_HTTP_Cookies" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Next Framework</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Next.html">Next</a></li><li class="backslash">\</li><li><a href="../../Next/HTTP.html">HTTP</a></li><li class="backslash">\</li><li>Cookies</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Cookies
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Cookies</strong>        extends <a href="../../Next/Components/Object.html"><abbr title="Next\Components\Object">Object</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>The HTTP Cookies Management Class</p>                                </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_cookies">
+                                                            private                    <a href="../../Next/Components/Collections/Lists.html"><abbr title="Next\Components\Collections\Lists">Lists</abbr></a>
+                </td>
+                <td>$cookies</td>
+                <td class="last">Registered Cookies</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_init">init</a>()
+        
+                                            <p>Additional Initialization</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Next/HTTP/Cookies.html"><abbr title="Next\HTTP\Cookies">Cookies</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addCookie">addCookie</a>(string|array $cookie, string|<abbr title="Next\HTTP\optional">optional</abbr> $value = NULL)
+        
+                                            <p>Add a Coookie</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Next/Components/Collections/Lists.html"><abbr title="Next\Components\Collections\Lists">Lists</abbr></a>|<a href="../../Next/HTTP/Headers/Request/Cookie.html"><abbr title="Next\HTTP\Headers\Request\Cookie">Cookie</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCookies">getCookies</a>(boolean $asString = FALSE)
+        
+                                            <p>Get registered Cookies</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Next/HTTP/Cookies.html"><abbr title="Next\HTTP\Cookies">Cookies</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearCookies">clearCookies</a>()
+        
+                                            <p>Empties Request Cookies</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">at         line 38</div>
+        <code>            protected        
+    <strong>init</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Additional Initialization</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addCookie">
+        <div class="location">at         line 59</div>
+        <code>                    <a href="../../Next/HTTP/Cookies.html"><abbr title="Next\HTTP\Cookies">Cookies</abbr></a>
+    <strong>addCookie</strong>(string|array $cookie, string|<abbr title="Next\HTTP\optional">optional</abbr> $value = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a Coookie</p>                    <p>Cookie definition: <em>cookiename[=cookievalue]</em></p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$cookie</td>
+                <td>Cookie to add</td>
+            </tr>
+                    <tr>
+                <td>string|<abbr title="Next\HTTP\optional">optional</abbr></td>
+                <td>$value</td>
+                <td>Cookie value, in case a non RFC definition is being used</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/HTTP/Cookies.html"><abbr title="Next\HTTP\Cookies">Cookies</abbr></a></td>
+            <td>Cookies Object (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Next/Exception/Exceptions/InvalidArgumentException.html"><abbr title="Next\Exception\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>Invalid or malformed Cookie Value</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCookies">
+        <div class="location">at         line 120</div>
+        <code>                    <a href="../../Next/Components/Collections/Lists.html"><abbr title="Next\Components\Collections\Lists">Lists</abbr></a>|<a href="../../Next/HTTP/Headers/Request/Cookie.html"><abbr title="Next\HTTP\Headers\Request\Cookie">Cookie</abbr></a>
+    <strong>getCookies</strong>(boolean $asString = FALSE)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get registered Cookies</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$asString</td>
+                <td>If TRUE, instead of the Lists Collection where the Cookies have been
+ stored, a <code>Next\HTTP\Headers\Request\Cookie</code> Object with a string
+ representation of all Cookies will be returned instead</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/Components/Collections/Lists.html"><abbr title="Next\Components\Collections\Lists">Lists</abbr></a>|<a href="../../Next/HTTP/Headers/Request/Cookie.html"><abbr title="Next\HTTP\Headers\Request\Cookie">Cookie</abbr></a></td>
+            <td>If <code>$asString</code> is set to FALSE, the Lists Collection with all added
+ Cookies will be returned</p>
+
+<p>Otherwise a well formed Request Cookie Header will be returned</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearCookies">
+        <div class="location">at         line 153</div>
+        <code>                    <a href="../../Next/HTTP/Cookies.html"><abbr title="Next\HTTP\Cookies">Cookies</abbr></a>
+    <strong>clearCookies</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Empties Request Cookies</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/HTTP/Cookies.html"><abbr title="Next\HTTP\Cookies">Cookies</abbr></a></td>
+            <td>Cookies Object (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

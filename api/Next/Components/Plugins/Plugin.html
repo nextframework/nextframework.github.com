@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Next\Components\Plugins\Plugin | Next Framework</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Next_Components_Plugins_Plugin" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Next Framework</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Next.html">Next</a></li><li class="backslash">\</li><li><a href="../../../Next/Components.html">Components</a></li><li class="backslash">\</li><li><a href="../../../Next/Components/Plugins.html">Plugins</a></li><li class="backslash">\</li><li>Plugin</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Plugin
+                
+        </h1>
+    </div>
+
+    <p>abstract     class
+    <strong>Plugin</strong>        extends <a href="../../../Next/Components/Object.html"><abbr title="Next\Components\Object">Object</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Base structure of a Plugin Object, with intermediary routines before and
+after every action, from its installation in a Application Object to their
+physical removal from the disk</p>                                </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>API</td>
+                <td class="last">
+                    <p><em>Plugins API File</em></p>
+                    <p>Although more complex Plugins may require a more defined workflow, they
+should be able to be managed somehow, externally.</p>
+
+<p>And in order to simplify this probable "Plugins Manager", the Plugin class
+provides a fixed name for the classes that come to extend this one.</p>
+
+<p>This is not required by any means, though. And the developer must consult
+any documentations available for this possible "Plugins Manager",
+accordingly to the target application</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EXCEPTIONS</td>
+                <td class="last">
+                    <p><em>Plugins Exceptions FIle</em></p>
+                    <p>The same consideration as above, but this refers to the file where
+the Exception messages raised by the Plugin <em>may</em> reside</p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_parameters">
+                                        protected                                        array
+                </td>
+                <td>$parameters</td>
+                <td class="last">Parameter Options Definition</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_eventHandler">
+                                        protected                                        <a href="../../../Next/Components/Plugins/Handler.html"><abbr title="Next\Components\Plugins\Handler">Handler</abbr></a>
+                </td>
+                <td>$eventHandler</td>
+                <td class="last">Event Handler Object</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_init">init</a>()
+        
+                                            <p>Additional Initialization.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_onBeforeActivate">onBeforeActivate</a>(array $args = [])
+        
+                                            <p>Routines to be performed after any possible post-processing, but
+before the Plugin can be activated. E.g: Before it's added to a database</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_onAfterActivate">onAfterActivate</a>(array $args = [])
+        
+                                            <p>Routines to be performed after the Plugin can be activated.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_onBeforeDeactivate">onBeforeDeactivate</a>(array $args = [])
+        
+                                            <p>Routines to be performed before the Plugin can be unregistered.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_onAfterDeactivate">onAfterDeactivate</a>(array $args = [])
+        
+                                            <p>Routines to be performed after the Plugin can be unregistered.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_onBeforeRemove">onBeforeRemove</a>(array $args = [])
+        
+                                            <p>Routines to be performed before the Plugin can be deleted
+E.g: Before it's removed from the physical disk</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_onAfterRemove">onAfterRemove</a>(array $args = [])
+        
+                                            <p>Routines to be performed after the Plugin can be deleted.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_onBeforeEdit">onBeforeEdit</a>(array $args = [])
+        
+                                            <p>Routines to be performed before the Plugin can be edited.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_onAfterEdit">onAfterEdit</a>(array $args = [])
+        
+                                            <p>Routines to be performed after the Plugin can be edited.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_onBeforeRun">onBeforeRun</a>(array $args = [])
+        
+                                            <p>Routines to be performed before the Plugin is executed.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_run">run</a>(array $args = [])
+        
+                                            <p>The main routine, with all the logics of the Plugin,
+preferably without any direct output</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_onAfterRun">onAfterRun</a>(array $args = [])
+        
+                                            <p>Routines to be performed after the Plugin is executed.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_onBeforeTest">onBeforeTest</a>(array $args = [])
+        
+                                            <p>Routines to be performed before the Plugin is tested.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_test">test</a>(array $args = [])
+        
+                                            <p>The test routine, that ensures whatever the main routine did
+wasn't accidentally (and manually) undone later</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/Components/Plugins/Handler.html"><abbr title="Next\Components\Plugins\Handler">Handler</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEventHandler">getEventHandler</a>()
+        
+                                            <p>Get Event Handler Object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addDefaultEventListeners">addDefaultEventListeners</a>()
+        
+                                            <p>Adds default Event Listeners to be used within Plugins</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">at         line 139</div>
+        <code>            protected        
+    <strong>init</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Additional Initialization.</p>                    <p><ul>
+<li>Creates the Event Handler and its Event Object</li>
+<li>Extends Plugin Context to <em>some</em> of the methods of
+\Next\Application\Application (required) and
+\Next\DB\Entity\Entity (optional) defined as Parameter Options
+
+<ul>
+<li>Creates default Event Listeners</li>
+</ul></li>
+</ul>
+</p>                            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_onBeforeActivate">
+        <div class="location">at         line 168</div>
+        <code>                    
+    <strong>onBeforeActivate</strong>(array $args = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Routines to be performed after any possible post-processing, but
+before the Plugin can be activated. E.g: Before it's added to a database</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>Additional arguments for execution</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_onAfterActivate">
+        <div class="location">at         line 177</div>
+        <code>                    
+    <strong>onAfterActivate</strong>(array $args = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Routines to be performed after the Plugin can be activated.</p>                    <p>E.g: After it's added to a database</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>Additional arguments for execution</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_onBeforeDeactivate">
+        <div class="location">at         line 186</div>
+        <code>                    
+    <strong>onBeforeDeactivate</strong>(array $args = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Routines to be performed before the Plugin can be unregistered.</p>                    <p>E.g: Before it's removed from a database</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>Additional arguments for execution</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_onAfterDeactivate">
+        <div class="location">at         line 195</div>
+        <code>                    
+    <strong>onAfterDeactivate</strong>(array $args = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Routines to be performed after the Plugin can be unregistered.</p>                    <p>E.g: After it's removed from a database</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>Additional arguments for execution</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_onBeforeRemove">
+        <div class="location">at         line 204</div>
+        <code>                    
+    <strong>onBeforeRemove</strong>(array $args = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Routines to be performed before the Plugin can be deleted
+E.g: Before it's removed from the physical disk</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>Additional arguments for execution</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_onAfterRemove">
+        <div class="location">at         line 213</div>
+        <code>                    
+    <strong>onAfterRemove</strong>(array $args = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Routines to be performed after the Plugin can be deleted.</p>                    <p>E.g: After it's removed from the physical disk</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>Additional arguments for execution</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_onBeforeEdit">
+        <div class="location">at         line 222</div>
+        <code>                    
+    <strong>onBeforeEdit</strong>(array $args = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Routines to be performed before the Plugin can be edited.</p>                    <p>E.g: Before its data is updated in a database</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>Additional arguments for execution</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_onAfterEdit">
+        <div class="location">at         line 231</div>
+        <code>                    
+    <strong>onAfterEdit</strong>(array $args = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Routines to be performed after the Plugin can be edited.</p>                    <p>E.g: After its data is updated in a database</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>Additional arguments for execution</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_onBeforeRun">
+        <div class="location">at         line 241</div>
+        <code>                    
+    <strong>onBeforeRun</strong>(array $args = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Routines to be performed before the Plugin is executed.</p>                    <p>E.g: A Plugin that provides a scheduled backup functionality could delete
+backup files that are too old</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>Additional arguments for execution</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_run">
+        <div class="location">at         line 250</div>
+        <code>                    
+    <strong>run</strong>(array $args = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The main routine, with all the logics of the Plugin,
+preferably without any direct output</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>Additional arguments for execution</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_onAfterRun">
+        <div class="location">at         line 260</div>
+        <code>                    
+    <strong>onAfterRun</strong>(array $args = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Routines to be performed after the Plugin is executed.</p>                    <p>E.g: A Plugin that provides a scheduled backup functionality could send
+the currently generated file as email attachment to the System Administrator</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>Additional arguments for execution</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_onBeforeTest">
+        <div class="location">at         line 272</div>
+        <code>                    
+    <strong>onBeforeTest</strong>(array $args = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Routines to be performed before the Plugin is tested.</p>                    <p>E.g: A Plugin that manipulates an external source with checkable
+informations, like an SQLite database file with settings of any sort,
+can't foreknow its own path, so this method may render something like a
+GUI where the user input the mentioned path manually</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>Additional arguments for execution</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_test">
+        <div class="location">at         line 281</div>
+        <code>                    
+    <strong>test</strong>(array $args = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The test routine, that ensures whatever the main routine did
+wasn't accidentally (and manually) undone later</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>Additional arguments for execution</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEventHandler">
+        <div class="location">at         line 291</div>
+        <code>                    <a href="../../../Next/Components/Plugins/Handler.html"><abbr title="Next\Components\Plugins\Handler">Handler</abbr></a>
+    <strong>getEventHandler</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Event Handler Object</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/Components/Plugins/Handler.html"><abbr title="Next\Components\Plugins\Handler">Handler</abbr></a></td>
+            <td>The Event Handler</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addDefaultEventListeners">
+        <div class="location">at         line 331</div>
+        <code>                private    
+    <strong>addDefaultEventListeners</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds default Event Listeners to be used within Plugins</p>                    <p>There are four Event Listeners by default:</p>
+
+<p>'success'    => For when everything goes as expected
+'warning'    => For when the main purpose goes as expected,
+                but something non-critical to the execution
+                of the Plugin failed
+'info'       => For informational purposes, like a
+                post-processing tip
+'error'      => For when something not happened as expected.
+                Usually this is used when the Plugin decides
+                to not use the APIException concept -OR-
+                an implemented Plugin Manager doesn't handle
+                these Exceptions or handle them as not stoppable
+                errors</p>
+
+<p>All default Event Listeners are provided as implementation of
+\Next\Components\Plugins\Listener and requires, additionally to the
+Event Object passed automatically by Event Handler, a string
+with the message in order to be registered as Handled Result</p>
+
+<p>Also, the Template Variables assignments it's up to the Developer
+using the Plugin feature. This way there's no variable conflicts</p>
+
+<p>And note that, by default, 'error' Event Listener has its
+propagation stopped, so once it's handled by Event Handler,
+no other Listeners will be further handled, after all it
+represents a critical incident</p>                            </div>
+                <div class="tags">
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>\Next\Components\Plugins\Handler::addListener()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>\Next\Components\Plugins\Handler::getHandledResults()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

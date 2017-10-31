@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Next\DB\Query\Builder | Next Framework</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Next_DB_Query_Builder" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Next Framework</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Next.html">Next</a></li><li class="backslash">\</li><li><a href="../../../Next/DB.html">DB</a></li><li class="backslash">\</li><li><a href="../../../Next/DB/Query.html">Query</a></li><li class="backslash">\</li><li>Builder</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Builder
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Builder</strong>        extends <a href="../../../Next/Components/Object.html"><abbr title="Next\Components\Object">Object</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>The Query Builder Object is responsible to assemble a Database Query
+through class' methods to be then rendered by the Query Renderer associated
+to the Connection Driver</p>                                </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_parameters">
+                                        protected                                        array
+                </td>
+                <td>$parameters</td>
+                <td class="last">Parameter Options Definition</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_query">
+                                                            private                    string
+                </td>
+                <td>$query</td>
+                <td class="last">Built Query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_replacements">
+                                                            private                    array
+                </td>
+                <td>$replacements</td>
+                <td class="last">Query Placeholders Replacements</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_columns">
+                                                            private                    array
+                </td>
+                <td>$columns</td>
+                <td class="last">Columns to be include in SELECT Statement</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tables">
+                                                            private                    array
+                </td>
+                <td>$tables</td>
+                <td class="last">Tables to be searched</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_distinct">
+                                                            private                    boolean
+                </td>
+                <td>$distinct</td>
+                <td class="last">DISTINCT Flag</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_where">
+                                                            private                    array
+                </td>
+                <td>$where</td>
+                <td class="last">WHERE Clauses</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_joins">
+                                                            private                    array
+                </td>
+                <td>$joins</td>
+                <td class="last">JOIN Clauses</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_having">
+                                                            private                    array
+                </td>
+                <td>$having</td>
+                <td class="last">HAVING Clauses</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_group">
+                                                            private                    string
+                </td>
+                <td>$group</td>
+                <td class="last">GROUP BY Fields</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_order">
+                                                            private                    array
+                </td>
+                <td>$order</td>
+                <td class="last">ORDER BY Fields</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_limit">
+                                                            private                    array
+                </td>
+                <td>$limit</td>
+                <td class="last">LIMIT Clause</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_insert">insert</a>(string $table, array $fields)
+        
+                                            <p>Builds an INSERT Statement</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_update">update</a>(string $table, array $fields)
+        
+                                            <p>Builds an UPDATE Statement</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_delete">delete</a>(string $table)
+        
+                                            <p>Builds a DELETE Statement</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_select">select</a>(<a href="../../../Next/DB/Query/Expression.html"><abbr title="Next\DB\Query\Expression">Expression</abbr></a>|string|array|<abbr title="Next\DB\Query\optional">optional</abbr> $columns = [])
+        
+                                            <p>Specifies one or more Columns for a SELECT Statement</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_from">from</a>(array|<abbr title="Next\DB\Query\optional">optional</abbr> $tables = [])
+        
+                                            <p>Specifies one or more Database Tables to be searched</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_distinct">distinct</a>()
+        
+                                            <p>Builds a DISTINCT Clause</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_where">where</a>(array|string $condition, array|mixed|<abbr title="Next\DB\Query\optional">optional</abbr> $replacements = [], mixed|string|<abbr title="Next\DB\Query\optional">optional</abbr> $type = Query::SQL_AND)
+        
+                                            <p>Adds a WHERE Clause</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_join">join</a>(string|array $table, string $on, string|<abbr title="Next\DB\Query\optional">optional</abbr> $type = Query::INNER_JOIN)
+        
+                                            <p>Adds a JOIN Clause</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_having">having</a>(array|string $condition, array|<abbr title="Next\DB\Query\optional">optional</abbr> $values = [], mixed|string|<abbr title="Next\DB\Query\optional">optional</abbr> $type = Query::SQL_AND)
+        
+                                            <p>Adds a HAVING Clause</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_group">group</a>(string|array $fields)
+        
+                                            <p>Adds a GROUP BY Clause</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_order">order</a>(string|array|<abbr title="Next\DB\Query\Next\DB\Query\Expression">Expression</abbr> $field, string|<abbr title="Next\DB\Query\optional">optional</abbr> $orientation = Query::ORDER_ASCENDING)
+        
+                                            <p>Adds ORDER BY Clause(s)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_limit">limit</a>(integer|<abbr title="Next\DB\Query\optional">optional</abbr> $limit = 1, integer|<abbr title="Next\DB\Query\optional">optional</abbr> $offset)
+        
+                                            <p>Adds a LIMIT Clause with an optional offset</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_assemble">assemble</a>()
+        
+                                            <p>Assembles the Query</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQuery">getQuery</a>()
+        
+                                            <p>Get assembled query</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getReplacements">getReplacements</a>()
+        
+                                            <p>Get placeholders replacements</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addReplacements">addReplacements</a>(mixed|array $replacements)
+        
+                                            <p>Add Placeholders Replacements</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Next\Query\Builder">Builder</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_reset">reset</a>()
+        
+                                            <p>Resets the Query Builder preparing it for another (possible)
+statement</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_insert">
+        <div class="location">at         line 141</div>
+        <code>                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+    <strong>insert</strong>(string $table, array $fields)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Builds an INSERT Statement</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td>Table name</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$fields</td>
+                <td>Columns to be added in INSERT Statement</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a></td>
+            <td>Query Builder Object (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_update">
+        <div class="location">at         line 166</div>
+        <code>                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+    <strong>update</strong>(string $table, array $fields)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Builds an UPDATE Statement</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td>Table name</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$fields</td>
+                <td>Columns to be added in UPDATE Statement</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a></td>
+            <td>Query Builder Object (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_delete">
+        <div class="location">at         line 188</div>
+        <code>                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+    <strong>delete</strong>(string $table)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Builds a DELETE Statement</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td>Table Name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a></td>
+            <td>Query Builder Object (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_select">
+        <div class="location">at         line 208</div>
+        <code>                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+    <strong>select</strong>(<a href="../../../Next/DB/Query/Expression.html"><abbr title="Next\DB\Query\Expression">Expression</abbr></a>|string|array|<abbr title="Next\DB\Query\optional">optional</abbr> $columns = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Specifies one or more Columns for a SELECT Statement</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Next/DB/Query/Expression.html"><abbr title="Next\DB\Query\Expression">Expression</abbr></a>|string|array|<abbr title="Next\DB\Query\optional">optional</abbr></td>
+                <td>$columns</td>
+                <td>Columns to be included in SELECT Statement</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a></td>
+            <td>Query Builder Object (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_from">
+        <div class="location">at         line 300</div>
+        <code>                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+    <strong>from</strong>(array|<abbr title="Next\DB\Query\optional">optional</abbr> $tables = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Specifies one or more Database Tables to be searched</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|<abbr title="Next\DB\Query\optional">optional</abbr></td>
+                <td>$tables</td>
+                <td>One or more different tables to search</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a></td>
+            <td>Query Builder Object (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_distinct">
+        <div class="location">at         line 382</div>
+        <code>                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+    <strong>distinct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Builds a DISTINCT Clause</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a></td>
+            <td>Query Builder Object (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_where">
+        <div class="location">at         line 438</div>
+        <code>                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+    <strong>where</strong>(array|string $condition, array|mixed|<abbr title="Next\DB\Query\optional">optional</abbr> $replacements = [], mixed|string|<abbr title="Next\DB\Query\optional">optional</abbr> $type = Query::SQL_AND)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds a WHERE Clause</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$condition</td>
+                <td>WHERE Clause</td>
+            </tr>
+                    <tr>
+                <td>array|mixed|<abbr title="Next\DB\Query\optional">optional</abbr></td>
+                <td>$replacements</td>
+                <td>Value for Clause Placeholders, if any</p>
+
+<p>If <code>$condition</code> has multiple possible values, <code>$replacements</code>
+ must be an associative array led by that field name. E.g.:</p>
+
+<p><code>Array
+ (
+     [field] =&gt; Array
+         (
+             [0] =&gt; value_1
+             [1] =&gt; value_2
+             [2] =&gt; value_3
+         )
+ )</code></p>
+
+<p>This helps not having to manually code a loop calling
+Build::where() for each one of them with potentially
+insecure workarounds for the multiplicity</td>
+            </tr>
+                    <tr>
+                <td>mixed|string|<abbr title="Next\DB\Query\optional">optional</abbr></td>
+                <td>$type</td>
+                <td>The WHERE Clause condition type, 'AND' or 'OR'.
+ Defaults to 'AND'</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a></td>
+            <td>Query Builder Object (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Next/Exception/Exceptions/BadMethodCallException.html"><abbr title="Next\Exception\Exceptions\BadMethodCallException">BadMethodCallException</abbr></a></td>
+                <td>Thrown if WHERE Clause is empty</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Next/Exception/Exceptions/BadMethodCallException.html"><abbr title="Next\Exception\Exceptions\BadMethodCallException">BadMethodCallException</abbr></a></td>
+                <td>Thrown if trying to create a multiple possibilities condition
+ by defining all of them, repeatedly, as an array,
+ enforcing maintainability</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Next/Exception/Exceptions/InvalidArgumentException.html"><abbr title="Next\Exception\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>Thrown when creating a multiple possibilities condition
+ without a valid key on the first entry on the replacements
+ array -OR- if this key doesn't match any Clause defined
+ on <code>$condition</code></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_join">
+        <div class="location">at         line 562</div>
+        <code>                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+    <strong>join</strong>(string|array $table, string $on, string|<abbr title="Next\DB\Query\optional">optional</abbr> $type = Query::INNER_JOIN)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds a JOIN Clause</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$table</td>
+                <td>A string with the JOIN Table or a single-index array with
+ a JOIN Table and its alias as key:</p>
+
+<p><code>[ 'm' =&gt; 'members' ]</code></p>
+
+<p>NOTE: In order to implicit maintainability, only the first
+ index will be used. For multiple JOINS, call the method again</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$on</td>
+                <td>The ON Clause</td>
+            </tr>
+                    <tr>
+                <td>string|<abbr title="Next\DB\Query\optional">optional</abbr></td>
+                <td>$type</td>
+                <td>The JOIN Type</p>
+
+<p>The Query Interface has three values of JOIN Types:
+ Query::INNER_JOIN, Query::LEFT_OUTER_JOIN and
+ Query::RIGHT_OUTER_JOIN</p>
+
+<p>However there are no constraints about what it's accepted here
+ because there are numerous valid aliases for this value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a></td>
+            <td>Query Builder Object (Fluent-Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_having">
+        <div class="location">at         line 594</div>
+        <code>                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+    <strong>having</strong>(array|string $condition, array|<abbr title="Next\DB\Query\optional">optional</abbr> $values = [], mixed|string|<abbr title="Next\DB\Query\optional">optional</abbr> $type = Query::SQL_AND)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds a HAVING Clause</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$condition</td>
+                <td>HAVING Clause</p>
+
+<p>NOTE: In order to implicit maintainability, only the first index
+will be used. For multiple HAVING conditions, call the method again</td>
+            </tr>
+                    <tr>
+                <td>array|<abbr title="Next\DB\Query\optional">optional</abbr></td>
+                <td>$values</td>
+                <td>Values for Clause Placeholders, if any</td>
+            </tr>
+                    <tr>
+                <td>mixed|string|<abbr title="Next\DB\Query\optional">optional</abbr></td>
+                <td>$type</td>
+                <td>The HAVING Clause condition type, 'AND' or 'OR'.</p>
+
+<p>Defaults to 'AND'</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a></td>
+            <td>Query Builder Object (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_group">
+        <div class="location">at         line 612</div>
+        <code>                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+    <strong>group</strong>(string|array $fields)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds a GROUP BY Clause</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$fields</td>
+                <td>Fields to group results</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a></td>
+            <td>Query Builder Object (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_order">
+        <div class="location">at         line 639</div>
+        <code>                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+    <strong>order</strong>(string|array|<abbr title="Next\DB\Query\Next\DB\Query\Expression">Expression</abbr> $field, string|<abbr title="Next\DB\Query\optional">optional</abbr> $orientation = Query::ORDER_ASCENDING)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds ORDER BY Clause(s)</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array|<abbr title="Next\DB\Query\Next\DB\Query\Expression">Expression</abbr></td>
+                <td>$field</td>
+                <td><ul>
+<li>A string with the field to order, accepting the default
+ordering value (Next\DB\Query\Query::ORDER_ASCENDING)
+
+<ul>
+<li>An associative array in which keys are the fields to order
+and the values the ordering directions</li>
+<li>A Next\DB\Query\Expression, case in which the Clause
+will be rendered "as is"</li>
+</ul></li>
+</ul>
+</td>
+            </tr>
+                    <tr>
+                <td>string|<abbr title="Next\DB\Query\optional">optional</abbr></td>
+                <td>$orientation</td>
+                <td>Orientation, if <strong>$field</strong> is not an array: ASC or DESC.
+ Defaults to ASC</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a></td>
+            <td>Query Builder Object (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_limit">
+        <div class="location">at         line 667</div>
+        <code>                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+    <strong>limit</strong>(integer|<abbr title="Next\DB\Query\optional">optional</abbr> $limit = 1, integer|<abbr title="Next\DB\Query\optional">optional</abbr> $offset)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds a LIMIT Clause with an optional offset</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer|<abbr title="Next\DB\Query\optional">optional</abbr></td>
+                <td>$limit</td>
+                <td>Number of records to be returned.
+ Defaults to 1 and it'll be forced to be greater than zero</td>
+            </tr>
+                    <tr>
+                <td>integer|<abbr title="Next\DB\Query\optional">optional</abbr></td>
+                <td>$offset</td>
+                <td>Record offset to start.
+ Defaults to 0 and it'll be forced to not be negative</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a></td>
+            <td>Query Builder Object (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assemble">
+        <div class="location">at         line 688</div>
+        <code>                    string
+    <strong>assemble</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Assembles the Query</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Built Query</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQuery">
+        <div class="location">at         line 742</div>
+        <code>                    string
+    <strong>getQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get assembled query</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Assembled query.
+ It'll, obvious, be empty if called before using any of the
+ Query Builder's methods</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getReplacements">
+        <div class="location">at         line 752</div>
+        <code>                    array
+    <strong>getReplacements</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get placeholders replacements</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Placeholders replacements</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addReplacements">
+        <div class="location">at         line 767</div>
+        <code>                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+    <strong>addReplacements</strong>(mixed|array $replacements)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add Placeholders Replacements</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed|array</td>
+                <td>$replacements</td>
+                <td>Query Placeholders Replacements</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a></td>
+            <td>Query Builder Instance (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reset">
+        <div class="location">at         line 789</div>
+        <code>                    <abbr title="Next\Query\Builder">Builder</abbr>
+    <strong>reset</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Resets the Query Builder preparing it for another (possible)
+statement</p>                    <p>Although all the property types can be predefined while
+defining them, by having such feature we can flush them after
+used, which doesn't occur within this class scope</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Next\Query\Builder">Builder</abbr></td>
+            <td>Query Builder Object (Fluent-Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>\Next\DB\Entity\Manager::flush()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

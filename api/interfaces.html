@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Interfaces | Next Framework</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="interfaces" data-name="" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Next Framework</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div id="page-content">
+                    <div class="page-header">
+        <h1>Interfaces</h1>
+    </div>
+
+    
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Auth/Helpers/Helper.html"><abbr title="Next\Auth\Helpers\Helper">Helper</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Auth Helper describe the bare minimum methods to Request an external
+OAuth Authentication and receive an Authorization Code to, perhaps,
+consume an API from which User Data is retrieved
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Cache/Schemas/Schema.html"><abbr title="Next\Cache\Schemas\Schema">Schema</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    An Interface for all Caching Schema Strategies
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Components/Decorators/Decorator.html"><abbr title="Next\Components\Decorators\Decorator">Decorator</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    An Interface for all Resource Decorators
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Components/Decorators/Linkify/Linkify.html"><abbr title="Next\Components\Decorators\Linkify\Linkify">Linkify</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Linkify Objects decorates resources by adding links to predefined
+keywords or expressions
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Components/Interfaces/Configurable.html"><abbr title="Next\Components\Interfaces\Configurable">Configurable</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Configurable Objects are assumed to provide and/or require
+post-initialization  — i.e. after Next\Components\Object::init()`
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Components/Interfaces/Contextualizable.html"><abbr title="Next\Components\Interfaces\Contextualizable">Contextualizable</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Contextualizable Objects allow their context to be extended,
+almost like PHP 5.4 Traits
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Components/Interfaces/Hashable.html"><abbr title="Next\Components\Interfaces\Hashable">Hashable</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Hashable Objects provides a string representation of the Object allowing
+them to be used as array indexes
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Components/Interfaces/Informational.html"><abbr title="Next\Components\Interfaces\Informational">Informational</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Informational Objects provides information messages about their
+processing state, success, error or just neutral messages
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Components/Interfaces/Observer.html"><abbr title="Next\Components\Interfaces\Observer">Observer</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Observer Interface is part of Observer Design Pattern.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Components/Interfaces/Parameterizable.html"><abbr title="Next\Components\Interfaces\Parameterizable">Parameterizable</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Parameterizable Objects make use of Next\Components\Parameter`
+to provide a way of customize classes' functionality with Default, Common
+and Instance Options
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Components/Interfaces/Prototypable.html"><abbr title="Next\Components\Interfaces\Prototypable">Prototypable</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Prototypable Objects prototypes new functionalities to a Prototypical Object,
+effectively allowing them to be used later — considering the vertically
+crescent Request Flow, of course
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Components/Interfaces/Prototypical.html"><abbr title="Next\Components\Interfaces\Prototypical">Prototypical</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Prototypical Objects allow new functionalities to be prototyped to them -AND-
+be available to future instances as well — considering the vertically crescent
+Request Flow, of course — similarly to JavaScript Prototypes
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Components/Interfaces/Subject.html"><abbr title="Next\Components\Interfaces\Subject">Subject</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Subject Interface is part of Observer Design Pattern.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Components/Types/Type.html"><abbr title="Next\Components\Types\Type">Type</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    An Interface for all custom Data-types
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/DB/DataGateway/DataGateway.html"><abbr title="Next\DB\DataGateway\DataGateway">DataGateway</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    An Interface for all DataGateway Classes
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/DB/Driver/Driver.html"><abbr title="Next\DB\Driver\Driver">Driver</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    An Interface for all Database Connection Drivers
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/DB/Query/Query.html"><abbr title="Next\DB\Query\Query">Query</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    The Query Interface provides some immutable SQL-related keywords to be used
+instead of have the developer to manually enter them resulting in
+possible comparison failures
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/DB/Query/Renderer/Renderer.html"><abbr title="Next\DB\Query\Renderer\Renderer">Renderer</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    An Interface for all Query Renderers
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/DB/Statement/Statement.html"><abbr title="Next\DB\Statement\Statement">Statement</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    An Interface for all Statement Classes
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Exception/Handler.html"><abbr title="Next\Exception\Handler">Handler</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    An Interface for all Registrable Error/Exception Handlers
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/FileSystem/Prototypes/ClassMapper/Writer/Writer.html"><abbr title="Next\FileSystem\Prototypes\ClassMapper\Writer\Writer">Writer</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    An Interface for all ClassMapper Output Writing Strategies
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Filter/Filterable.html"><abbr title="Next\Filter\Filterable">Filterable</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Filterable Objects filters, by removing or treating, unwanted values,
+pretty much like native FilterIterator class only that being an
+Interface does not imply inheritance, preventing Filterable Objects
+to be children of Next\Components\Object
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/HTTP/Router/Generators/Annotations/Annotations.html"><abbr title="Next\HTTP\Router\Generators\Annotations\Annotations">Annotations</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    An Interface for all Annotations Parser Generator
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/HTTP/Router/Generators/Generator.html"><abbr title="Next\HTTP\Router\Generators\Generator">Generator</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    An Interface for all Routes Generators
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/HTTP/Router/Generators/Writer/Writer.html"><abbr title="Next\HTTP\Router\Generators\Writer\Writer">Writer</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    An Interface for all Routes Generator Output Writing Strategies
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/HTTP/Stream/Adapter/Adapter.html"><abbr title="Next\HTTP\Stream\Adapter\Adapter">Adapter</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    An Interface for all HTTP Stream Adapters
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/HTTP/Stream/Context/Context.html"><abbr title="Next\HTTP\Stream\Context\Context">Context</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    The HTTP Stream Context Type
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/HTTP/Stream/Context/Options/Option.html"><abbr title="Next\HTTP\Stream\Context\Options\Option">Option</abbr></a></em>
+                                            <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                </div>
+                <div class="col-md-6">
+                    The Stream Context Options Type
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Loader/AutoLoaders/AutoLoader.html"><abbr title="Next\Loader\AutoLoaders\AutoLoader">AutoLoader</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    An Interface for all AutoLoader Strategies
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Math/Equations/Equation.html"><abbr title="Next\Math\Equations\Equation">Equation</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    An Interface for all Equations
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Math/Equations/Interval/Boundable.html"><abbr title="Next\Math\Equations\Interval\Boundable">Boundable</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Boundable Interval Objects work out of lower and upper boundaries in a
+mathematical interval
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Math/Equations/Interval/Interval.html"><abbr title="Next\Math\Equations\Interval\Interval">Interval</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    An Interface for all Mathematical Interval Algorithms
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Pagination/Adapter/Adapter.html"><abbr title="Next\Pagination\Adapter\Adapter">Adapter</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    An Interface for for all Pagination Adapters
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Pagination/Styles/Style.html"><abbr title="Next\Pagination\Styles\Style">Style</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    An Interface for all Pagination Styles
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Session/Handlers/Handler.html"><abbr title="Next\Session\Handlers\Handler">Handler</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    An Interface for all custom/adapted/improved Session Handlers
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Validation/HTTP/Headers/Header.html"><abbr title="Next\Validation\HTTP\Headers\Header">Header</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    An Interface for for all HTTP Headers Validators
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Validation/Validatable.html"><abbr title="Next\Validation\Validatable">Validatable</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Validatable Objects can be validated against a set of rules
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Validation/Validator.html"><abbr title="Next\Validation\Validator">Validator</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Validator Objects validate input data
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/Validation/Verifiable.html"><abbr title="Next\Validation\Verifiable">Verifiable</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Verifiable Objects provide a way to verify its integrity
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/View/Helpers/Helper.html"><abbr title="Next\View\Helpers\Helper">Helper</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    An Interface for all View Engines' Helpers
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="Next/View/View.html"><abbr title="Next\View\View">View</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    An Interface for all View Engines
+                </div>
+            </div>
+            </div>
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

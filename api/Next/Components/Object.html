@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Next\Components\Object | Next Framework</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Next_Components_Object" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Next Framework</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Next.html">Next</a></li><li class="backslash">\</li><li><a href="../../Next/Components.html">Components</a></li><li class="backslash">\</li><li>Object</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Object
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Object</strong>        extends <a href="../../Next/Components/Prototype.html"><abbr title="Next\Components\Prototype">Prototype</abbr></a>        implements
+        <a href="../../Next/Components/Interfaces/Hashable.html"><abbr title="Next\Components\Interfaces\Hashable">Hashable</abbr></a>, <a href="../../Next/Components/Interfaces/Contextualizable.html"><abbr title="Next\Components\Interfaces\Contextualizable">Contextualizable</abbr></a>, <a href="../../Next/Components/Interfaces/Informational.html"><abbr title="Next\Components\Interfaces\Informational">Informational</abbr></a>, <a href="../../Next/Components/Interfaces/Parameterizable.html"><abbr title="Next\Components\Interfaces\Parameterizable">Parameterizable</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>The Object is the base Class of (almost) all classes in Next Framework.</p>            <p>It implements the <strong>Extended Context</strong> Concept defined by
+Contextualizable Interface through which an Object can bridge methods
+of multiple classes to themselves, simulating multiple inheritance.</p>
+
+<p>It also implements the <strong>Informational Messages Concept</strong> defined by
+Informational Interface through which an Object can retrieve passed
+Error, Information and/or Success Messages.</p>
+
+<p>Objects implements the <strong>Parameterizable Concept</strong> through which an
+Object can have multiple Parameters Options replacing arguments
+usually defined in the Constructor without the need of
+overwrite it, similarly to JavaScript Object arguments,
+reinforcing the <strong>Additional Initialization Concept</strong></p>
+
+<p>Last but not least, the <strong>Verifiable Concept</strong> defined by
+Verifiable Interface through which an Object enforces an integrity
+checking of any sorts, but usually to reinforce the
+Parameterizable Concept that (currently) lacks the typed verifications
+the way type-hinting does</p>                    </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_parameters">
+                                        protected                                        array
+                </td>
+                <td>$parameters</td>
+                <td class="last">Parameter Options Definition</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property__success">
+                                        protected                                        mixed|string
+                </td>
+                <td>$_success</td>
+                <td class="last">Success Message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property__error">
+                                        protected                                        mixed|string
+                </td>
+                <td>$_error</td>
+                <td class="last">Error Message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property__info">
+                                        protected                                        mixed|string
+                </td>
+                <td>$_info</td>
+                <td class="last">Informational Message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_context">
+                                                            private                    <a href="../../Next/Components/Context.html"><abbr title="Next\Components\Context">Context</abbr></a>
+                </td>
+                <td>$context</td>
+                <td class="last">Context Object</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_options">
+                                        protected                                        <a href="../../Next/Components/Parameter.html"><abbr title="Next\Components\Parameter">Parameter</abbr></a>
+                </td>
+                <td>$options</td>
+                <td class="last">Object Parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(mixed|<abbr title="Next\Components\optional">optional</abbr> $options = NULL)
+        
+                                            <p>Object Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_init">init</a>()
+        
+                                            <p>Additional initialization. Must be overwritten</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Next\Components\stdClass">stdClass</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_map">map</a>(mixed $param)
+        
+                                            <p>Map given array to stdClass Object recursively</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Next\Components\ReflectionClass">ReflectionClass</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getClass">getClass</a>()
+        
+                                            <p>Retrieves a Reflection instance for the Object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hash">hash</a>()
+        
+                                            <p>Get Object hash</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_extend">extend</a>(<a href="../../Next/Components/Invoker.html"><abbr title="Next\Components\Invoker">Invoker</abbr></a> $invoker, string|array|<abbr title="Next\Components\Interfaces\optional">optional</abbr> $methods = NULL, string|array|<abbr title="Next\Components\optional">optional</abbr> $properties = NULL)
+        
+                                            <p>Registers a new Invoker Object to be used as context extension</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCallables">getCallables</a>()
+        
+                                            <p>Get Context Callables</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSuccessMessage">getSuccessMessage</a>()
+        
+                                            <p>Get success message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getErrorMessage">getErrorMessage</a>()
+        
+                                            <p>Get error message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getInformationalMessage">getInformationalMessage</a>()
+        
+                                            <p>Get informational message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOptions">getOptions</a>()
+        
+                                            <p>Get Class Options</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOptions">setOptions</a>()
+        
+                                            <p>Set class options</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed|void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $method, array $args = [])
+        
+                                            <p>Allow extended Objects to be called in this Object context</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___toString">__toString</a>()
+        
+                                            <p>Return a nice name for the class</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         line 117</div>
+        <code>                    
+    <strong>__construct</strong>(mixed|<abbr title="Next\Components\optional">optional</abbr> $options = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Object Constructor.</p>                    <p><ul>
+<li>Creates the Extended Context</li>
+<li>Merges all Parameter Options in one</li>
+<li>Runs Additional Initialization</li>
+<li>Calls Next\Validation\Verifiable::verify() if needed</li>
+</ul>
+
+<p>Phew!</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed|<abbr title="Next\Components\optional">optional</abbr></td>
+                <td>$options</td>
+                <td>Child class additional options</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">at         line 131</div>
+        <code>            protected        
+    <strong>init</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Additional initialization. Must be overwritten</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_map">
+        <div class="location">at         line 152</div>
+        <code>        static            <abbr title="Next\Components\stdClass">stdClass</abbr>
+    <strong>map</strong>(mixed $param)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Map given array to stdClass Object recursively</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$param</td>
+                <td>Argument to mapped into an stdClass Object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Next\Components\stdClass">stdClass</abbr></td>
+            <td>Given argument mapped into an stdClass Object</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a></td>
+                <td>Thrown when an entry of the associative array being mapped
+ has an empty key. E.g:</p>
+
+<pre><code>$array = [ '' =&gt; 'foo' ];
+</code></pre>
+
+<p>This is accepted by PHP (for whatever reason), but we don't accept</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getClass">
+        <div class="location">at         line 203</div>
+        <code>                    <abbr title="Next\Components\ReflectionClass">ReflectionClass</abbr>
+    <strong>getClass</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieves a Reflection instance for the Object</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Next\Components\ReflectionClass">ReflectionClass</abbr></td>
+            <td>Reflector instance of Object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hash">
+        <div class="location">at         line 219</div>
+        <code>                    
+    <strong>hash</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Object hash</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extend">
+        <div class="location">at         line 244</div>
+        <code>final                    
+    <strong>extend</strong>(<a href="../../Next/Components/Invoker.html"><abbr title="Next\Components\Invoker">Invoker</abbr></a> $invoker, string|array|<abbr title="Next\Components\Interfaces\optional">optional</abbr> $methods = NULL, string|array|<abbr title="Next\Components\optional">optional</abbr> $properties = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Registers a new Invoker Object to be used as context extension</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Next/Components/Invoker.html"><abbr title="Next\Components\Invoker">Invoker</abbr></a></td>
+                <td>$invoker</td>
+                <td>Invoker Object</td>
+            </tr>
+                    <tr>
+                <td>string|array|<abbr title="Next\Components\Interfaces\optional">optional</abbr></td>
+                <td>$methods</td>
+                <td>One or more methods accessible through extended Context.
+ Defaults to NULL, which means almost all PUBLIC methods will be accessible</td>
+            </tr>
+                    <tr>
+                <td>string|array|<abbr title="Next\Components\optional">optional</abbr></td>
+                <td>$properties</td>
+                <td>One or more properties accessible through extended Context
+ Defaults to NULL, which means all PROTECTED properties will be accessible</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>\Next\Components\Context::extend()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCallables">
+        <div class="location">at         line 263</div>
+        <code>                    
+    <strong>getCallables</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Context Callables</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>\Next\Components\Context::getCallables()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSuccessMessage">
+        <div class="location">at         line 275</div>
+        <code>                    
+    <strong>getSuccessMessage</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get success message</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getErrorMessage">
+        <div class="location">at         line 285</div>
+        <code>                    
+    <strong>getErrorMessage</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get error message</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInformationalMessage">
+        <div class="location">at         line 295</div>
+        <code>                    
+    <strong>getInformationalMessage</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get informational message</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOptions">
+        <div class="location">at         line 308</div>
+        <code>                    
+    <strong>getOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Class Options</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOptions">
+        <div class="location">at         line 325</div>
+        <code>                    
+    <strong>setOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set class options</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">at         line 356</div>
+        <code>                    mixed|void
+    <strong>__call</strong>(string $method, array $args = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Allow extended Objects to be called in this Object context</p>                    <p>IMPORTANT!</p>
+
+<p>Watch out when use Fluent Interfaces, because the "bridging"
+feature WILL return the METHOD called, not the invoker object</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>Method trying to be invoked</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>Variable list of arguments to the method</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed|void</td>
+            <td>Returns what the method under Extended Context returns or
+ what the prototyped resource returns
+ Any failure on either of these calls and nothing is returned</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Next\Exception\Exceptions\BadmethodcallException">BadmethodcallException</abbr></td>
+                <td>Thrown if a \ReflectionException is caught in when trying
+ to call the method under Extended Context</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Next\Exception\Exceptions\BadmethodcallException">BadmethodcallException</abbr></td>
+                <td>Thrown if the method couldn't be found as part of an
+ Extended Context and neither as a Prototyped Resource</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___toString">
+        <div class="location">at         line 378</div>
+        <code>                    string
+    <strong>__toString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return a nice name for the class</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Classname without namespaces</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Next\Components\Utils\ArrayUtils | Next Framework</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Next_Components_Utils_ArrayUtils" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Next Framework</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Next.html">Next</a></li><li class="backslash">\</li><li><a href="../../../Next/Components.html">Components</a></li><li class="backslash">\</li><li><a href="../../../Next/Components/Utils.html">Utils</a></li><li class="backslash">\</li><li>ArrayUtils</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            ArrayUtils
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>ArrayUtils</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Collection of Array utility routines not present in original
+language or improved and/or expanded versions of them</p>                                </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_equalize">equalize</a>(array $a = [], array $b = [])
+        
+                                            <p>Equalize array lengths</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;integer|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_search">search</a>(mixed|array $haystack, mixed $needle, mixed|<abbr title="Next\Components\Utils\optional">optional</abbr> $index = NULL, boolean|<abbr title="Next\Components\Utils\optional">optional</abbr> $strict = TRUE)
+        
+                                            <p>Searches value inside a multidimensional array, returning its index</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_map">map</a>(mixed $param)
+        
+                                            <p>Map given (stdClass) Object to array, recursively</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_union">union</a>(array $a, array $b)
+        
+                                            <p>Adjoin Multidimensional Arrays</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_insert">insert</a>(array $a, array $b)
+        
+                                            <p>Insert an array inside other pushing existent indexes
+without overwrite any value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clean">clean</a>(array $array, boolean|<abbr title="Next\Components\Utils\optional">optional</abbr> $allowZeros = TRUE, boolean|<abbr title="Next\Components\Utils\optional">optional</abbr> $recursive = FALSE, boolean|<abbr title="Next\Components\Utils\optional">optional</abbr> $destruct = FALSE, boolean|<abbr title="Next\Components\Utils\optional">optional</abbr> $reindex = FALSE)
+        
+                                            <p>Clean an array</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lastKey">lastKey</a>(array $stack)
+        
+                                            <p>Get last key</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_transpose">transpose</a>(array $array)
+        
+                                            <p>Transpose a multidimensional array</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_filter">filter</a>(array $array, boolean|<abbr title="Next\Components\Utils\optional">optional</abbr> $allowZeros = TRUE)
+        
+                                            <p>Filters input array entries equal to FALSE but, differently from default
+behavior of native array_filter() function, if defined, zeros will not be
+considered as FALSE, and thus they'll not be removed from given array</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_equalize">
+        <div class="location">at         line 43</div>
+        <code>        static            
+    <strong>equalize</strong>(array $a = [], array $b = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Equalize array lengths</p>                    <p>The shorter array will receive as many NULL elements as needed to have the same length
+of the larger array.</p>
+
+<p>Both arguments are optional, so this method can be used to create dummy arrays based upon
+other array length</p>
+
+<p>And both arguments must be passed as reference, so the changes can be applied</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$a</td>
+                <td>First Array</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$b</td>
+                <td>Second Array</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_search">
+        <div class="location">at         line 89</div>
+        <code>        static            integer|string
+    <strong>search</strong>(mixed|array $haystack, mixed $needle, mixed|<abbr title="Next\Components\Utils\optional">optional</abbr> $index = NULL, boolean|<abbr title="Next\Components\Utils\optional">optional</abbr> $strict = TRUE)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Searches value inside a multidimensional array, returning its index</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed|array</td>
+                <td>$haystack</td>
+                <td>The haystack to search</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$needle</td>
+                <td>The needle we are looking for</td>
+            </tr>
+                    <tr>
+                <td>mixed|<abbr title="Next\Components\Utils\optional">optional</abbr></td>
+                <td>$index</td>
+                <td>Allow to define a specific index where the data will be searched</td>
+            </tr>
+                    <tr>
+                <td>boolean|<abbr title="Next\Components\Utils\optional">optional</abbr></td>
+                <td>$strict</td>
+                <td>Deactivates case strictness when comparing.
+ This is available only is <code>$needle</code> is of a scalar
+ type (i.e. integer, float, string or boolean)
+ Defaults to TRUE, which means that, by default, the routine is
+ case-sensitive</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer|string</td>
+            <td>If given needle can be found in given haystack, its index will
+ be returned. Otherwise, -1 will</p>
+
+<p>If provided haystack is NULL or empty, -1 will be returned as well</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://www.php.net/manual/en/function.array-search.php#97645
+</td>
+                <td>Original version without checkings and strictness
+ authored by "giulio provasi"</td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_map">
+        <div class="location">at         line 134</div>
+        <code>        static            array
+    <strong>map</strong>(mixed $param)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Map given (stdClass) Object to array, recursively</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$param</td>
+                <td>Object to be mapped</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Given object map into array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_union">
+        <div class="location">at         line 193</div>
+        <code>        static            array
+    <strong>union</strong>(array $a, array $b)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adjoin Multidimensional Arrays</p>                    <p>Differently of the native array_merge_recursive function,
+this one merges the arrays but overwrites the indexes of first
+arrays which are present in second, keeping the same structure
+of arrays you enter.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$a</td>
+                <td>Initial array</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$b</td>
+                <td>Array to unite</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>A new array with elements in <strong>$b</strong> united to elements in <strong>$a</strong></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://www.phpbuilder.com/board/showpost.php?p=10886411&postcount=6
+</td>
+                <td>Original source authored by "bpat1434"</td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_insert">
+        <div class="location">at         line 227</div>
+        <code>        static            
+    <strong>insert</strong>(array $a, array $b)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Insert an array inside other pushing existent indexes
+without overwrite any value</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$a</td>
+                <td>Array to insert</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$b</td>
+                <td>Array where new data will be inserted</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clean">
+        <div class="location">at         line 266</div>
+        <code>        static            array
+    <strong>clean</strong>(array $array, boolean|<abbr title="Next\Components\Utils\optional">optional</abbr> $allowZeros = TRUE, boolean|<abbr title="Next\Components\Utils\optional">optional</abbr> $recursive = FALSE, boolean|<abbr title="Next\Components\Utils\optional">optional</abbr> $destruct = FALSE, boolean|<abbr title="Next\Components\Utils\optional">optional</abbr> $reindex = FALSE)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clean an array</p>                    <p>Allow all the empty dimensions (if any) of resulting array to be
+destructed, by removing its index.</p>
+
+<p>Also allow the resulting array to be reindexed.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$array</td>
+                <td>The array to be cleaned</td>
+            </tr>
+                    <tr>
+                <td>boolean|<abbr title="Next\Components\Utils\optional">optional</abbr></td>
+                <td>$allowZeros</td>
+                <td>Defines whether or not if a 'zero' will be considered as NULL</td>
+            </tr>
+                    <tr>
+                <td>boolean|<abbr title="Next\Components\Utils\optional">optional</abbr></td>
+                <td>$recursive</td>
+                <td>Defines whether or not if the cleanup will be applied recursively</td>
+            </tr>
+                    <tr>
+                <td>boolean|<abbr title="Next\Components\Utils\optional">optional</abbr></td>
+                <td>$destruct</td>
+                <td>Defines whether or not if an empty dimension will be removed</td>
+            </tr>
+                    <tr>
+                <td>boolean|<abbr title="Next\Components\Utils\optional">optional</abbr></td>
+                <td>$reindex</td>
+                <td>Defines whether ot not if the resulting array will be reindexed</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Input array, now cleaned</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lastKey">
+        <div class="location">at         line 305</div>
+        <code>        static            string|integer
+    <strong>lastKey</strong>(array $stack)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get last key</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$stack</td>
+                <td>Given array</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|integer</td>
+            <td>Last index of given array</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_transpose">
+        <div class="location">at         line 321</div>
+        <code>        static            array
+    <strong>transpose</strong>(array $array)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Transpose a multidimensional array</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$array</td>
+                <td>Multidimensional array to transpose</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Transpose multidimensional array</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://stackoverflow.com/a/3423692/753531
+</td>
+                <td>Original source authored by "Codler"</td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_filter">
+        <div class="location">at         line 350</div>
+        <code>        static            array
+    <strong>filter</strong>(array $array, boolean|<abbr title="Next\Components\Utils\optional">optional</abbr> $allowZeros = TRUE)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Filters input array entries equal to FALSE but, differently from default
+behavior of native array_filter() function, if defined, zeros will not be
+considered as FALSE, and thus they'll not be removed from given array</p>                    <p>Defaults to TRUE, zeros are allowed</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$array</td>
+                <td>Array to filter</td>
+            </tr>
+                    <tr>
+                <td>boolean|<abbr title="Next\Components\Utils\optional">optional</abbr></td>
+                <td>$allowZeros</td>
+                <td>Define whether or not zeros will be allowed in filtered array. If FALSE,
+ array_filter() with its default behavior will be used. Otherwise, we'll use
+ mb_strlen() as callback.</p>
+
+<p>Defaults to TRUE, zeros are allowed.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Input array filtered</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://php.net/manual/en/function.array-filter.php#111091</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

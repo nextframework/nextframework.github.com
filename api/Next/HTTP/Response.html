@@ -1,0 +1,2048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Next\HTTP\Response | Next Framework</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Next_HTTP_Response" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Next Framework</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Next.html">Next</a></li><li class="backslash">\</li><li><a href="../../Next/HTTP.html">HTTP</a></li><li class="backslash">\</li><li>Response</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Response
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Response</strong>        extends <a href="../../Next/Components/Object.html"><abbr title="Next\Components\Object">Object</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>The Response Class</p>                                </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>HTTP_CONTINUE</td>
+                <td class="last">
+                    <p><em>HTTP_CONTINUE</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SWITCHING_PROTOCOLS</td>
+                <td class="last">
+                    <p><em>SWITCHING_PROTOCOLS</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PROCESSING</td>
+                <td class="last">
+                    <p><em>PROCESSING</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>OK</td>
+                <td class="last">
+                    <p><em>OK</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CREATED</td>
+                <td class="last">
+                    <p><em>CREATED</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ACCEPTED</td>
+                <td class="last">
+                    <p><em>ACCEPTED</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NONAUTHORITATIVE_INFORMATION</td>
+                <td class="last">
+                    <p><em>NONAUTHORITATIVE_INFORMATION</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NO_CONTENT</td>
+                <td class="last">
+                    <p><em>NO_CONTENT</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RESET_CONTENT</td>
+                <td class="last">
+                    <p><em>RESET_CONTENT</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PARTIAL_CONTENT</td>
+                <td class="last">
+                    <p><em>PARTIAL_CONTENT</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MULTI_STATUS</td>
+                <td class="last">
+                    <p><em>MULTI_STATUS</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ALREADY_REPORTED</td>
+                <td class="last">
+                    <p><em>ALREADY_REPORTED</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IM_USED</td>
+                <td class="last">
+                    <p><em>IM_USED</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MULTIPLE_CHOICES</td>
+                <td class="last">
+                    <p><em>MULTIPLE_CHOICES</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MOVED_PERMANENTLY</td>
+                <td class="last">
+                    <p><em>MOVED_PERMANENTLY</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FOUND</td>
+                <td class="last">
+                    <p><em>FOUND</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SEE_OTHER</td>
+                <td class="last">
+                    <p><em>SEE_OTHER</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NOT_MODIFIED</td>
+                <td class="last">
+                    <p><em>NOT_MODIFIED</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>USE_PROXY</td>
+                <td class="last">
+                    <p><em>USE_PROXY</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>UNUSED</td>
+                <td class="last">
+                    <p><em>UNUSED</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TEMPORARY_REDIRECT</td>
+                <td class="last">
+                    <p><em>TEMPORARY_REDIRECT</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PERMANENT_REDIRECT</td>
+                <td class="last">
+                    <p><em>PERMANENT_REDIRECT</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BAD_REQUEST</td>
+                <td class="last">
+                    <p><em>BAD_REQUEST</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>UNAUTHORIZED</td>
+                <td class="last">
+                    <p><em>UNAUTHORIZED</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PAYMENT_REQUIRED</td>
+                <td class="last">
+                    <p><em>PAYMENT_REQUIRED</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FORBIDDEN</td>
+                <td class="last">
+                    <p><em>FORBIDDEN</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NOT_FOUND</td>
+                <td class="last">
+                    <p><em>NOT_FOUND</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>METHOD_NOT_ALLOWED</td>
+                <td class="last">
+                    <p><em>METHOD_NOT_ALLOWED</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NOT_ACCEPTABLE</td>
+                <td class="last">
+                    <p><em>NOT_ACCEPTABLE</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PROXY_AUTHENTICATION_REQUIRED</td>
+                <td class="last">
+                    <p><em>PROXY_AUTHENTICATION_REQUIRED</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>REQUEST_TIMEOUT</td>
+                <td class="last">
+                    <p><em>REQUEST_TIMEOUT</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONFLICT</td>
+                <td class="last">
+                    <p><em>CONFLICT</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>GONE</td>
+                <td class="last">
+                    <p><em>GONE</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LENGTH_REQUIRED</td>
+                <td class="last">
+                    <p><em>LENGTH_REQUIRED</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRECONDITION_FAILED</td>
+                <td class="last">
+                    <p><em>PRECONDITION_FAILED</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>REQUEST_ENTITY_TOO_LARGE</td>
+                <td class="last">
+                    <p><em>REQUEST_ENTITY_TOO_LARGE</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>REQUEST_URI_TOO_LONG</td>
+                <td class="last">
+                    <p><em>REQUEST_URI_TOO_LONG</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>UNSUPPORTED_MEDIA_TYPE</td>
+                <td class="last">
+                    <p><em>UNSUPPORTED_MEDIA_TYPE</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>REQUESTED_RANGE_NOT_SATISFIABLE</td>
+                <td class="last">
+                    <p><em>REQUESTED_RANGE_NOT_SATISFIABLE</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EXPECTATION_FAILED</td>
+                <td class="last">
+                    <p><em>EXPECTATION_FAILED</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IM_TEAPOT</td>
+                <td class="last">
+                    <p><em>IM_TEAPOT</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ENHANCE_YOUR_CALM</td>
+                <td class="last">
+                    <p><em>ENHANCE_YOUR_CALM</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>UNPROCESSABLE_ENTITY</td>
+                <td class="last">
+                    <p><em>UNPROCESSABLE_ENTITY</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LOCKED</td>
+                <td class="last">
+                    <p><em>LOCKED</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FAILED_DEPENDENCY</td>
+                <td class="last">
+                    <p><em>FAILED_DEPENDENCY</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>UNORDERED_COLLECTION</td>
+                <td class="last">
+                    <p><em>UNORDERED_COLLECTION</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>UPGRADE_REQUIRED</td>
+                <td class="last">
+                    <p><em>UPGRADE_REQUIRED</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRECONDITION_REQUIRED</td>
+                <td class="last">
+                    <p><em>PRECONDITION_REQUIRED</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TOO_MANY_REQUESTS</td>
+                <td class="last">
+                    <p><em>TOO_MANY_REQUESTS</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>REQUEST_HEADER_FIELDS_TOO_LARGE</td>
+                <td class="last">
+                    <p><em>REQUEST_HEADER_FIELDS_TOO_LARGE</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NO_RESPONSE</td>
+                <td class="last">
+                    <p><em>NO_RESPONSE</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RETRY_WITH</td>
+                <td class="last">
+                    <p><em>RETRY_WITH</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BLOCKED_BY_WINDOWS_PARENTAL_CONTROLS</td>
+                <td class="last">
+                    <p><em>BLOCKED_BY_WINDOWS_PARENTAL_CONTROLS</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>UNAVAILABLE_FOR_LEGAL_REASONS</td>
+                <td class="last">
+                    <p><em>UNAVAILABLE_FOR_LEGAL_REASONS</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>REQUEST_HEADER_TOO_LARGE</td>
+                <td class="last">
+                    <p><em>REQUEST_HEADER_TOO_LARGE</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CERT_ERROR</td>
+                <td class="last">
+                    <p><em>CERT_ERROR</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NO_CERT</td>
+                <td class="last">
+                    <p><em>NO_CERT</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TO_HTTPS</td>
+                <td class="last">
+                    <p><em>TO_HTTPS</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CLIENT_CLOSED_REQUEST</td>
+                <td class="last">
+                    <p><em>CLIENT_CLOSED_REQUEST</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>INTERNAL_SERVER_ERROR</td>
+                <td class="last">
+                    <p><em>INTERNAL_SERVER_ERROR</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NOT_IMPLEMENTED</td>
+                <td class="last">
+                    <p><em>NOT_IMPLEMENTED</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BAD_GATEWAY</td>
+                <td class="last">
+                    <p><em>BAD_GATEWAY</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SERVICE_UNAVAILABLE</td>
+                <td class="last">
+                    <p><em>SERVICE_UNAVAILABLE</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>GATEWAY_TIMEOUT</td>
+                <td class="last">
+                    <p><em>GATEWAY_TIMEOUT</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>VERSION_NOT_SUPPORTED</td>
+                <td class="last">
+                    <p><em>VERSION_NOT_SUPPORTED</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>INSUFFICIENT_STORAGE</td>
+                <td class="last">
+                    <p><em>INSUFFICIENT_STORAGE</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LOOP_DETECTED</td>
+                <td class="last">
+                    <p><em>LOOP_DETECTED</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BANDWIDTH_LIMIT_EXCEEDED</td>
+                <td class="last">
+                    <p><em>BANDWIDTH_LIMIT_EXCEEDED</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NOT_EXTENDED</td>
+                <td class="last">
+                    <p><em>NOT_EXTENDED</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NETWORK_AUTHENTICATION_REQUIRED</td>
+                <td class="last">
+                    <p><em>NETWORK_AUTHENTICATION_REQUIRED</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NETWORK_READ_TIMEOUT_ERROR</td>
+                <td class="last">
+                    <p><em>NETWORK_READ_TIMEOUT_ERROR</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NETWORK_CONNECT_TIMEOUT_ERROR</td>
+                <td class="last">
+                    <p><em>NETWORK_CONNECT_TIMEOUT_ERROR</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CLEANUP</td>
+                <td class="last">
+                    <p><em>Blank Lines Regexp</em></p>
+                    <p>Match two blank lines in a row allowing it to be replaced
+by a single one, cleaning the Response Body</p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_parameters">
+                                        protected                                        array
+                </td>
+                <td>$parameters</td>
+                <td class="last">Parameter Options Definition</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_messages">
+                                                            private                    array
+                </td>
+                <td>$messages</td>
+                <td class="last">HTTP Message for Codes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_body">
+                                                            private                    string
+                </td>
+                <td>$body</td>
+                <td class="last">Response Body</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_headers">
+                                                            private                    <abbr title="Next\HTTP\Manager">Manager</abbr>
+                </td>
+                <td>$headers</td>
+                <td class="last">Headers Management Object</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_statusCode">
+                                                            private                    integer
+                </td>
+                <td>$statusCode</td>
+                <td class="last">HTTP Response Status Code</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_shouldReturn">
+                                                            private                    boolean
+                </td>
+                <td>$shouldReturn</td>
+                <td class="last">Should we return the Response instead of send it?</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_shouldAbort">
+                                                            private                    boolean
+                </td>
+                <td>$shouldAbort</td>
+                <td class="last">Should we abort the execution flow with an "exit"?</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_shouldApplyMarkupAdjustments">
+                                                            private                    boolean
+                </td>
+                <td>$shouldApplyMarkupAdjustments</td>
+                <td class="last">Should we cleanup excess of whitespace and try to
+fix indentation for markup languages?</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_disableSendingHeaders">
+                                                            private                    boolean
+                </td>
+                <td>$disableSendingHeaders</td>
+                <td class="last">Should we avoid Response Headers to be sent?</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_init">init</a>()
+        
+                                            <p>Additional Initialization.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_appendBody">appendBody</a>(string $content)
+        
+                                            <p>Append content in the end of Response Body</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_prependBody">prependBody</a>(string $content)
+        
+                                            <p>Prepend content in the beginning of Response Body</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearBody">clearBody</a>()
+        
+                                            <p>Clear Response Body</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_send">send</a>()
+        
+                                            <p>Send the Response</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_redirect">redirect</a>(string $destination)
+        
+                                            <p>Send a Redirect Header</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_shouldReturn">shouldReturn</a>()
+        
+                                            <p>Get current state of Response returning flag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_returnResponse">returnResponse</a>(boolean $flag)
+        
+                                            <p>Change state of Response return conditional flag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_shouldAbort">shouldAbort</a>()
+        
+                                            <p>Get current state of Response Flow abortion flag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_abortFlow">abortFlow</a>(boolean $flag)
+        
+                                            <p>Change state of Response Flow Abortion flag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_shouldSendHeaders">shouldSendHeaders</a>()
+        
+                                            <p>Get current state of Headers Sending flag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_disableSendingHeaders">disableSendingHeaders</a>(boolean $flag)
+        
+                                            <p>Change state of Headers Sending flag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_applyMarkupAdjustments">applyMarkupAdjustments</a>(boolean $flag)
+        
+                                            <p>Change state of Markup Adjustments flag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_canSendHeaders">canSendHeaders</a>()
+        
+                                            <p>Checks if we can send any header</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addHeader">addHeader</a>(mixed $header, string|<abbr title="Next\HTTP\optional">optional</abbr> $value = NULL, float $schemaVersion = 1.1)
+        
+                                            <p>Add response Header to be sent</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasBody">hasBody</a>()
+        
+                                            <p>Check whether or not Response Body is empty</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|NULL
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBody">getBody</a>()
+        
+                                            <p>Get Response Body</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isClientError">isClientError</a>()
+        
+                                            <p>Does the status code indicate a client error?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isForbidden">isForbidden</a>()
+        
+                                            <p>Is a Forbidden Request?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isInformational">isInformational</a>()
+        
+                                            <p>Is the current status informational?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isNotFound">isNotFound</a>()
+        
+                                            <p>Does the status code indicate the resource was not found?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isOk">isOk</a>()
+        
+                                            <p>Do we have a normal / OK response?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isServerError">isServerError</a>()
+        
+                                            <p>Does the status code reflects a server error?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isRedirect">isRedirect</a>()
+        
+                                            <p>Do we have a redirect?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isSuccess">isSuccess</a>()
+        
+                                            <p>Was the response successful?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer|NULL
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStatusCode">getStatusCode</a>()
+        
+                                            <p>Get HTTP Status Code</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStatusMessage">getStatusMessage</a>(mixed|integer $code)
+        
+                                            <p>Get the message associated to a Response Code</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sendHeaders">sendHeaders</a>()
+        
+                                            <p>Send Response Headers</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addResponseData">addResponseData</a>()
+        
+                                            <p>Fill Response Information</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___toString">__toString</a>()
+        
+                                            <p>Get Response Body</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">at         line 743</div>
+        <code>            protected        
+    <strong>init</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Additional Initialization.</p>                    <p>Prepares HTTP Response Headers Collection extending
+Response's Context to it and sends all HTTP response Headers
+already sent so far</p>                            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_appendBody">
+        <div class="location">at         line 791</div>
+        <code>                    <a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a>
+    <strong>appendBody</strong>(string $content)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Append content in the end of Response Body</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$content</td>
+                <td>Content to be appended to Response Body</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a></td>
+            <td>Response Object (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prependBody">
+        <div class="location">at         line 807</div>
+        <code>                    <a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a>
+    <strong>prependBody</strong>(string $content)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Prepend content in the beginning of Response Body</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$content</td>
+                <td>Content to be prepended to Response Body</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a></td>
+            <td>Response Object (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearBody">
+        <div class="location">at         line 819</div>
+        <code>                    <a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a>
+    <strong>clearBody</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clear Response Body</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_send">
+        <div class="location">at         line 831</div>
+        <code>                    
+    <strong>send</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Send the Response</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_redirect">
+        <div class="location">at         line 875</div>
+        <code>                    
+    <strong>redirect</strong>(string $destination)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Send a Redirect Header</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$destination</td>
+                <td>URL to be Redirected</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>Response::canSendHeaders()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_shouldReturn">
+        <div class="location">at         line 917</div>
+        <code>                    boolean
+    <strong>shouldReturn</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get current state of Response returning flag</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>Response returning flag value</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_returnResponse">
+        <div class="location">at         line 930</div>
+        <code>                    <a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a>
+    <strong>returnResponse</strong>(boolean $flag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Change state of Response return conditional flag</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$flag</td>
+                <td>New state for the flag</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a></td>
+            <td>Response Instance (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_shouldAbort">
+        <div class="location">at         line 943</div>
+        <code>                    boolean
+    <strong>shouldAbort</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get current state of Response Flow abortion flag</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>Response Flow Abortion flag value</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_abortFlow">
+        <div class="location">at         line 956</div>
+        <code>                    <a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a>
+    <strong>abortFlow</strong>(boolean $flag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Change state of Response Flow Abortion flag</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$flag</td>
+                <td>New state for the flag</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a></td>
+            <td>Response Instance (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_shouldSendHeaders">
+        <div class="location">at         line 969</div>
+        <code>                    boolean
+    <strong>shouldSendHeaders</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get current state of Headers Sending flag</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>Headers Sending flag value</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_disableSendingHeaders">
+        <div class="location">at         line 982</div>
+        <code>                    <a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a>
+    <strong>disableSendingHeaders</strong>(boolean $flag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Change state of Headers Sending flag</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$flag</td>
+                <td>New state for the flag</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a></td>
+            <td>Response Instance (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_applyMarkupAdjustments">
+        <div class="location">at         line 998</div>
+        <code>                    <a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a>
+    <strong>applyMarkupAdjustments</strong>(boolean $flag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Change state of Markup Adjustments flag</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$flag</td>
+                <td>New state for the flag</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a></td>
+            <td>Response Instance (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_canSendHeaders">
+        <div class="location">at         line 1011</div>
+        <code>        static            
+    <strong>canSendHeaders</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checks if we can send any header</p>                                                </div>
+                <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a></td>
+                <td>Thrown if any Header has already been sent</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addHeader">
+        <div class="location">at         line 1099</div>
+        <code>                    <a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a>
+    <strong>addHeader</strong>(mixed $header, string|<abbr title="Next\HTTP\optional">optional</abbr> $value = NULL, float $schemaVersion = 1.1)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add response Header to be sent</p>                    <p>This method intermediates Next\HTTP\Headers\AbstractHeaders::addHeader()
+in order to use the proper field for HTTP Response Status Code Headers</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$header</td>
+                <td>Header name. Possible values are:</p>
+
+<p>
+
+      <ul>
+
+          <li>
+
+              <p>An integer as HTTP Response State Header</p>
+
+              <p>In this case a Raw Header Field will be sent</p>
+          </li>
+
+          <li>
+
+              <p>
+                  A well-formed Header Field, instance of
+                  \Next\HTTP\Headers\Field
+              </p>
+
+              <p>In this case it'll be used "as is"</p>
+
+          </li>
+
+          <li>
+
+              <p>A Header Field Name</p>
+
+              <p>
+                  We'll try to match a valid one or send
+                  it as "Generic"
+              </p>
+
+          </li>
+
+          <li>
+
+              <p>
+                  An array of Header Fields, where each value
+                  can be a well-formed Header Field or a
+                  Header Field Name
+              </p>
+
+              <p>In this case we'll add them recursively</p>
+
+          </li>
+
+      </ul></td>
+            </tr>
+                    <tr>
+                <td>string|<abbr title="Next\HTTP\optional">optional</abbr></td>
+                <td>$value</td>
+                <td>Header value</td>
+            </tr>
+                    <tr>
+                <td>float</td>
+                <td>$schemaVersion</td>
+                <td>Schema Version. Only used if <strong>$header</strong> is an integer</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/HTTP/Response.html"><abbr title="Next\HTTP\Response">Response</abbr></a></td>
+            <td>Response Object (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasBody">
+        <div class="location">at         line 1152</div>
+        <code>                    boolean
+    <strong>hasBody</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether or not Response Body is empty</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if Response Body is not empty and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBody">
+        <div class="location">at         line 1163</div>
+        <code>                    string|NULL
+    <strong>getBody</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Response Body</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|NULL</td>
+            <td>The Response Body, if any content has been added to it.
+ Otherwise, nothing is returned</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isClientError">
+        <div class="location">at         line 1175</div>
+        <code>                    bool
+    <strong>isClientError</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Does the status code indicate a client error?</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>TRUE if HTTP Response Code is in Client Error Range and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isForbidden">
+        <div class="location">at         line 1188</div>
+        <code>                    bool
+    <strong>isForbidden</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is a Forbidden Request?</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>TRUE if HTTP Response Code is equal to Forbidden Response Code
+ and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isInformational">
+        <div class="location">at         line 1199</div>
+        <code>                    bool
+    <strong>isInformational</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is the current status informational?</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>TRUE if HTTP Response Code is in Informational Range
+ and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isNotFound">
+        <div class="location">at         line 1212</div>
+        <code>                    bool
+    <strong>isNotFound</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Does the status code indicate the resource was not found?</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>TRUE if HTTP Response Code is equal to Not Found Response Code
+ and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isOk">
+        <div class="location">at         line 1223</div>
+        <code>                    bool
+    <strong>isOk</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Do we have a normal / OK response?</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>TRUE if HTTP Response Code is equal to Success/OK Response Code
+ and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isServerError">
+        <div class="location">at         line 1233</div>
+        <code>                    bool
+    <strong>isServerError</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Does the status code reflects a server error?</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>TRUE if HTTP Response Code is in Server Error Range and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isRedirect">
+        <div class="location">at         line 1245</div>
+        <code>                    bool
+    <strong>isRedirect</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Do we have a redirect?</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>TRUE if HTTP Response Code is in Redirection Range and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isSuccess">
+        <div class="location">at         line 1257</div>
+        <code>                    bool
+    <strong>isSuccess</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Was the response successful?</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>TRUE if HTTP Response Code is in Success Range and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStatusCode">
+        <div class="location">at         line 1269</div>
+        <code>                    integer|NULL
+    <strong>getStatusCode</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get HTTP Status Code</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer|NULL</td>
+            <td>HTTP Response Code, if found and NULL otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStatusMessage">
+        <div class="location">at         line 1283</div>
+        <code>                    string|null
+    <strong>getStatusMessage</strong>(mixed|integer $code)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the message associated to a Response Code</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed|integer</td>
+                <td>$code</td>
+                <td>HTTP Response Code to have its associated message retrieved</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>The HTTP Response Code message associated if known by Response class.
+ If not, return NULL</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendHeaders">
+        <div class="location">at         line 1300</div>
+        <code>                private    
+    <strong>sendHeaders</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Send Response Headers</p>                                                </div>
+                <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a></td>
+                <td>Thrown if any Header has already been sent</td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>Response::canSendHeaders()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addResponseData">
+        <div class="location">at         line 1362</div>
+        <code>                private    
+    <strong>addResponseData</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Fill Response Information</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___toString">
+        <div class="location">at         line 1429</div>
+        <code>                    string
+    <strong>__toString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Response Body</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Classname without namespaces</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

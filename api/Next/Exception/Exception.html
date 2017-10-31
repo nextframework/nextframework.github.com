@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Next\Exception\Exception | Next Framework</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Next_Exception_Exception" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Next Framework</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Next.html">Next</a></li><li class="backslash">\</li><li><a href="../../Next/Exception.html">Exception</a></li><li class="backslash">\</li><li>Exception</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Exception
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Exception</strong>        extends <a target="_blank" href="http://php.net/Exception">Exception</a>        implements
+        <a href="../../Next/Validation/Verifiable.html"><abbr title="Next\Validation\Verifiable">Verifiable</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Defines a variation of native Exception Class with native support
+for HTTP Response Codes and, in the future, translation</p>                                </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>UNKNOWN</td>
+                <td class="last">
+                    <p><em>Unknown or PHP Internal Exception Code</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PHP_ERROR</td>
+                <td class="last">
+                    <p><em>PHP-Error</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_replacements">
+                                        protected                                        array
+                </td>
+                <td>$replacements</td>
+                <td class="last">Placeholders Replacements</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_responseCode">
+                                        protected                                        integer
+                </td>
+                <td>$responseCode</td>
+                <td class="last">Default HTTP Response Code</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_severity">
+                                        protected                                        integer
+                </td>
+                <td>$severity</td>
+                <td class="last">Error Severity</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_callback">
+                                        protected                                        callable|<abbr title="Next\Exception\optional">optional</abbr>
+                </td>
+                <td>$callback</td>
+                <td class="last">An optional callback to associate with the Exception thrown
+as complement of Error Standardization Concept</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>()
+        
+                                            <p>Exception Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer|void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSeverity">getSeverity</a>()
+        
+                                            <p>Gets the exception severity</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getResponseCode">getResponseCode</a>()
+        
+                                            <p>Get defined HTTP Response Code</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    callable|void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCallback">getCallback</a>()
+        
+                                            <p>Get associated Exception callback</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_verify">verify</a>()
+        
+                                            <p>Verify Exception Object Integrity.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___toString">__toString</a>()
+        
+                                            <p>Wrapper method of Exception::getMessage() to allow
+the translated message be returned when casting Exception Object
+to string</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         line 78</div>
+        <code>                    
+    <strong>__construct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Exception Constructor</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSeverity">
+        <div class="location">at         line 125</div>
+        <code>                    integer|void
+    <strong>getSeverity</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the exception severity</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer|void</td>
+            <td>Returns the severity level of the Exception, if any</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResponseCode">
+        <div class="location">at         line 135</div>
+        <code>                    integer
+    <strong>getResponseCode</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get defined HTTP Response Code</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td>HTTP Response Code, if any, associated to Exception thrown</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCallback">
+        <div class="location">at         line 145</div>
+        <code>                    callable|void
+    <strong>getCallback</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get associated Exception callback</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>callable|void</td>
+            <td>Exception Callback, if provided</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_verify">
+        <div class="location">at         line 180</div>
+        <code>                    
+    <strong>verify</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Verify Exception Object Integrity.</p>                    <p>An Exception can be formed by one and up to three components:</p>
+
+<ul>
+<li>Message</li>
+<li>Exception Code</li>
+<li>HTTP Response Code</li>
+</ul>
+
+<p>But the only component required is the Exception Message and
+since the Exception Code can be virtually anything, we'll only
+check if the HTTP Response Code provided is valid</p>
+
+<p>We'll always provide a default code, of course, but when manually
+defined, let's make sure it's valid in order to not send an
+invalid Response Header.</p>
+
+<p>Also, even being possible to throw Exceptions inside the
+Exception Class, we avoid this practice in order to protect
+against a infinite loop.</p>
+
+<p>We could trigger an error, but the most appropriate Error Level
+to be used (E_ERROR) cannot be used</p>
+
+<p>And since E_USER_ERROR can be, accidentally or not, hidden with a
+very low error_reporting() definition, we'll avoid it too.</p>
+
+<p>So, using die(), it's not elegant, but no one can complain ^^</p>                            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___toString">
+        <div class="location">at         line 215</div>
+        <code>                    string
+    <strong>__toString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Wrapper method of Exception::getMessage() to allow
+the translated message be returned when casting Exception Object
+to string</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Exception Message</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Next\Session\Handlers | Next Framework</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Next_Session_Handlers" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Next Framework</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Next.html">Next</a></li><li class="backslash">\</li><li><a href="../../Next/Session.html">Session</a></li><li class="backslash">\</li><li>Handlers</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Handlers
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Handlers</strong>        extends <a href="../../Next/Components/Object.html"><abbr title="Next\Components\Object">Object</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>The Session Handlers Manager controls different Session Handlers, by adding
+them to a Set Collection but more important it deals with the Handler switching</p>                                </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_parameters">
+                                        protected                                        array
+                </td>
+                <td>$parameters</td>
+                <td class="last">Parameter Options Definition</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_handlers">
+                                                            private                    <a href="../../Next/Components/Collections/Set.html"><abbr title="Next\Components\Collections\Set">Set</abbr></a>
+                </td>
+                <td>$handlers</td>
+                <td class="last">Handlers Set</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_handler">
+                                                            private                    <a href="../../Next/Session/Handlers/Handler.html"><abbr title="Next\Session\Handlers\Handler">Handler</abbr></a>
+                </td>
+                <td>$handler</td>
+                <td class="last">Active Handler</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_manager">
+                                                            private                    <a href="../../Next/Session/Manager.html"><abbr title="Next\Session\Manager">Manager</abbr></a>
+                </td>
+                <td>$manager</td>
+                <td class="last">Session Manager Object</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_init">init</a>()
+        
+                                            <p>Additional Initialization.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Next/Session/Handlers.html"><abbr title="Next\Session\Handlers">Handlers</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addHandler">addHandler</a>(<a href="../../Next/Session/Handlers/Handler.html"><abbr title="Next\Session\Handlers\Handler">Handler</abbr></a> $handler, boolean|<abbr title="Next\Session\optional">optional</abbr> $activate = FALSE)
+        
+                                            <p>Add a new Session Handler</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_switch">switch</a>(string|<a href="../../Next/Session/Handlers/Handler.html"><abbr title="Next\Session\Handlers\Handler">Handler</abbr></a> $handler)
+        
+                                            <p>Switch to a different Session Handler</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Next/Session/Handlers/Handler.html"><abbr title="Next\Session\Handlers\Handler">Handler</abbr></a>|void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHandler">getHandler</a>()
+        
+                                            <p>Get active Session Handler</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">at         line 71</div>
+        <code>            protected        
+    <strong>init</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Additional Initialization.</p>                    <p>Creates a new Collection set for all Session Handlers to be
+registered and a shortcut for Next\Session\Manager</p>                            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addHandler">
+        <div class="location">at         line 90</div>
+        <code>                    <a href="../../Next/Session/Handlers.html"><abbr title="Next\Session\Handlers">Handlers</abbr></a>
+    <strong>addHandler</strong>(<a href="../../Next/Session/Handlers/Handler.html"><abbr title="Next\Session\Handlers\Handler">Handler</abbr></a> $handler, boolean|<abbr title="Next\Session\optional">optional</abbr> $activate = FALSE)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a new Session Handler</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Next/Session/Handlers/Handler.html"><abbr title="Next\Session\Handlers\Handler">Handler</abbr></a></td>
+                <td>$handler</td>
+                <td>Session Handler</td>
+            </tr>
+                    <tr>
+                <td>boolean|<abbr title="Next\Session\optional">optional</abbr></td>
+                <td>$activate</td>
+                <td>Flag to condition the immediate activation of Handler</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/Session/Handlers.html"><abbr title="Next\Session\Handlers">Handlers</abbr></a></td>
+            <td>Session Handlers Object (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_switch">
+        <div class="location">at         line 115</div>
+        <code>                    
+    <strong>switch</strong>(string|<a href="../../Next/Session/Handlers/Handler.html"><abbr title="Next\Session\Handlers\Handler">Handler</abbr></a> $handler)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Switch to a different Session Handler</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<a href="../../Next/Session/Handlers/Handler.html"><abbr title="Next\Session\Handlers\Handler">Handler</abbr></a></td>
+                <td>$handler</td>
+                <td>Handler Object or Handler Name</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Next\Session\Handlers\HandlerException">HandlerException</abbr></td>
+                <td>Changing Session Handler to a invalid Handler, characterized as
+ instance of Next\Session\Handlers\Handler</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHandler">
+        <div class="location">at         line 186</div>
+        <code>                    <a href="../../Next/Session/Handlers/Handler.html"><abbr title="Next\Session\Handlers\Handler">Handler</abbr></a>|void
+    <strong>getHandler</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get active Session Handler</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/Session/Handlers/Handler.html"><abbr title="Next\Session\Handlers\Handler">Handler</abbr></a>|void</td>
+            <td>Active Handler, after Handlers::change() has been called</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Next\View\ViewException | Next Framework</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Next_View_ViewException" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Next Framework</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Next.html">Next</a></li><li class="backslash">\</li><li><a href="../../Next/View.html">View</a></li><li class="backslash">\</li><li>ViewException</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            ViewException
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>ViewException</strong>        extends <a href="../../Next/Exception/Exception.html"><abbr title="Next\Exception\Exception">Exception</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>A wrapper class for reusable Exceptions within the Next\View Module</p>            <p>Note that the ViewException itself is not returned. Instead one of the
+Exceptions of Next\Exception module are</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Next/Exception/Exceptions/InvalidArgumentException.html"><abbr title="Next\Exception\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_forbiddenVariable">forbiddenVariable</a>(string $tplVar)
+        
+                                            <p>Chosen Template Variable Name is reserved or forbidden due
+an associated View Engine Helper</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unableToFindFile">unableToFindFile</a>()
+        
+                                            <p>Template View File could not be manually found and the
+auto-searching feature by FileSpec is disabled</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_missingFile">missingFile</a>(string $file)
+        
+                                            <p>Template View File could not be found</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Next/Exception/Exceptions/AccessViolationException.html"><abbr title="Next\Exception\Exceptions\AccessViolationException">AccessViolationException</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_missingVariable">missingVariable</a>(string $tplVar)
+        
+                                            <p>Missing Template Variable</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Next/Exception/Exceptions/InvalidArgumentException.html"><abbr title="Next\Exception\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unknownHelper">unknownHelper</a>(string $helper)
+        
+                                            <p>Unknown View Helper</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_disabledFileSpec">disabledFileSpec</a>()
+        
+                                            <p>Template View File could not be manually found and with the
+Template FileSpec auto-searching feature disabled, a
+Template File can't be automatically found</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_noPaths">noPaths</a>(string $filename)
+        
+                                            <p>No Template View Paths to search for Template View Files</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_wrongUseOfSubpath">wrongUseOfSubpath</a>(string $file)
+        
+                                            <p>Template View Files could not be automatically found using the
+Template FileSpec auto-searching feature and a Template Subpath
+is defined.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unableToFindUnderFileSpec">unableToFindUnderFileSpec</a>(string $file)
+        
+                                            <p>Unable to find a Template View in defined FileSpec</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_forbiddenVariable">
+        <div class="location">at         line 51</div>
+        <code>        static            <a href="../../Next/Exception/Exceptions/InvalidArgumentException.html"><abbr title="Next\Exception\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a>
+    <strong>forbiddenVariable</strong>(string $tplVar)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Chosen Template Variable Name is reserved or forbidden due
+an associated View Engine Helper</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tplVar</td>
+                <td>Desired Template Variable Name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/Exception/Exceptions/InvalidArgumentException.html"><abbr title="Next\Exception\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+            <td>Exception for forbidden variable name</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unableToFindFile">
+        <div class="location">at         line 74</div>
+        <code>        static            <a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a>
+    <strong>unableToFindFile</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Template View File could not be manually found and the
+auto-searching feature by FileSpec is disabled</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a></td>
+            <td>Exception for Template View File findability failure</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_missingFile">
+        <div class="location">at         line 95</div>
+        <code>        static            <a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a>
+    <strong>missingFile</strong>(string $file)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Template View File could not be found</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td>File we could not find</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a></td>
+            <td>Exception for missing Template View File</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_missingVariable">
+        <div class="location">at         line 115</div>
+        <code>        static            <a href="../../Next/Exception/Exceptions/AccessViolationException.html"><abbr title="Next\Exception\Exceptions\AccessViolationException">AccessViolationException</abbr></a>
+    <strong>missingVariable</strong>(string $tplVar)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Missing Template Variable</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tplVar</td>
+                <td>Desired Template Variable Name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/Exception/Exceptions/AccessViolationException.html"><abbr title="Next\Exception\Exceptions\AccessViolationException">AccessViolationException</abbr></a></td>
+            <td>Exception for missing Template Variable being used</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unknownHelper">
+        <div class="location">at         line 137</div>
+        <code>        static            <a href="../../Next/Exception/Exceptions/InvalidArgumentException.html"><abbr title="Next\Exception\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a>
+    <strong>unknownHelper</strong>(string $helper)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unknown View Helper</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$helper</td>
+                <td>Helper trying to be used</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/Exception/Exceptions/InvalidArgumentException.html"><abbr title="Next\Exception\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+            <td>Exception for unknown View Helper</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_disabledFileSpec">
+        <div class="location">at         line 156</div>
+        <code>        static            <a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a>
+    <strong>disabledFileSpec</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Template View File could not be manually found and with the
+Template FileSpec auto-searching feature disabled, a
+Template File can't be automatically found</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a></td>
+            <td>Exception for when no Template View name is provided and
+ auto-search by Template View FileSpec is disabled</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_noPaths">
+        <div class="location">at         line 176</div>
+        <code>        static            <a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a>
+    <strong>noPaths</strong>(string $filename)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>No Template View Paths to search for Template View Files</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td>Template View Filename</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a></td>
+            <td>Exception for impossibility to find a Template View File
+ when no paths were provided</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_wrongUseOfSubpath">
+        <div class="location">at         line 204</div>
+        <code>        static            <a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a>
+    <strong>wrongUseOfSubpath</strong>(string $file)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Template View Files could not be automatically found using the
+Template FileSpec auto-searching feature and a Template Subpath
+is defined.</p>                    <p>Just a split condition to help Developers debug</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td>File we could not find</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a></td>
+            <td>Exception for subpaths being wrongly used</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unableToFindUnderFileSpec">
+        <div class="location">at         line 231</div>
+        <code>        static            <a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a>
+    <strong>unableToFindUnderFileSpec</strong>(string $file)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unable to find a Template View in defined FileSpec</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td>File we could not find</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a></td>
+            <td>Exception for impossibility to find Template View File</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

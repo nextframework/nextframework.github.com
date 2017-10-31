@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Next\Components\Context | Next Framework</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Next_Components_Context" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Next Framework</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Next.html">Next</a></li><li class="backslash">\</li><li><a href="../../Next/Components.html">Components</a></li><li class="backslash">\</li><li>Context</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Context
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Context</strong>        implements
+        <a href="../../Next/Components/Interfaces/Contextualizable.html"><abbr title="Next\Components\Interfaces\Contextualizable">Contextualizable</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Bridges two Object instances wrapped in an Invoker Object and handles
+methods calling within the Extended Context</p>                                </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_callables">
+                                                            private                    array
+                </td>
+                <td>$callables</td>
+                <td class="last">Context Callables</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_extend">extend</a>(<a href="../../Next/Components/Invoker.html"><abbr title="Next\Components\Invoker">Invoker</abbr></a> $invoker, string|array|<abbr title="Next\Components\Interfaces\optional">optional</abbr> $methods = NULL)
+        
+                                            <p>Registers a new Invoker Object to be used as context extension</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed|boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_call">call</a>(<a href="../../Next/Components/Object.html"><abbr title="Next\Components\Object">Object</abbr></a> $caller, string $method, array $args = [])
+        
+                                            <p>Invoke an extended resource from a caller context</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCallables">getCallables</a>()
+        
+                                            <p>Get Context Callables</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_filter">filter</a>(string|<abbr title="Next\Components\ReflectionMethod">ReflectionMethod</abbr> $element)
+        
+                                            <p>Filter elements of an array to not be a method of:</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_simplify">simplify</a>(string|<abbr title="Next\Components\reflectionMethod">reflectionMethod</abbr> $element)
+        
+                                            <p>Get method name from ReflectionMethod objects</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_extend">
+        <div class="location">at         line 60</div>
+        <code>                    
+    <strong>extend</strong>(<a href="../../Next/Components/Invoker.html"><abbr title="Next\Components\Invoker">Invoker</abbr></a> $invoker, string|array|<abbr title="Next\Components\Interfaces\optional">optional</abbr> $methods = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Registers a new Invoker Object to be used as context extension</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Next/Components/Invoker.html"><abbr title="Next\Components\Invoker">Invoker</abbr></a></td>
+                <td>$invoker</td>
+                <td>Invoker Object</td>
+            </tr>
+                    <tr>
+                <td>string|array|<abbr title="Next\Components\Interfaces\optional">optional</abbr></td>
+                <td>$methods</td>
+                <td>One or more methods accessible through extended Context.
+ Defaults to NULL, which means almost all PUBLIC methods will be accessible</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_call">
+        <div class="location">at         line 119</div>
+        <code>                    mixed|boolean
+    <strong>call</strong>(<a href="../../Next/Components/Object.html"><abbr title="Next\Components\Object">Object</abbr></a> $caller, string $method, array $args = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Invoke an extended resource from a caller context</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Next/Components/Object.html"><abbr title="Next\Components\Object">Object</abbr></a></td>
+                <td>$caller</td>
+                <td>Caller Object</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>Callable resource name</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>Calling Arguments</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed|boolean</td>
+            <td>Return what extended method returns.</p>
+
+<p>If invoking process fail, false will returned.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Next\Exception\Exceptions\BadmethodcallException">BadmethodcallException</abbr></td>
+                <td>Thrown if a \ReflectionException is caught in
+ <code>\Next\Components\Context::call()</code> when trying to call the
+ method under Extended Context</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Next/Exception/Exceptions/NullException.html"><abbr title="Next\Exception\Exceptions\NullException">NullException</abbr></a></td>
+                <td>Thrown as a way for Next\Components\Object` to know the
+ method hasn't been found as part of the Extended Context and
+ should try to search as Prototyped Resource</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCallables">
+        <div class="location">at         line 188</div>
+        <code>                    
+    <strong>getCallables</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Context Callables</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_filter">
+        <div class="location">at         line 211</div>
+        <code>                private    boolean
+    <strong>filter</strong>(string|<abbr title="Next\Components\ReflectionMethod">ReflectionMethod</abbr> $element)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Filter elements of an array to not be a method of:</p>                    <p><ul>
+<li>\Next\Components\Object</li>
+<li>\Next\Components\Context</li>
+<li>\Next\Components\Prototype</li>
+<li>Any magic method (__get(), __set()...)</li>
+</ul>
+</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<abbr title="Next\Components\ReflectionMethod">ReflectionMethod</abbr></td>
+                <td>$element</td>
+                <td>The current element in the "behind the scenes" loop of array_filter()</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if current element is NOT an instance of
+ \ReflectionMethod -OR- if given \ReflectionObject::$class
+ property of current element is not a method of one of the
+ classes mentioned above and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_simplify">
+        <div class="location">at         line 241</div>
+        <code>                private    string
+    <strong>simplify</strong>(string|<abbr title="Next\Components\reflectionMethod">reflectionMethod</abbr> $element)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get method name from ReflectionMethod objects</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<abbr title="Next\Components\reflectionMethod">reflectionMethod</abbr></td>
+                <td>$element</td>
+                <td>The current element in the "behind the scenes" loop of array_map()</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>If current element is an instance of ReflectionMethod then the
+ value of their public property 'name' will be returned</p>
+
+<p>Otherwise it will be returned "as is"</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Next\DB\Entity\Manager | Next Framework</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Next_DB_Entity_Manager" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Next Framework</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Next.html">Next</a></li><li class="backslash">\</li><li><a href="../../../Next/DB.html">DB</a></li><li class="backslash">\</li><li><a href="../../../Next/DB/Entity.html">Entity</a></li><li class="backslash">\</li><li>Manager</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Manager
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Manager</strong>        extends <a href="../../../Next/Components/Object.html"><abbr title="Next\Components\Object">Object</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>The Entity Manager Class is responsible for listing, updating and removing
+records based on informations provided by its associated Entity through
+a Repository</p>            <p>It also bridges its own Context to Query Builder's and the provided
+Repository's Contexts as well as the inverse, bridging the Repository
+to both its and Query Builder's Contexts</p>                    </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_parameters">
+                                        protected                                        array
+                </td>
+                <td>$parameters</td>
+                <td class="last">Parameter Options Definition</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_builder">
+                                                            private                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+                </td>
+                <td>$builder</td>
+                <td class="last">Query Builder</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_source">
+                                                            private                    array
+                </td>
+                <td>$source</td>
+                <td class="last">Data-source</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_init">init</a>()
+        
+                                            <p>Additional Initialization.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/Entity/Manager.html"><abbr title="Next\DB\Entity\Manager">Manager</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setSource">setSource</a>(array $source)
+        
+                                            <p>Set Data-source</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rowCount">rowCount</a>()
+        
+                                            <p>Return the number of rows affected by the last SQL statement</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/DataGateway/RowSet.html"><abbr title="Next\DB\DataGateway\RowSet">RowSet</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fetch">fetch</a>(string|integer|<abbr title="Next\DB\Entity\optional">optional</abbr> $fetchStyle = NULL)
+        
+                                            <p>Fetch the next row from a result set</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/DataGateway/RowSet.html"><abbr title="Next\DB\DataGateway\RowSet">RowSet</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fetchAll">fetchAll</a>()
+        
+                                            <p>Return an array containing all of the result set rows</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_select">select</a>(string|array|<abbr title="Next\DB\Entity\optional">optional</abbr> $columns = Query::WILDCARD)
+        
+                                            <p>Selects records from Database Table associated to provided Entity</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_insert">insert</a>(string|<abbr title="Next\DB\Entity\optional">optional</abbr> $name = NULL)
+        
+                                            <p>Inserts a new record on Database Table associated with
+provided Entity</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/Entity/Manager.html"><abbr title="Next\DB\Entity\Manager">Manager</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_update">update</a>()
+        
+                                            <p>Updates records on Database Table associated with
+provided Entity</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/Entity/Manager.html"><abbr title="Next\DB\Entity\Manager">Manager</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_delete">delete</a>()
+        
+                                            <p>Delete records from Database Table associated with
+provided Entity</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/Entity/Manager.html"><abbr title="Next\DB\Entity\Manager">Manager</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_reset">reset</a>()
+        
+                                            <p>Resets the Entity Manager by returning a new instance of it</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/Entity/Manager.html"><abbr title="Next\DB\Entity\Manager">Manager</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_flush">flush</a>()
+        
+                                            <p>Flushes Entity Manager's previously used informations,
+preparing it for a new use</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/Entity/Manager.html"><abbr title="Next\DB\Entity\Manager">Manager</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEntity">setEntity</a>(<a href="../../../Next/DB/Entity/Entity.html"><abbr title="Next\DB\Entity\Entity">Entity</abbr></a> $entity)
+        
+                                            <p>Sets a new Entity Object after the Manager Object is built</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQuery">getQuery</a>()
+        
+                                            <p>Get assembled query</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/Entity/Entity.html"><abbr title="Next\DB\Entity\Entity">Entity</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEntity">getEntity</a>()
+        
+                                            <p>Get associated Entity Object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSource">getSource</a>()
+        
+                                            <p>Get Data-source</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/Driver/Driver.html"><abbr title="Next\DB\Driver\Driver">Driver</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDriver">getDriver</a>()
+        
+                                            <p>Get associated Connection Driver</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBuilder">getBuilder</a>()
+        
+                                            <p>Get Query Builder</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Next/DB/Statement/Statement.html"><abbr title="Next\DB\Statement\Statement">Statement</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_execute">execute</a>()
+        
+                                            <p>Wrapper method for Next\DB\Driver\Driver::prepare()
+and Next\DB\Statement\Statement:execute()</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">at         line 81</div>
+        <code>            protected        
+    <strong>init</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Additional Initialization.</p>                    <p>Prepares initial data-source, initializes Repositories Collection
+and the Query Builder extending Manager's Context to it</p>                            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSource">
+        <div class="location">at         line 126</div>
+        <code>                    <a href="../../../Next/DB/Entity/Manager.html"><abbr title="Next\DB\Entity\Manager">Manager</abbr></a>
+    <strong>setSource</strong>(array $source)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set Data-source</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$source</td>
+                <td>Data-source</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/Entity/Manager.html"><abbr title="Next\DB\Entity\Manager">Manager</abbr></a></td>
+            <td>Entity Manager Object (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rowCount">
+        <div class="location">at         line 143</div>
+        <code>                    integer
+    <strong>rowCount</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the number of rows affected by the last SQL statement</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td>The number of rows affected</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>\Next\DB\Driver\Driver::lastInsertId()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fetch">
+        <div class="location">at         line 166</div>
+        <code>                    <a href="../../../Next/DB/DataGateway/RowSet.html"><abbr title="Next\DB\DataGateway\RowSet">RowSet</abbr></a>
+    <strong>fetch</strong>(string|integer|<abbr title="Next\DB\Entity\optional">optional</abbr> $fetchStyle = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Fetch the next row from a result set</p>                    <p>This method is a mere formality since records shouldn't
+be used outside a RowSet</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|integer|<abbr title="Next\DB\Entity\optional">optional</abbr></td>
+                <td>$fetchStyle</td>
+                <td>The Fetch Mode, accordingly to chosen Driver</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/DataGateway/RowSet.html"><abbr title="Next\DB\DataGateway\RowSet">RowSet</abbr></a></td>
+            <td>RowSet Object with fetched data, if any</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>\Next\DB\Statement\Statement::fetch()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fetchAll">
+        <div class="location">at         line 190</div>
+        <code>                    <a href="../../../Next/DB/DataGateway/RowSet.html"><abbr title="Next\DB\DataGateway\RowSet">RowSet</abbr></a>
+    <strong>fetchAll</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return an array containing all of the result set rows</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/DataGateway/RowSet.html"><abbr title="Next\DB\DataGateway\RowSet">RowSet</abbr></a></td>
+            <td>RowSet Object with fetched data, if any</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>\Next\DB\Statement\Statement::fetchAll()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_select">
+        <div class="location">at         line 217</div>
+        <code>                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+    <strong>select</strong>(string|array|<abbr title="Next\DB\Entity\optional">optional</abbr> $columns = Query::WILDCARD)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Selects records from Database Table associated to provided Entity</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array|<abbr title="Next\DB\Entity\optional">optional</abbr></td>
+                <td>$columns</td>
+                <td>Columns to be included in SELECT Statement</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a></td>
+            <td>Query Builder Object (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_insert">
+        <div class="location">at         line 236</div>
+        <code>                    string
+    <strong>insert</strong>(string|<abbr title="Next\DB\Entity\optional">optional</abbr> $name = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Inserts a new record on Database Table associated with
+provided Entity</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<abbr title="Next\DB\Entity\optional">optional</abbr></td>
+                <td>$name</td>
+                <td>Name of the sequence object from which the ID should be returned
+ According to PHP Manual it's used, for example, by PDO_PGSQL
+ as sequence object identifier</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>The ID of last record inserted</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Next/Exception/Exceptions/LengthException.html"><abbr title="Next\Exception\Exceptions\LengthException">LengthException</abbr></a></td>
+                <td>Trying to insert something without define any field</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_update">
+        <div class="location">at         line 266</div>
+        <code>                    <a href="../../../Next/DB/Entity/Manager.html"><abbr title="Next\DB\Entity\Manager">Manager</abbr></a>
+    <strong>update</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Updates records on Database Table associated with
+provided Entity</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/Entity/Manager.html"><abbr title="Next\DB\Entity\Manager">Manager</abbr></a></td>
+            <td>Manager instance, in order to allow method chaining to build the final query</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Next/Exception/Exceptions/LengthException.html"><abbr title="Next\Exception\Exceptions\LengthException">LengthException</abbr></a></td>
+                <td>Trying to execute an UPDATE Statement without define any field</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_delete">
+        <div class="location">at         line 293</div>
+        <code>                    <a href="../../../Next/DB/Entity/Manager.html"><abbr title="Next\DB\Entity\Manager">Manager</abbr></a>
+    <strong>delete</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Delete records from Database Table associated with
+provided Entity</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/Entity/Manager.html"><abbr title="Next\DB\Entity\Manager">Manager</abbr></a></td>
+            <td>Manager instance, in order to allow method chaining to build the final query</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reset">
+        <div class="location">at         line 308</div>
+        <code>                    <a href="../../../Next/DB/Entity/Manager.html"><abbr title="Next\DB\Entity\Manager">Manager</abbr></a>
+    <strong>reset</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Resets the Entity Manager by returning a new instance of it</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/Entity/Manager.html"><abbr title="Next\DB\Entity\Manager">Manager</abbr></a></td>
+            <td>Entity Manager Object (Fluent-Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_flush">
+        <div class="location">at         line 325</div>
+        <code>                    <a href="../../../Next/DB/Entity/Manager.html"><abbr title="Next\DB\Entity\Manager">Manager</abbr></a>
+    <strong>flush</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Flushes Entity Manager's previously used informations,
+preparing it for a new use</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/Entity/Manager.html"><abbr title="Next\DB\Entity\Manager">Manager</abbr></a></td>
+            <td>Entity Manager Object (Fluent-Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEntity">
+        <div class="location">at         line 343</div>
+        <code>                    <a href="../../../Next/DB/Entity/Manager.html"><abbr title="Next\DB\Entity\Manager">Manager</abbr></a>
+    <strong>setEntity</strong>(<a href="../../../Next/DB/Entity/Entity.html"><abbr title="Next\DB\Entity\Entity">Entity</abbr></a> $entity)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets a new Entity Object after the Manager Object is built</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Next/DB/Entity/Entity.html"><abbr title="Next\DB\Entity\Entity">Entity</abbr></a></td>
+                <td>$entity</td>
+                <td>Entity Object to replace the old one, if any</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/Entity/Manager.html"><abbr title="Next\DB\Entity\Manager">Manager</abbr></a></td>
+            <td>Entity Manager Object (Fluent-Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQuery">
+        <div class="location">at         line 362</div>
+        <code>                    string
+    <strong>getQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get assembled query</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Assembled query</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEntity">
+        <div class="location">at         line 372</div>
+        <code>                    <a href="../../../Next/DB/Entity/Entity.html"><abbr title="Next\DB\Entity\Entity">Entity</abbr></a>
+    <strong>getEntity</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get associated Entity Object</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/Entity/Entity.html"><abbr title="Next\DB\Entity\Entity">Entity</abbr></a></td>
+            <td>Entity Object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSource">
+        <div class="location">at         line 382</div>
+        <code>                    array
+    <strong>getSource</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Data-source</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Data-source</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDriver">
+        <div class="location">at         line 392</div>
+        <code>                    <a href="../../../Next/DB/Driver/Driver.html"><abbr title="Next\DB\Driver\Driver">Driver</abbr></a>
+    <strong>getDriver</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get associated Connection Driver</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/Driver/Driver.html"><abbr title="Next\DB\Driver\Driver">Driver</abbr></a></td>
+            <td>Connection Driver</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBuilder">
+        <div class="location">at         line 402</div>
+        <code>                    <a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a>
+    <strong>getBuilder</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Query Builder</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/Query/Builder.html"><abbr title="Next\DB\Query\Builder">Builder</abbr></a></td>
+            <td>Query Builder</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_execute">
+        <div class="location">at         line 424</div>
+        <code>                private    <a href="../../../Next/DB/Statement/Statement.html"><abbr title="Next\DB\Statement\Statement">Statement</abbr></a>
+    <strong>execute</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Wrapper method for Next\DB\Driver\Driver::prepare()
+and Next\DB\Statement\Statement:execute()</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Next/DB/Statement/Statement.html"><abbr title="Next\DB\Statement\Statement">Statement</abbr></a></td>
+            <td>Statement Object</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Next/Exception/Exceptions/LengthException.html"><abbr title="Next\Exception\Exceptions\LengthException">LengthException</abbr></a></td>
+                <td>SQL Statement is empty</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

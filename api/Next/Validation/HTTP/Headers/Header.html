@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Next\Validation\HTTP\Headers\Header | Next Framework</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Next_Validation_HTTP_Headers_Header" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Next Framework</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">interface</span></li>
+                        <li><a href="../../../../Next.html">Next</a></li><li class="backslash">\</li><li><a href="../../../../Next/Validation.html">Validation</a></li><li class="backslash">\</li><li><a href="../../../../Next/Validation/HTTP.html">HTTP</a></li><li class="backslash">\</li><li><a href="../../../../Next/Validation/HTTP/Headers.html">Headers</a></li><li class="backslash">\</li><li>Header</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Header
+                
+        </h1>
+    </div>
+
+    <p>    interface
+    <strong>Header</strong>        implements
+        <a href="../../../../Next/Validation/Validator.html"><abbr title="Next\Validation\Validator">Validator</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>An Interface for for all HTTP Headers Validators</p>                                </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>FLOAT</td>
+                <td class="last">
+                    <p><em>Quality Factor Regular Expression</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TOKEN</td>
+                <td class="last">
+                    <p><em>Tokens</em></p>
+                    <p>There aren't rules for them, so we'll accept a generic format
+    with all Graphical Characters as shown in RFC 2616 Section 3,
+    Sub-section 3.8
+</p>
+
+<p>
+    But we will deny the '=' (equal sign) because this is the character
+    which separates the token name from its value and ';' (semi-colon),
+    because is the character which separates multiples tokens in a
+    string</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ABSOLUTE_URI</td>
+                <td class="last">
+                    <p><em>Absolute URI Definition</em></p>
+                    <p>HTTP or FTP Protocols, with or without SSL Character followed by
+    <strong>://</strong> (everything optional).
+</p>
+
+<p>
+    Then followed by one or more alphanumeric characters and/or
+    special chars</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RELATIVE_URI</td>
+                <td class="last">
+                    <p><em>Relative URI Definition</em></p>
+                    <p>An optional slash followed by one or more alphanumeric characters
+    and/or sepcial chars
+</p>
+
+<p>Special Chars are: :.?+=&%@!\/-</p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

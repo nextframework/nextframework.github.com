@@ -1,0 +1,2266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Next\HTTP\Request\Browser | Next Framework</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Next_HTTP_Request_Browser" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Next Framework</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Next.html">Next</a></li><li class="backslash">\</li><li><a href="../../../Next/HTTP.html">HTTP</a></li><li class="backslash">\</li><li><a href="../../../Next/HTTP/Request.html">Request</a></li><li class="backslash">\</li><li>Browser</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Browser
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Browser</strong>        extends <a href="../../../Next/Components/Object.html"><abbr title="Next\Components\Object">Object</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>The Browser Class obtains various informations by analyzing Server variables</p>                                </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>IP_REGEX</td>
+                <td class="last">
+                    <p><em>IP Address Regular Expression</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>UNKNOWN</td>
+                <td class="last">
+                    <p><em>Unknown Browser/Platform</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>OPERA</td>
+                <td class="last">
+                    <p><em>Opera</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>OPERA_MINI</td>
+                <td class="last">
+                    <p><em>Opera Mini</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WEBTV</td>
+                <td class="last">
+                    <p><em>WebTV</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IE</td>
+                <td class="last">
+                    <p><em>Internet Explorer</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>POCKET_IE</td>
+                <td class="last">
+                    <p><em>Pocket Internet Explorer</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KONQUEROR</td>
+                <td class="last">
+                    <p><em>Konqueror</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ICAB</td>
+                <td class="last">
+                    <p><em>iCab</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>OMNIWEB</td>
+                <td class="last">
+                    <p><em>OmniWeb</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FIREBIRD</td>
+                <td class="last">
+                    <p><em>Firebird</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FIREFOX</td>
+                <td class="last">
+                    <p><em>Firefox</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ICEWEASEL</td>
+                <td class="last">
+                    <p><em>Iceweasel</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SHIRETOKO</td>
+                <td class="last">
+                    <p><em>Shiretoko</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MOZILLA</td>
+                <td class="last">
+                    <p><em>Mozilla</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AMAYA</td>
+                <td class="last">
+                    <p><em>Amaya</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LYNX</td>
+                <td class="last">
+                    <p><em>Lynx</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SAFARI</td>
+                <td class="last">
+                    <p><em>Safari</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IPHONE</td>
+                <td class="last">
+                    <p><em>iPhone</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IPOD</td>
+                <td class="last">
+                    <p><em>iPod</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IPAD</td>
+                <td class="last">
+                    <p><em>iPad</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CHROME</td>
+                <td class="last">
+                    <p><em>Chrome</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ANDROID</td>
+                <td class="last">
+                    <p><em>Android</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>GOOGLEBOT</td>
+                <td class="last">
+                    <p><em>GoogleBot</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SLURP</td>
+                <td class="last">
+                    <p><em>Yahoo! Slurp</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>W3CVALIDATOR</td>
+                <td class="last">
+                    <p><em>W3C Validator</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BLACKBERRY</td>
+                <td class="last">
+                    <p><em>BlackBerry</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ICECAT</td>
+                <td class="last">
+                    <p><em>IceCat</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NOKIA_S60</td>
+                <td class="last">
+                    <p><em>Nokia S60 OSS Browser</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NOKIA</td>
+                <td class="last">
+                    <p><em>Nokia Browser</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MSN</td>
+                <td class="last">
+                    <p><em>MSN Browser</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MSNBOT</td>
+                <td class="last">
+                    <p><em>MSN Bot</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NETSCAPE_NAVIGATOR</td>
+                <td class="last">
+                    <p><em>Netscape Navigator</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>GALEON</td>
+                <td class="last">
+                    <p><em>Galeon</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NETPOSITIVE</td>
+                <td class="last">
+                    <p><em>NetPositive</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PHOENIX</td>
+                <td class="last">
+                    <p><em>Phoenix</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WINDOWS</td>
+                <td class="last">
+                    <p><em>Windows</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WINDOWS_CE</td>
+                <td class="last">
+                    <p><em>Windows CE</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>APPLE</td>
+                <td class="last">
+                    <p><em>Apple</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LINUX</td>
+                <td class="last">
+                    <p><em>Linux</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>OS2</td>
+                <td class="last">
+                    <p><em>OS/2</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BEOS</td>
+                <td class="last">
+                    <p><em>BeOS</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FREEBSD</td>
+                <td class="last">
+                    <p><em>FreeBSD</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>OPENBSD</td>
+                <td class="last">
+                    <p><em>OpenBSD</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NETBSD</td>
+                <td class="last">
+                    <p><em>NetBSD</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SUNOS</td>
+                <td class="last">
+                    <p><em>SunOS</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>OPENSOLARIS</td>
+                <td class="last">
+                    <p><em>OpenSolaris</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_info">
+                                                            private                    <abbr title="Next\HTTP\Request\stdClass">stdClass</abbr>
+                </td>
+                <td>$info</td>
+                <td class="last">Found informations</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_init">init</a>()
+        
+                                            <p>Additional Initialization.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/stdClass">stdClass</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getInfo">getInfo</a>()
+        
+                                            <p>Get ALL Detected Information</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getIP">getIP</a>()
+        
+                                            <p>Get detected IP Address</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPlatform">getPlatform</a>()
+        
+                                            <p>Get detected Platform</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBrowser">getBrowser</a>(boolean|<abbr title="Next\HTTP\Request\optional">optional</abbr> $includeVersion = FALSE)
+        
+                                            <p>Get detected Browser</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_reset">reset</a>()
+        
+                                            <p>Resets all detected Information</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_detectIP">detectIP</a>()
+        
+                                            <p>Detects User's IP</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_detectPlatform">detectPlatform</a>()
+        
+                                            <p>Detects Platform</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_detectBrowser">detectBrowser</a>()
+        
+                                            <p>Detects Browser</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_WebTv">WebTv</a>()
+        
+                                            <p>WebTV</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_InternetExplorer">InternetExplorer</a>()
+        
+                                            <p>Internet Explorer, Pocket Internet Explorer and the odd MSN Explorer</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_Opera">Opera</a>()
+        
+                                            <p>Opera and Opera Mini</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_Galeon">Galeon</a>()
+        
+                                            <p>Galeon</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_NetscapeNavigator">NetscapeNavigator</a>()
+        
+                                            <p>Netscape Navigator</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_Firefox">Firefox</a>()
+        
+                                            <p>Firefox</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_Chrome">Chrome</a>()
+        
+                                            <p>Google Chrome</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_OmniWeb">OmniWeb</a>()
+        
+                                            <p>OmniWeb</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_Android">Android</a>()
+        
+                                            <p>Android</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_iPad">iPad</a>()
+        
+                                            <p>iPad</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_iPod">iPod</a>()
+        
+                                            <p>iPod</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_iPhone">iPhone</a>()
+        
+                                            <p>iPhone</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_BlackBerry">BlackBerry</a>()
+        
+                                            <p>Blackberry</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_Nokia">Nokia</a>()
+        
+                                            <p>Nokia S60 and others Nokia-based WAP browsers</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_GoogleBot">GoogleBot</a>()
+        
+                                            <p>Googlebot</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_MSNBot">MSNBot</a>()
+        
+                                            <p>MSNBot</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_Slurp">Slurp</a>()
+        
+                                            <p>Yahoo! Slurp</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_Safari">Safari</a>()
+        
+                                            <p>Safari</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_NetPositive">NetPositive</a>()
+        
+                                            <p>NetPositive</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_Firebird">Firebird</a>()
+        
+                                            <p>Firebird</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_Konqueror">Konqueror</a>()
+        
+                                            <p>Konqueror</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_Icab">Icab</a>()
+        
+                                            <p>iCab</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_Phoenix">Phoenix</a>()
+        
+                                            <p>Phoenix</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_Amaya">Amaya</a>()
+        
+                                            <p>Amaya</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_Lynx">Lynx</a>()
+        
+                                            <p>Lynx</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_Shiretoko">Shiretoko</a>()
+        
+                                            <p>Shiretoko</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_IceCat">IceCat</a>()
+        
+                                            <p>IceCat</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_W3CValidator">W3CValidator</a>()
+        
+                                            <p>W3CValidator</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_IceWeasel">IceWeasel</a>()
+        
+                                            <p>IceWeasel</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_Mozilla">Mozilla</a>()
+        
+                                            <p>Mozilla</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">at         line 370</div>
+        <code>            protected        
+    <strong>init</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Additional Initialization.</p>                    <p>Resets all found data</p>                            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInfo">
+        <div class="location">at         line 382</div>
+        <code>                    <a target="_blank" href="http://php.net/stdClass">stdClass</a>
+    <strong>getInfo</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get ALL Detected Information</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/stdClass">stdClass</a></td>
+            <td>Browser Informations</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIP">
+        <div class="location">at         line 399</div>
+        <code>                    string
+    <strong>getIP</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get detected IP Address</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>User IP Address</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPlatform">
+        <div class="location">at         line 412</div>
+        <code>                    string
+    <strong>getPlatform</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get detected Platform</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>User Platform, Operating System or Mobile Device Name</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBrowser">
+        <div class="location">at         line 435</div>
+        <code>                    array|string
+    <strong>getBrowser</strong>(boolean|<abbr title="Next\HTTP\Request\optional">optional</abbr> $includeVersion = FALSE)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get detected Browser</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean|<abbr title="Next\HTTP\Request\optional">optional</abbr></td>
+                <td>$includeVersion</td>
+                <td>If TRUE, detected Browser Version will be returned too and, in that case,
+ as an array of Information</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|string</td>
+            <td>If argument is set to TRUE both browser name and browser
+      version will be returned.
+  </p>
+
+<p>Otherwise only browser name will</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reset">
+        <div class="location">at         line 451</div>
+        <code>                private    
+    <strong>reset</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Resets all detected Information</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_detectIP">
+        <div class="location">at         line 473</div>
+        <code>                private    
+    <strong>detectIP</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Detects User's IP</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_detectPlatform">
+        <div class="location">at         line 521</div>
+        <code>                private    
+    <strong>detectPlatform</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Detects Platform</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_detectBrowser">
+        <div class="location">at         line 546</div>
+        <code>                private    
+    <strong>detectBrowser</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Detects Browser</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_WebTv">
+        <div class="location">at         line 620</div>
+        <code>                private    boolean
+    <strong>WebTv</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>WebTV</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is WebTV Browser and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://www.webtv.net/pc</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_InternetExplorer">
+        <div class="location">at         line 655</div>
+        <code>                private    boolean
+    <strong>InternetExplorer</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Internet Explorer, Pocket Internet Explorer and the odd MSN Explorer</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is Internet Explorer Browser and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://www.microsoft.com/ie
+</td>
+                <td>http://en.wikipedia.org/wiki/Internet_Explorer_Mobile
+ http://explorer.msn.com</td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Opera">
+        <div class="location">at         line 763</div>
+        <code>                private    boolean
+    <strong>Opera</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Opera and Opera Mini</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is Opera Browser and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://www.opera.com
+</td>
+                <td>http://www.opera.com/mini</td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Galeon">
+        <div class="location">at         line 852</div>
+        <code>                private    boolean
+    <strong>Galeon</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Galeon</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is Galeon Browser and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://galeon.sourceforge.net</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_NetscapeNavigator">
+        <div class="location">at         line 883</div>
+        <code>                private    boolean
+    <strong>NetscapeNavigator</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Netscape Navigator</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is etscape Navigator Browser and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://browser.netscape.com</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Firefox">
+        <div class="location">at         line 919</div>
+        <code>                private    boolean
+    <strong>Firefox</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Firefox</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is Firefox Browser and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://www.mozilla.com/en-US/firefox/firefox.html</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Chrome">
+        <div class="location">at         line 946</div>
+        <code>                private    boolean
+    <strong>Chrome</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Google Chrome</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is Chrome Browser and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://www.google.com/chrome</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_OmniWeb">
+        <div class="location">at         line 979</div>
+        <code>                private    boolean
+    <strong>OmniWeb</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>OmniWeb</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is OmniWeb Browser and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://www.omnigroup.com/applications/omniweb</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Android">
+        <div class="location">at         line 1014</div>
+        <code>                private    boolean
+    <strong>Android</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Android</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is under an Android Device and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://www.android.com</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_iPad">
+        <div class="location">at         line 1051</div>
+        <code>                private    boolean
+    <strong>iPad</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>iPad</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is under iPad Browser and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://www.apple.com</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_iPod">
+        <div class="location">at         line 1086</div>
+        <code>                private    boolean
+    <strong>iPod</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>iPod</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is under iPod Device and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://www.apple.com</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_iPhone">
+        <div class="location">at         line 1121</div>
+        <code>                private    boolean
+    <strong>iPhone</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>iPhone</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is under iPhone Device and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://www.apple.com</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_BlackBerry">
+        <div class="location">at         line 1156</div>
+        <code>                private    boolean
+    <strong>BlackBerry</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Blackberry</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is under Blackberry Device and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://www.blackberry.com</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Nokia">
+        <div class="location">at         line 1193</div>
+        <code>                private    boolean
+    <strong>Nokia</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Nokia S60 and others Nokia-based WAP browsers</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is Nokia Device and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://en.wikipedia.org/wiki/Web_for_S60</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GoogleBot">
+        <div class="location">at         line 1232</div>
+        <code>                private    boolean
+    <strong>GoogleBot</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Googlebot</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is the Google Crawler Bot and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://en.wikipedia.org/wiki/Googlebot</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_MSNBot">
+        <div class="location">at         line 1270</div>
+        <code>                private    boolean
+    <strong>MSNBot</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>MSNBot</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is the MSN Crawler Bot and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://search.msn.com/msnbot.htm
+</td>
+                <td>http://en.wikipedia.org/wiki/Msnbot (used for Bing too)</td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Slurp">
+        <div class="location">at         line 1307</div>
+        <code>                private    boolean
+    <strong>Slurp</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Yahoo! Slurp</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is the Yahoo! Slurp Crawler Bot and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://en.wikipedia.org/wiki/Yahoo!_Slurp</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Safari">
+        <div class="location">at         line 1346</div>
+        <code>                private    boolean
+    <strong>Safari</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Safari</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is Safari Browser and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://www.apple.com</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_NetPositive">
+        <div class="location">at         line 1380</div>
+        <code>                private    boolean
+    <strong>NetPositive</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>NetPositive</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is Net Positive Browser and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://en.wikipedia.org/wiki/NetPositive</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Firebird">
+        <div class="location">at         line 1415</div>
+        <code>                private    boolean
+    <strong>Firebird</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Firebird</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is Firebird Browser and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://www.ibphoenix.com</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Konqueror">
+        <div class="location">at         line 1444</div>
+        <code>                private    boolean
+    <strong>Konqueror</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Konqueror</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is Konqueror Browser and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://www.konqueror.org</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Icab">
+        <div class="location">at         line 1475</div>
+        <code>                private    boolean
+    <strong>Icab</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>iCab</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is iCab Browser and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://www.icab.de</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Phoenix">
+        <div class="location">at         line 1506</div>
+        <code>                private    boolean
+    <strong>Phoenix</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Phoenix</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is Phoenix Browser and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://en.wikipedia.org/wiki/History_of_Mozilla_Firefox</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Amaya">
+        <div class="location">at         line 1537</div>
+        <code>                private    boolean
+    <strong>Amaya</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Amaya</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is Amaya Browser and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://www.w3.org/Amaya</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Lynx">
+        <div class="location">at         line 1570</div>
+        <code>                private    boolean
+    <strong>Lynx</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Lynx</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is Lynx Browser and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://en.wikipedia.org/wiki/Lynx</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Shiretoko">
+        <div class="location">at         line 1603</div>
+        <code>                private    boolean
+    <strong>Shiretoko</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Shiretoko</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is Shiretoko Browser and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://wiki.mozilla.org/Projects/shiretoko</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_IceCat">
+        <div class="location">at         line 1628</div>
+        <code>                private    boolean
+    <strong>IceCat</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>IceCat</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is Ice Cat Browser and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://en.wikipedia.org/wiki/GNU_IceCat</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_W3CValidator">
+        <div class="location">at         line 1653</div>
+        <code>                private    boolean
+    <strong>W3CValidator</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>W3CValidator</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is W3CValidator Access and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://validator.w3.org</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_IceWeasel">
+        <div class="location">at         line 1706</div>
+        <code>                private    boolean
+    <strong>IceWeasel</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>IceWeasel</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is IceWheasel Browser and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://www.geticeweasel.org</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Mozilla">
+        <div class="location">at         line 1739</div>
+        <code>                private    boolean
+    <strong>Mozilla</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Mozilla</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>TRUE if is generic Mozilla Browser and FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://www.mozilla.com/en-US</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

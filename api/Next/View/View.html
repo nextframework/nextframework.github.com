@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Next\View\View | Next Framework</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Next_View_View" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Next Framework</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">interface</span></li>
+                        <li><a href="../../Next.html">Next</a></li><li class="backslash">\</li><li><a href="../../Next/View.html">View</a></li><li class="backslash">\</li><li>View</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            View
+                
+        </h1>
+    </div>
+
+    <p>    interface
+    <strong>View</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>An Interface for all View Engines</p>                                </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>CONTROLLERS_KEYWORD</td>
+                <td class="last">
+                    <p><em>Controllers Keyword</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ACTION_METHOD_SUFFIX_VIEW</td>
+                <td class="last">
+                    <p><em>Action Method 'View' Suffix</em></p>
+                    <p>According to Next Framework naming forms this suffix is appended
+in controllers' action methods describing their purpose
+to only for display something</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ACTION_METHOD_SUFFIX_ACTION</td>
+                <td class="last">
+                    <p><em>Action Method 'View' Suffix</em></p>
+                    <p>According to Next Framework naming forms this suffix is appended
+in controllers' action methods describing their purpose to execute
+some task (like a database interaction) before display something</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>APPLICATION</td>
+                <td class="last">
+                    <p><em>Application FileSpec Token</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONTROLLER</td>
+                <td class="last">
+                    <p><em>Controller FileSpec Token</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ACTION</td>
+                <td class="last">
+                    <p><em>Action FileSpec Token</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SUBPATH</td>
+                <td class="last">
+                    <p><em>Subpath FileSpec Token</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resetDefaults">resetDefaults</a>()
+        
+                                            <p>Reset View to its defaults</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerHelper">registerHelper</a>($name, $classname)
+        
+                                            <p>Register a new Template View Helper</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHelpers">getHelpers</a>()
+        
+                                            <p>Get all registered View Helpers</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getExtension">getExtension</a>()
+        
+                                            <p>Get default File Extension</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBasepath">getBasepath</a>()
+        
+                                            <p>Get current Basepath</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSubpath">getSubpath</a>()
+        
+                                            <p>Get current Subpath</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addPath">addPath</a>(string $path)
+        
+                                            <p>Add more paths to Template Files Location</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPaths">getPaths</a>()
+        
+                                            <p>Get current paths</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFileSpec">getFileSpec</a>()
+        
+                                            <p>Get FileSpec definition</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_shouldReturnVariables">shouldReturnVariables</a>()
+        
+                                            <p>Should Variables be returned or echoed</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_assign">assign</a>(string|array $tplVar, mixed|<abbr title="Next\View\optional">optional</abbr> $value = NULL)
+        
+                                            <p>Assign one or more Template Variables</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getVars">getVars</a>()
+        
+                                            <p>Get all assigned Template Variables</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getVar">getVar</a>(string $tplVar)
+        
+                                            <p>Get an specific Template Variable assigned</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultTemplate">getDefaultTemplate</a>()
+        
+                                            <p>Get Default Template</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_render">render</a>(string|<abbr title="Next\View\optional">optional</abbr> $name = NULL, boolean|<abbr title="Next\View\optional">optional</abbr> $search = TRUE)
+        
+                                            <p>Render the page, outputs the buffer</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_disableRender">disableRender</a>()
+        
+                                            <p>Disable Rendering Process</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_enableRender">enableRender</a>()
+        
+                                            <p>(Re-)Enables Rendering process</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_resetDefaults">
+        <div class="location">at         line 91</div>
+        <code>                    
+    <strong>resetDefaults</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Reset View to its defaults</p>                    <p>User defined Template Variables are removed leaving only the
+pre-assigned variables.</p>
+
+<p>If, for some reason, it's already empty, simply create them.</p>                            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerHelper">
+        <div class="location">at         line 109</div>
+        <code>                    
+    <strong>registerHelper</strong>($name, $classname)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a new Template View Helper</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$classname</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHelpers">
+        <div class="location">at         line 114</div>
+        <code>                    
+    <strong>getHelpers</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all registered View Helpers</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExtension">
+        <div class="location">at         line 121</div>
+        <code>                    
+    <strong>getExtension</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get default File Extension</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBasepath">
+        <div class="location">at         line 128</div>
+        <code>                    
+    <strong>getBasepath</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get current Basepath</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSubpath">
+        <div class="location">at         line 133</div>
+        <code>                    
+    <strong>getSubpath</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get current Subpath</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addPath">
+        <div class="location">at         line 141</div>
+        <code>                    
+    <strong>addPath</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add more paths to Template Files Location</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>Another Path to locate Template Views</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPaths">
+        <div class="location">at         line 146</div>
+        <code>                    
+    <strong>getPaths</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get current paths</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFileSpec">
+        <div class="location">at         line 151</div>
+        <code>                    
+    <strong>getFileSpec</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get FileSpec definition</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_shouldReturnVariables">
+        <div class="location">at         line 158</div>
+        <code>                    
+    <strong>shouldReturnVariables</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Should Variables be returned or echoed</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assign">
+        <div class="location">at         line 173</div>
+        <code>                    
+    <strong>assign</strong>(string|array $tplVar, mixed|<abbr title="Next\View\optional">optional</abbr> $value = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Assign one or more Template Variables</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$tplVar</td>
+                <td>Template Variable Name or an array of Variables</td>
+            </tr>
+                    <tr>
+                <td>mixed|<abbr title="Next\View\optional">optional</abbr></td>
+                <td>$value</td>
+                <td>Value for Template Variable when <strong>$tplVar</strong>
+      is not an array</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getVars">
+        <div class="location">at         line 178</div>
+        <code>                    
+    <strong>getVars</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all assigned Template Variables</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getVar">
+        <div class="location">at         line 186</div>
+        <code>                    
+    <strong>getVar</strong>(string $tplVar)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an specific Template Variable assigned</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tplVar</td>
+                <td>The Template Variable</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultTemplate">
+        <div class="location">at         line 193</div>
+        <code>                    
+    <strong>getDefaultTemplate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Default Template</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_render">
+        <div class="location">at         line 208</div>
+        <code>                    
+    <strong>render</strong>(string|<abbr title="Next\View\optional">optional</abbr> $name = NULL, boolean|<abbr title="Next\View\optional">optional</abbr> $search = TRUE)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Render the page, outputs the buffer</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<abbr title="Next\View\optional">optional</abbr></td>
+                <td>$name</td>
+                <td>Template View File to render. If NULL, we'll try to find it</td>
+            </tr>
+                    <tr>
+                <td>boolean|<abbr title="Next\View\optional">optional</abbr></td>
+                <td>$search</td>
+                <td>Flag to condition whether or not we should try to find the
+ proper Template View File automatically</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_disableRender">
+        <div class="location">at         line 215</div>
+        <code>                    
+    <strong>disableRender</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Disable Rendering Process</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_enableRender">
+        <div class="location">at         line 220</div>
+        <code>                    
+    <strong>enableRender</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>(Re-)Enables Rendering process</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

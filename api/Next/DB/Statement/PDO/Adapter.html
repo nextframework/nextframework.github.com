@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Next\DB\Statement\PDO\Adapter | Next Framework</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Next_DB_Statement_PDO_Adapter" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Next Framework</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../../Next.html">Next</a></li><li class="backslash">\</li><li><a href="../../../../Next/DB.html">DB</a></li><li class="backslash">\</li><li><a href="../../../../Next/DB/Statement.html">Statement</a></li><li class="backslash">\</li><li><a href="../../../../Next/DB/Statement/PDO.html">PDO</a></li><li class="backslash">\</li><li>Adapter</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Adapter
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Adapter</strong>        extends <a href="../../../../Next/Components/Object.html"><abbr title="Next\Components\Object">Object</abbr></a>        implements
+        <a href="../../../../Next/DB/Statement/Statement.html"><abbr title="Next\DB\Statement\Statement">Statement</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>The PDO Statement Adapter adapts the native PDOStatement interface signature</p>                                </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_parameters">
+                                        protected                                        array
+                </td>
+                <td>$parameters</td>
+                <td class="last">Parameter Options Definition</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_stmt">
+                                                            private                    <abbr title="Next\DB\Statement\PDO\PDOStatement">PDOStatement</abbr>
+                </td>
+                <td>$stmt</td>
+                <td class="last">PDOStatement Object</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Next/DB/Statement/PDO/Adapter.html"><abbr title="Next\DB\Statement\PDO\Adapter">Adapter</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setStatement">setStatement</a>(<a target="_blank" href="http://php.net/PDOStatement">PDOStatement</a> $stmt)
+        
+                                            <p>Set a PDOStatement Object which will be adapted</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_execute">execute</a>(array $params = [])
+        
+                                            <p>Execute a prepared statement.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fetch">fetch</a>(integer|<abbr title="Next\DB\Statement\optional">optional</abbr> $style = null, integer|<abbr title="Next\DB\Statement\optional">optional</abbr> $cursor = null, integer|<abbr title="Next\DB\Statement\optional">optional</abbr> $offset = null)
+        
+                                            <p>Fetch the next row from a ResultSet</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fetchAll">fetchAll</a>(integer|<abbr title="Next\DB\Statement\optional">optional</abbr> $style = null)
+        
+                                            <p>Return an array containing all of the ResultSet rows</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fetchColumn">fetchColumn</a>(integer|<abbr title="Next\DB\Statement\optional">optional</abbr> $column)
+        
+                                            <p>Return a single column from the next row of a ResultSet</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rowCount">rowCount</a>()
+        
+                                            <p>Return the number of rows affected by the last SQL statement</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_errorCode">errorCode</a>()
+        
+                                            <p>Retrieve the Error Code</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_errorInfo">errorInfo</a>()
+        
+                                            <p>Retrieve an array of error information</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFetchMode">setFetchMode</a>(integer|<abbr title="Next\DB\Statement\optional">optional</abbr> $mode, mixed|array|<abbr title="Next\DB\Statement\optional">optional</abbr> $params = NULL)
+        
+                                            <p>Set the default Fetch Mode for the Statement</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_closeCursor">closeCursor</a>()
+        
+                                            <p>Closes the cursor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed|void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_invoke">invoke</a>(string $method, array|<abbr title="Next\DB\Statement\PDO\optional">optional</abbr> $args = [])
+        
+                                            <p>Call a PDOStatement Method from PDO Adapter Context,
+adapting native PDOStatement Interface to our Statement Interface</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setStatement">
+        <div class="location">at         line 67</div>
+        <code>                    <a href="../../../../Next/DB/Statement/PDO/Adapter.html"><abbr title="Next\DB\Statement\PDO\Adapter">Adapter</abbr></a>
+    <strong>setStatement</strong>(<a target="_blank" href="http://php.net/PDOStatement">PDOStatement</a> $stmt)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a PDOStatement Object which will be adapted</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/PDOStatement">PDOStatement</a></td>
+                <td>$stmt</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Next/DB/Statement/PDO/Adapter.html"><abbr title="Next\DB\Statement\PDO\Adapter">Adapter</abbr></a></td>
+            <td>Statement Adapter Object (Fluent Interface)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_execute">
+        <div class="location">at         line 87</div>
+        <code>                    
+    <strong>execute</strong>(array $params = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute a prepared statement.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>Values to bind to parameter placeholders.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fetch">
+        <div class="location">at         line 110</div>
+        <code>                    
+    <strong>fetch</strong>(integer|<abbr title="Next\DB\Statement\optional">optional</abbr> $style = null, integer|<abbr title="Next\DB\Statement\optional">optional</abbr> $cursor = null, integer|<abbr title="Next\DB\Statement\optional">optional</abbr> $offset = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Fetch the next row from a ResultSet</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer|<abbr title="Next\DB\Statement\optional">optional</abbr></td>
+                <td>$style</td>
+                <td>Fetch mode for this fetch operation</td>
+            </tr>
+                    <tr>
+                <td>integer|<abbr title="Next\DB\Statement\optional">optional</abbr></td>
+                <td>$cursor</td>
+                <td>Determines which row will be returned to the caller</td>
+            </tr>
+                    <tr>
+                <td>integer|<abbr title="Next\DB\Statement\optional">optional</abbr></td>
+                <td>$offset</td>
+                <td>Controls the cursor orientation</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fetchAll">
+        <div class="location">at         line 125</div>
+        <code>                    
+    <strong>fetchAll</strong>(integer|<abbr title="Next\DB\Statement\optional">optional</abbr> $style = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return an array containing all of the ResultSet rows</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer|<abbr title="Next\DB\Statement\optional">optional</abbr></td>
+                <td>$style</td>
+                <td>Fetch mode for this fetch operation</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fetchColumn">
+        <div class="location">at         line 138</div>
+        <code>                    
+    <strong>fetchColumn</strong>(integer|<abbr title="Next\DB\Statement\optional">optional</abbr> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return a single column from the next row of a ResultSet</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer|<abbr title="Next\DB\Statement\optional">optional</abbr></td>
+                <td>$column</td>
+                <td>Position of the column to fetch</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rowCount">
+        <div class="location">at         line 148</div>
+        <code>                    
+    <strong>rowCount</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the number of rows affected by the last SQL statement</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_errorCode">
+        <div class="location">at         line 160</div>
+        <code>                    
+    <strong>errorCode</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve the Error Code</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_errorInfo">
+        <div class="location">at         line 170</div>
+        <code>                    
+    <strong>errorInfo</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve an array of error information</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFetchMode">
+        <div class="location">at         line 186</div>
+        <code>                    
+    <strong>setFetchMode</strong>(integer|<abbr title="Next\DB\Statement\optional">optional</abbr> $mode, mixed|array|<abbr title="Next\DB\Statement\optional">optional</abbr> $params = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the default Fetch Mode for the Statement</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer|<abbr title="Next\DB\Statement\optional">optional</abbr></td>
+                <td>$mode</td>
+                <td>The Fetch Mode</td>
+            </tr>
+                    <tr>
+                <td>mixed|array|<abbr title="Next\DB\Statement\optional">optional</abbr></td>
+                <td>$params</td>
+                <td>Additional Parameters</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_closeCursor">
+        <div class="location">at         line 200</div>
+        <code>                    
+    <strong>closeCursor</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Closes the cursor</p>                    <p>This enables the statement to be executed again</p>                            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_invoke">
+        <div class="location">at         line 226</div>
+        <code>                private    mixed|void
+    <strong>invoke</strong>(string $method, array|<abbr title="Next\DB\Statement\PDO\optional">optional</abbr> $args = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Call a PDOStatement Method from PDO Adapter Context,
+adapting native PDOStatement Interface to our Statement Interface</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>Method trying to be invoked</td>
+            </tr>
+                    <tr>
+                <td>array|<abbr title="Next\DB\Statement\PDO\optional">optional</abbr></td>
+                <td>$args</td>
+                <td>Variable list of arguments to the method, if exist</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed|void</td>
+            <td>Returns what called PDOStatement's method returns and
+ FALSE otherwise</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Next/Exception/Exceptions/BadMethodCallException.html"><abbr title="Next\Exception\Exceptions\BadMethodCallException">BadMethodCallException</abbr></a></td>
+                <td>Thrown with \PDOException's message if one is caught</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Next/Exception/Exceptions/RuntimeException.html"><abbr title="Next\Exception\Exceptions\RuntimeException">RuntimeException</abbr></a></td>
+                <td>Thrown with \PDOException's message if one is caught</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
