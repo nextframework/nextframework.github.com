@@ -134,14 +134,6 @@
                 <td class="last">Template Views Paths</td>
                 <td></td>
             </tr>
-                    <tr>
-                <td class="type" id="property__shouldRender">
-                                                            private                    boolean
-                </td>
-                <td>$_shouldRender</td>
-                <td class="last">Flag to define whether or not Template File should be rendered</td>
-                <td></td>
-            </tr>
             </table>
 
     
@@ -293,9 +285,19 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getDefaultTemplate">getDefaultTemplate</a>()
+                    <a href="#method_disableRender">disableRender</a>()
         
-                                            <p>Get Default Template</p>                </div>
+                                            <p>Disable Rendering process</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_enableRender">enableRender</a>()
+        
+                                            <p>(Re-)Enables Rendering process</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -313,19 +315,9 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_disableRender">disableRender</a>()
+                    <a href="#method_getDefaultTemplate">getDefaultTemplate</a>()
         
-                                            <p>Disable Rendering process</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_enableRender">enableRender</a>()
-        
-                                            <p>(Re-)Enables Rendering process</p>                </div>
+                                            <p>Get Default Template</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -419,7 +411,7 @@ not its value</p>                </div>
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_init">
-        <div class="location">at         line 196</div>
+        <div class="location">at         line 205</div>
         <code>            protected        
     <strong>init</strong>()
         </code>
@@ -441,7 +433,7 @@ provided and apply quik fixes over optional Parameter Options</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_resetDefaults">
-        <div class="location">at         line 229</div>
+        <div class="location">at         line 238</div>
         <code>                    
     <strong>resetDefaults</strong>()
         </code>
@@ -465,7 +457,7 @@ pre-assigned variables.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_registerHelper">
-        <div class="location">at         line 282</div>
+        <div class="location">at         line 291</div>
         <code>                    
     <strong>registerHelper</strong>($name, <abbr title="Next\View\Next\View\Helpers\Helper">Helper</abbr>|string|callable $resource)
         </code>
@@ -521,7 +513,7 @@ pre-assigned variables.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getHelpers">
-        <div class="location">at         line 339</div>
+        <div class="location">at         line 348</div>
         <code>                    
     <strong>getHelpers</strong>()
         </code>
@@ -542,7 +534,7 @@ pre-assigned variables.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getExtension">
-        <div class="location">at         line 351</div>
+        <div class="location">at         line 360</div>
         <code>                    
     <strong>getExtension</strong>()
         </code>
@@ -563,7 +555,7 @@ pre-assigned variables.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getBasepath">
-        <div class="location">at         line 363</div>
+        <div class="location">at         line 372</div>
         <code>                    
     <strong>getBasepath</strong>()
         </code>
@@ -584,7 +576,7 @@ pre-assigned variables.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getSubpath">
-        <div class="location">at         line 373</div>
+        <div class="location">at         line 382</div>
         <code>                    
     <strong>getSubpath</strong>()
         </code>
@@ -605,7 +597,7 @@ pre-assigned variables.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_addPath">
-        <div class="location">at         line 386</div>
+        <div class="location">at         line 395</div>
         <code>                    
     <strong>addPath</strong>(string $path)
         </code>
@@ -636,7 +628,7 @@ pre-assigned variables.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getPaths">
-        <div class="location">at         line 406</div>
+        <div class="location">at         line 415</div>
         <code>                    
     <strong>getPaths</strong>()
         </code>
@@ -657,7 +649,7 @@ pre-assigned variables.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getFileSpec">
-        <div class="location">at         line 416</div>
+        <div class="location">at         line 425</div>
         <code>                    
     <strong>getFileSpec</strong>()
         </code>
@@ -678,7 +670,7 @@ pre-assigned variables.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_shouldReturnVariables">
-        <div class="location">at         line 428</div>
+        <div class="location">at         line 437</div>
         <code>                    
     <strong>shouldReturnVariables</strong>()
         </code>
@@ -699,7 +691,7 @@ pre-assigned variables.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_assign">
-        <div class="location">at         line 448</div>
+        <div class="location">at         line 457</div>
         <code>                    
     <strong>assign</strong>(string|array $tplVar, mixed|<abbr title="Next\View\optional">optional</abbr> $value = NULL)
         </code>
@@ -745,7 +737,7 @@ pre-assigned variables.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getVars">
-        <div class="location">at         line 481</div>
+        <div class="location">at         line 490</div>
         <code>                    
     <strong>getVars</strong>()
         </code>
@@ -766,7 +758,7 @@ pre-assigned variables.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getVar">
-        <div class="location">at         line 494</div>
+        <div class="location">at         line 503</div>
         <code>                    
     <strong>getVar</strong>(string $tplVar)
         </code>
@@ -796,10 +788,10 @@ pre-assigned variables.</p>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getDefaultTemplate">
-        <div class="location">at         line 508</div>
+                    <h3 id="method_disableRender">
+        <div class="location">at         line 517</div>
         <code>                    
-    <strong>getDefaultTemplate</strong>()
+    <strong>disableRender</strong>()
         </code>
     </h3>
     <div class="details">
@@ -807,7 +799,28 @@ pre-assigned variables.</p>
     
 
                     <div class="method-description">
-                                    <p>Get Default Template</p>                                                </div>
+                                    <p>Disable Rendering process</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_enableRender">
+        <div class="location">at         line 530</div>
+        <code>                    
+    <strong>enableRender</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>(Re-)Enables Rendering process</p>                                                </div>
                 <div class="tags">
             
             
@@ -818,7 +831,7 @@ pre-assigned variables.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_render">
-        <div class="location">at         line 528</div>
+        <div class="location">at         line 553</div>
         <code>                    
     <strong>render</strong>(string|<abbr title="Next\View\optional">optional</abbr> $name = NULL, boolean|<abbr title="Next\View\optional">optional</abbr> $search = TRUE)
         </code>
@@ -863,10 +876,10 @@ pre-assigned variables.</p>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_disableRender">
-        <div class="location">at         line 592</div>
+                    <h3 id="method_getDefaultTemplate">
+        <div class="location">at         line 617</div>
         <code>                    
-    <strong>disableRender</strong>()
+    <strong>getDefaultTemplate</strong>()
         </code>
     </h3>
     <div class="details">
@@ -874,28 +887,7 @@ pre-assigned variables.</p>
     
 
                     <div class="method-description">
-                                    <p>Disable Rendering process</p>                                                </div>
-                <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_enableRender">
-        <div class="location">at         line 605</div>
-        <code>                    
-    <strong>enableRender</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>(Re-)Enables Rendering process</p>                                                </div>
+                                    <p>Get Default Template</p>                                                </div>
                 <div class="tags">
             
             
@@ -906,7 +898,7 @@ pre-assigned variables.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_verify">
-        <div class="location">at         line 621</div>
+        <div class="location">at         line 633</div>
         <code>                    
     <strong>verify</strong>()
         </code>
@@ -928,6 +920,10 @@ pre-assigned variables.</p>
                 <td>Thrown if provided Template View FileSpec is not minimally
  valid (i.e at least one string led by a colon)</td>
             </tr>
+                    <tr>
+                <td><a href="../../Next/Exception/Exceptions/InvalidArgumentException.html"><abbr title="Next\Exception\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>Thrown if provided un-escape callback is not really a callable resource</td>
+            </tr>
             </table>
 
             
@@ -937,7 +933,7 @@ pre-assigned variables.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method___isset">
-        <div class="location">at         line 650</div>
+        <div class="location">at         line 672</div>
         <code>                    boolean
     <strong>__isset</strong>(string $tplVar)
         </code>
@@ -977,7 +973,7 @@ pre-assigned variables.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method___unset">
-        <div class="location">at         line 668</div>
+        <div class="location">at         line 690</div>
         <code>                    
     <strong>__unset</strong>(string $tplVar)
         </code>
@@ -1023,7 +1019,7 @@ Note that the PRESENCE of key is tested before unset it, not its value</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method___set">
-        <div class="location">at         line 694</div>
+        <div class="location">at         line 716</div>
         <code>                    
     <strong>__set</strong>(string $tplVar, mixed|<abbr title="Next\View\optional">optional</abbr> $value = NULL)
         </code>
@@ -1069,7 +1065,7 @@ Note that the PRESENCE of key is tested before unset it, not its value</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method___get">
-        <div class="location">at         line 722</div>
+        <div class="location">at         line 744</div>
         <code>                    mixed|void
     <strong>__get</strong>(string $tplVar)
         </code>
@@ -1124,7 +1120,7 @@ not its value</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___call">
-        <div class="location">at         line 758</div>
+        <div class="location">at         line 780</div>
         <code>                    mixed|void
     <strong>__call</strong>(string $helper, array $args = [])
         </code>
@@ -1180,7 +1176,7 @@ not its value</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_findFile">
-        <div class="location">at         line 794</div>
+        <div class="location">at         line 816</div>
         <code>                private    string
     <strong>findFile</strong>(string|<abbr title="Next\View\optional">optional</abbr> $file = NULL)
         </code>
@@ -1238,7 +1234,7 @@ not its value</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_findFileBySpec">
-        <div class="location">at         line 893</div>
+        <div class="location">at         line 915</div>
         <code>                private    string
     <strong>findFileBySpec</strong>()
         </code>

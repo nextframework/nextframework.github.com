@@ -80,7 +80,7 @@
 
     <p>    class
     <strong>StripTags</strong>        extends <a href="../../Next/Components/Object.html"><abbr title="Next\Components\Object">Object</abbr></a>        implements
-        <a href="../../Next/Filter/Filterable.html"><abbr title="Next\Filter\Filterable">Filterable</abbr></a>
+        <a href="../../Next/Filter/Filterable.html"><abbr title="Next\Filter\Filterable">Filterable</abbr></a>, <a href="../../Next/Components/Interfaces/Configurable.html"><abbr title="Next\Components\Interfaces\Configurable">Configurable</abbr></a>
 </p>
 
         
@@ -121,9 +121,9 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_init">init</a>()
+                    <a href="#method_configure">configure</a>()
         
-                                            <p>Additional Initialization.</p>                </div>
+                                            <p>Post-Initialization Configuration.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -172,7 +172,7 @@ given \DOMNode node</p>                </div>
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_walk">walk</a>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node)
+                    <a href="#method_walk">walk</a>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node, $skipParent = false)
         
                                             <p>Traverses through all DOMNodes within given DOMNode recursively</p>                </div>
                 <div class="col-md-2"></div>
@@ -184,10 +184,10 @@ given \DOMNode node</p>                </div>
 
             <div id="method-details">
                     <div class="method-item">
-                    <h3 id="method_init">
-        <div class="location">at         line 107</div>
-        <code>            protected        
-    <strong>init</strong>()
+                    <h3 id="method_configure">
+        <div class="location">at         line 103</div>
+        <code>                    
+    <strong>configure</strong>()
         </code>
     </h3>
     <div class="details">
@@ -195,9 +195,7 @@ given \DOMNode node</p>                </div>
     
 
                     <div class="method-description">
-                                    <p>Additional Initialization.</p>                    <p>Creates a DOMDocument Object, loading input data as HTML and
-extends this class' context to the DOMDocument instance created,
-bridging them</p>                            </div>
+                                    <p>Post-Initialization Configuration.</p>                    <p>Creates a DOMDocument Object, loading input data as HTML</p>                            </div>
                 <div class="tags">
             
             
@@ -208,7 +206,7 @@ bridging them</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_filter">
-        <div class="location">at         line 146</div>
+        <div class="location">at         line 132</div>
         <code>                    
     <strong>filter</strong>()
         </code>
@@ -248,7 +246,7 @@ bridging them</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_stripTags">
-        <div class="location">at         line 166</div>
+        <div class="location">at         line 154</div>
         <code>            protected        
     <strong>stripTags</strong>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node)
         </code>
@@ -280,7 +278,7 @@ bridging them</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_stripAttributes">
-        <div class="location">at         line 207</div>
+        <div class="location">at         line 195</div>
         <code>            protected        
     <strong>stripAttributes</strong>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node)
         </code>
@@ -312,7 +310,7 @@ given \DOMNode node</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_forceAttributes">
-        <div class="location">at         line 230</div>
+        <div class="location">at         line 218</div>
         <code>            protected        
     <strong>forceAttributes</strong>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node)
         </code>
@@ -344,9 +342,9 @@ them will open in a new window/tab</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_walk">
-        <div class="location">at         line 246</div>
+        <div class="location">at         line 234</div>
         <code>            protected        
-    <strong>walk</strong>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node)
+    <strong>walk</strong>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $node, $skipParent = false)
         </code>
     </h3>
     <div class="details">
@@ -362,7 +360,12 @@ them will open in a new window/tab</p>                            </div>
                     <tr>
                 <td><a target="_blank" href="http://php.net/DOMNode">DOMNode</a></td>
                 <td>$node</td>
-                <td>DOMNode node to traverse</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$skipParent</td>
+                <td></td>
             </tr>
             </table>
 
